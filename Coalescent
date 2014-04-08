@@ -1,6 +1,6 @@
 /*
 Sketch to read a MS5803-14BA pressure sensor, 3-gang dallas temperature probe, homebrewed conductivity circuit. 
-Hacked together from code by Walt Holm, arduino.cc samples, and original code by Andrew Thaler.
+Hacked together from code by Walt Holm, arduino.cc samples, and original code by Andrew Thaler. Runs on Arduino.
 
 SD card datalogger	
 * SD card attached to SPI bus as follows:
