@@ -5,7 +5,7 @@ Source code for the OpenCTD
 
 Reads an MS5803-14BA pressure sensor, 3-gang dallas temperature probe, and an Atlas conductivity circuit with homebrewed probe. 
 
-Kludged together by Andrew Thaler from code by Walt Holm, arduino.cc samples, Atlas scientific, and himself. Runs on Arduino.
+Kludged together by Andrew Thaler from code by Walt Holm, arduino.cc samples, Atlas scientific, Vhati, Russell Neches, and myself. Runs on Arduino.
 
 Currently a mess.
 
@@ -38,3 +38,11 @@ https://www.arduino.cc/en/Reference/Wire
 
 * Included with Arduino.
 ** Included with Arduino. A newer version may be available.
+
+Pinouts:
+
+A4 - Pressure Sensor SDA
+A5 - Pressure Sensor SCLK
+D7 - Temperature Data
+D2 - Conductivity RX
+D3 - Conductivity TX
