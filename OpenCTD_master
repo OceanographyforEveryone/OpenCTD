@@ -1,125 +1,156 @@
-#include <SoftwareSerial.h> //imports the SoftwareSerial library for use by EC circuit
-#include <OneWire.h> //imports the OneWire library needed for both temperature and conductivity
-#include <DallasTemperature.h> //imports the DallasTemperature library neede to query individual thermistors for temperature
-#include <Wire.h> //imports the Wire library needed for pressure
-#include <MS5803_14.h> //Imports the specific library for the 14bar pressure sensor
-#include <SPI.h> //imports the SPI library for the SD card reader
-#include <SD.h> //imports the SD library that runs the SD card reader
+#include <SoftwareSerial.h>     // For the EC circuit.
+#include <OneWire.h>            // Dependency for both temperature and conductivity. TODO: EC uses OneWire?
+#include <DallasTemperature.h>  // Specific library for DallasTemperature sensors.
+#include <Wire.h>               // Dependency for pressure.
+#include <MS5803_14.h>          // Specific library for the 14bar pressure sensor.
+#include <SPI.h>                // Dependency for the SD card reader.
+#include <SD.h>                 // For the SD card reader.
 
-float tempA; //create a floating variable for TempA
-float tempB; //create a floating variable for TempB
-float tempC; //create a floating variable for TempC
-float EC_float=0; //creates a floating variable for electrical conductivity.
-float TDS_float ; //creates a floating variable for total dissolved solids.
-float SAL__float; //creates a floating variable for salinity.
-float GRAV__float; //creates a flaoting variable for specific gravity.
 
-char EC_data[48]; //creates a 48 byte character array to hold incoming data from the conductivity circuit. 
-char *EC; //character pointer for string parsing 
-char *TDS; //character pointer for string parsing
-char *SAL; //character pointer for string parsing
-char *GRAV; //character pointer for string parsing
+// Declare global variables.
+float tempA_float;
+float tempB_float;
+float tempC_float;
+float PS_float;    // Pressure.
+float EC_float;    // Electrical conductivity. TODO: Unused.
+float TDS_float;   // Total dissolved solids.  TODO: Unused.
+float SAL_float;   // Salinity.                TODO: Unused.
+float GRAV_float;  // Specific gravity.        TODO: Unused.
 
-byte received_from_sensor=0; //determines how many characters have been received.
-byte string_received=0; //determines if it received a string from the EC circuit.
+char EC_data[48];  // A 48 byte character array to hold incoming data from the conductivity circuit. 
+char *EC_str;
+char *TDS_str;     // TODO: Parsed but not logged.
+char *SAL_str;     // TODO: Inconsistently used.
+char *GRAV_str;    // TODO: Parsed but not logged.
 
-#define rx 2 //sets rx to pin 2 for conductivity
-#define tx 3 //sets tx to pin 3 for conductivity
-#define ONE_WIRE_BUS 7 //sets input pin for temperature battery to D7
+byte chars_received = 0;        // How many characters have been received, reading into EC_data.
+byte string_received = 0;       // Whether it received a string from the EC circuit. TODO: Boolean (1/0)? Remove?
 
-SoftwareSerial myserial(rx, tx); //defines the SoftwareSerial port for conductivity
-OneWire oneWire(ONE_WIRE_BUS); //defines the OneWire port for temperature
-DallasTemperature sensors(&oneWire); //defines DallasTemperature input based on OneWire
-MS_5803 sensor = MS_5803(512); //defines pressure sensor
+#define rx 2  // Set rx to pin 2 for conductivity.
+#define tx 3  // Set tx to pin 3 for conductivity.
+#define ONE_WIRE_BUS 7  // Set input pin for temperature battery to D7.
 
-void setup(void) //start it up
-{
-  Serial.begin(9600); //sets baud rate
-  myserial.begin(9600); //sets baud rate for conductivty circuit
+HardwareSerial & monitorSerial = Serial;  // A renamed reference to the pre-existing Serial singleton.
+SoftwareSerial ecSerial(rx, tx);          // SoftwareSerial port for conductivity.
+OneWire oneWire(ONE_WIRE_BUS);            // OneWire port for temperature.
+DallasTemperature dallasSensors(&oneWire);
+MS_5803 pressureSensor = MS_5803(512);    // TODO: Declare this like the others "Type varName(args);" ?
+
+
+// Starts it up.
+//
+void setup(void) {
+
+  // Set serial baud rates.
+  monitorSerial.begin(9600);
+  ecSerial.begin(9600);
   
-  pinMode(10, OUTPUT); //sets data output pin for SD card reader
+  pinMode(10, OUTPUT);       // Set data output pin for the SD card reader.
   
-  while (!Serial) {} //initializes SD card reader
+  while (!monitorSerial) {}  // Wait until the serial monitor is ready.
 
-  if (!SD.begin(4)) { //test to see if SD card reader is functioning
-    Serial.println("Card failed, or not present"); //outputs to serial monitor if SD card doesn't work
+  // Initialize the SD card reader.
+  if (!SD.begin(4)) {
+    monitorSerial.println("Card failed, or not present");
     return; 
-    }
-  
-  delay(500); //waits half a second before continuing
-  
-  sensors.begin(); //intializes the temperature sensors
-  delay(250); //waits a quarter second to continue
-  
-  sensor.initializeMS_5803();  //intialize pressure sensor
-  delay(250); //waits a quarter second to continue
-  
-}
-
-void loop(void) //let's get going!
-{ 
-  if(myserial.available() > 0){ //checks if EC circuit is sending data
-    received_from_sensor=myserial.readBytesUntil(13,EC_data,48); //reads data sent by EC circuit and counts how many characters have been sent
-    EC_data[received_from_sensor]=0; //adds a zero to the array after the last character is recieved 
-    }
-    
-  if((EC_data[0] >= 48) && (EC_data[0] <=57)){ //parses data is EC_data is a digit, not a letter
-    pars_data(); //parses EC data
-    }
-     
-  delay(10); //waits 10 milliseconds
-  
-  sensors.requestTemperatures();  //pings temperature sensors
-  sensor.readSensor(); //reads pressure sensor
-  
-  tempA = sensors.getTempCByIndex(0); //reads first temperature sensor
-  tempB = sensors.getTempCByIndex(1); //reads second temperature sensor
-  tempC = sensors.getTempCByIndex(2); //reads thrid temperature sensor
-  
-  File dataFile = SD.open("datalog.txt", FILE_WRITE); //opens data file
-
-  if (dataFile) { //logs data on SD card
-    dataFile.print(tempA); //C
-    dataFile.print("  ");
-    dataFile.print(tempB);  
-    dataFile.print("  "); 
-    dataFile.print(tempC); 
-    dataFile.print("  "); 
-    dataFile.print(sensor.pressure()); //in milliBar
-    dataFile.print("  "); 
-    dataFile.println(EC); //electrical conductivity, microsiemens, uncorrected
-    dataFile.close(); 
-    } 
-
-/* comment in for serial monitor diagnostics
-  else { //Data
-    Serial.println("error opening datalog.txt"); //Data
-    
-    } //Data
-*/
-
-
-  Serial.print(tempA); //Temperature
-  Serial.print("  "); //Tab
-  Serial.print(tempB);  //Temperature
-  Serial.print("  "); //Tab
-  Serial.print(tempC); //Temperature
-  Serial.print("  "); //Tab
-  Serial.print(sensor.pressure()); //Pressure
-  Serial.print("  "); //Tab
-  Serial.print(SAL); //Salinity
-  Serial.print("  "); //Tab
-  Serial.println(EC); //Electrical conductivity
-
- 
-  delay(50); //waits 50 milliseconds
-}
-
-void pars_data(){ //function to parse data from EC Circuit
-
-  EC=strtok(EC_data, ",");               
-  TDS=strtok(NULL, ",");                
-  SAL=strtok(NULL, ",");                
-  GRAV=strtok(NULL, ",");                
-
   }
+  delay(500);             // Wait half a second.
+  
+  dallasSensors.begin();  // Initialize the temperature sensors.
+  delay(250);             // Wait a quarter second.
+  
+  pressureSensor.initializeMS_5803();
+  delay(250);             // Wait a quarter second.
+
+}
+
+
+// Let's get going!
+//
+void loop(void) {
+
+  // Read any pending data from the EC circuit.
+  if (ecSerial.available() > 0) {
+    chars_received = ecSerial.readBytesUntil(13, EC_data, 48);
+
+    // Null terminate the data by setting the value after the final character to 0.
+    EC_data[chars_received] = 0;
+  }
+
+  // TODO: Add a comment here depicting an example string from the EC circuit.
+
+  // Parse data, if EC_data begins with a digit, not a letter (testing ASCII values).
+  if ((EC_data[0] >= 48) && (EC_data[0] <=57)) {
+    parse_data();
+  }
+
+  delay(10);  // Wait 10 milliseconds.
+
+  // Ping sensors.
+  dallasSensors.requestTemperatures();
+  pressureSensor.readSensor();
+
+  // Store measurements.
+  tempA_float = dallasSensors.getTempCByIndex(0);
+  tempB_float = dallasSensors.getTempCByIndex(1);
+  tempC_float = dallasSensors.getTempCByIndex(2);
+  PS_float = pressureSensor.pressure();
+
+  // Log data as a delimited list.
+  // TODO: Spaces ("  ") vs Tab ("\t") ?
+  //
+  // TempA (celsius)
+  // TempB (celsius)
+  // TempC (celsius)
+  // Pressure (milliBars)
+  // Electrical conductivity (microsiemens, uncorrected)
+
+  // Log to the SD card...
+  File dataFile = SD.open("datalog.txt", FILE_WRITE);
+  if (dataFile) {
+    dataFile.print(tempA_float);
+    dataFile.print("  ");
+    dataFile.print(tempB_float);
+    dataFile.print("  ");
+    dataFile.print(tempC_float);
+    dataFile.print("  ");
+    dataFile.print(PS_float);
+    dataFile.print("  ");      // TODO: Insert SAL here?
+    dataFile.print(EC_str);
+    dataFile.println("");
+    dataFile.close();
+  }
+  else {
+    // TODO: Serial monitor diagnostics.
+
+    //monitorSerial.println("Error opening datalog.txt");
+  }
+
+  // Log to the serial monitor...
+  monitorSerial.print(tempA_float);
+  monitorSerial.print("  ");
+  monitorSerial.print(tempB_float);
+  monitorSerial.print("  ");
+  monitorSerial.print(tempC_float);
+  monitorSerial.print("  ");
+  monitorSerial.print(PS_float);
+  monitorSerial.print("  ");
+  monitorSerial.print(SAL_str);  // TODO: Remove SAL here?
+  monitorSerial.print("  ");
+  monitorSerial.print(EC_str);
+  monitorSerial.println("");
+
+  delay(50);  // Wait 50 milliseconds.
+}
+
+
+// Parses data from the EC Circuit.
+//
+void parse_data() {
+
+  EC_str = strtok(EC_data, ",");               
+  TDS_str = strtok(NULL, ",");                
+  SAL_str = strtok(NULL, ",");                
+  GRAV_str = strtok(NULL, ",");                
+
+}
