@@ -42,7 +42,11 @@ https://www.arduino.cc/en/Reference/Wire
 Pinouts:
 
 A4 - Pressure Sensor SDA
+
 A5 - Pressure Sensor SCLK
+
 D7 - Temperature Data
+
 D2 - Conductivity RX
+
 D3 - Conductivity TX
