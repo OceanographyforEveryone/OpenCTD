@@ -1,10 +1,10 @@
-#include <SoftwareSerial.h>     // For use by EC circuit.
-#include <OneWire.h>            // For both temperature and conductivity.
-#include <DallasTemperature.h>  // DallasTemperature library to query individual thermistors for temperature.
-#include <Wire.h>               // For pressure.
+#include <SoftwareSerial.h>     // For the EC circuit.
+#include <OneWire.h>            // Dependency for both temperature and conductivity. TODO: EC uses OneWire?
+#include <DallasTemperature.h>  // Specific library for DallasTemperature sensors.
+#include <Wire.h>               // Dependency for pressure.
 #include <MS5803_14.h>          // Specific library for the 14bar pressure sensor.
-#include <SPI.h>                // For the SD card reader.
-#include <SD.h>                 // Runs the SD card reader
+#include <SPI.h>                // Dependency for the SD card reader.
+#include <SD.h>                 // For the SD card reader.
 
 
 // Declare global variables.
@@ -45,22 +45,22 @@ void setup(void) {
   monitorSerial.begin(9600);
   ecSerial.begin(9600);
   
-  pinMode(10, OUTPUT);  // Set data output pin for the SD card reader.
+  pinMode(10, OUTPUT);       // Set data output pin for the SD card reader.
   
-  while (!monitorSerial) {}    // Initialize the SD card reader.
+  while (!monitorSerial) {}  // Wait until the serial monitor is ready.
 
-  // Test to see if the SD card reader is functioning.
+  // Initialize the SD card reader.
   if (!SD.begin(4)) {
     monitorSerial.println("Card failed, or not present");
     return; 
   }
-  delay(500);  // Wait half a second before continuing.
+  delay(500);             // Wait half a second.
   
   dallasSensors.begin();  // Initialize the temperature sensors.
-  delay(250);             // Wait a quarter second to continue.
+  delay(250);             // Wait a quarter second.
   
   pressureSensor.initializeMS_5803();
-  delay(250);             // Wait a quarter second to continue.
+  delay(250);             // Wait a quarter second.
 
 }
 
