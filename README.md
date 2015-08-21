@@ -15,12 +15,12 @@ The OpenCTD is a low-cost, open-source CTD suitable for both educators and scien
 
 * An Arduino microcontroller
 * MS5803-14BA pressure sensor
-* 3-gang dallas temperature probe
+* Dallas DS18B20 3-gang temperature probe
 * Atlas conductivity circuit with homebrewed probe
 
 ### Required Arduino Libraries
 
-I2C library for the MS5803_14BA 14bar pressure sensor<br />
+I2C library for the MS5803_14BA pressure sensor<br />
 https://github.com/millerlp/MS5803_14
 
 Dallas Temperature Control for the DS18B20 thermometer<br />
