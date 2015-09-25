@@ -11,7 +11,7 @@ Conductivity, temperature, and depth (CTD). With these three measurements, marin
 
 The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Our goal is to create a device that is accurate enough to be used for scientific research and can be constructed for less than $200. Source codes, circuit diagrams, and building plans will be freely available. The final instrument will be effective to 200 meters depth.   Why 200 meters? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
 
-### Hardware
+### Bill of Materials
 
 * An Arduino microcontroller
 * MS5803-14BA pressure sensor
@@ -58,8 +58,12 @@ D7 - Temperature Data
 
 D2 - Conductivity RX
 
-D3 - Conductivity TX
+D3 - Conductivity 
 
-### Acknowledgments
+###Build Instructions
+
+###Resources
+
+###Acknowledgments
 
 This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches.
