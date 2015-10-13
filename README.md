@@ -13,39 +13,26 @@ The OpenCTD is a low-cost, open-source CTD suitable for both educators and scien
 
 ### Bill of Materials
 
-* An Arduino microcontroller
-* MS5803-14BA pressure sensor
-* Dallas DS18B20 3-gang temperature probe
-* Atlas conductivity circuit with homebrewed probe
+Almost all of the necessary parts can be found through Amazon. Visit our Parts Depot for the full list.
 
 ### Required Arduino Libraries
 
-I2C library for the MS5803_14BA pressure sensor<br />
-https://github.com/millerlp/MS5803_14
++[I2C library for the MS5803_14BA pressure sensor.](https://github.com/millerlp/MS5803_14)
 
-Dallas Temperature Control for the DS18B20 thermometer<br />
-https://milesburton.com/Dallas_Temperature_Control_Library
++[Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
 
-OneWire **<br />
-http://www.pjrc.com/teensy/td_libs_OneWire.html<br />
-http://playground.arduino.cc/Learning/OneWire
++[OneWire**.](http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
 
-SD *<br />
-https://www.arduino.cc/en/Reference/SD
++[SD*.](https://www.arduino.cc/en/Reference/SD) 
 
-SoftwareSerial *<br />
-http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html<br />
-https://www.arduino.cc/en/Reference/SoftwareSerial
++[SoftwareSerial*.](http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.](https://www.arduino.cc/en/Reference/SoftwareSerial)
 
-SPI **<br />
-https://www.pjrc.com/teensy/td_libs_SPI.html<br />
-https://www.arduino.cc/en/Reference/SPI
++[SPI**.](https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
 
-Wire *<br />
-http://www.pjrc.com/teensy/td_libs_Wire.html<br />
-https://www.arduino.cc/en/Reference/Wire
++[Wire*.](http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
-\* Included with Arduino.<br />
+\* Included with Arduino.
+
 \** Included with Arduino. A newer version may be available.
 
 ### Pinouts
