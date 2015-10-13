@@ -19,6 +19,8 @@ Initial field trials have been completed and we are analyzing the data from the 
 
 Almost all of the necessary parts can be found through Amazon. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for the full list.
 
+A 3" PVC pipe can be found at most home supply stores. 
+
 ### Required Arduino Libraries
 
 + [I2C library for the MS5803_14BA pressure sensor.](https://github.com/millerlp/MS5803_14)
