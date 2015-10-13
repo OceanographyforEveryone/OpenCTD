@@ -13,7 +13,7 @@ The OpenCTD is a low-cost, open-source CTD suitable for both educators and scien
 
 ### Bill of Materials
 
-Almost all of the necessary parts can be found through Amazon. Visit our Parts Depot for the full list.
+Almost all of the necessary parts can be found through Amazon. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for the full list.
 
 ### Required Arduino Libraries
 
@@ -35,22 +35,28 @@ Almost all of the necessary parts can be found through Amazon. Visit our Parts D
 
 \** Included with Arduino. A newer version may be available.
 
-### Pinouts
+### Arduino Pinouts
 
-A4 - Pressure Sensor SDA
+- A4 - Pressure Sensor SDA
 
-A5 - Pressure Sensor SCLK
+- A5 - Pressure Sensor SCLK
 
-D7 - Temperature Data
+- D7 - Temperature Data
 
-D2 - Conductivity RX
+- D2 - Conductivity RX
 
-D3 - Conductivity 
+- D3 - Conductivity 
 
 ###Build Instructions
 
+*detailed build instructions are pending*
+
 ###Resources
+
+[Oceanography for Everyone](http://oceanographyforeveryone.com/)
+
+[Original Project Description](https://www.rockethub.com/projects/26388-oceanography-for-everyone-the-openctd)
 
 ###Acknowledgments
 
-This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches.
+This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
