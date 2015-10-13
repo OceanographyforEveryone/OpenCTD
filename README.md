@@ -17,19 +17,19 @@ Almost all of the necessary parts can be found through Amazon. Visit our Parts D
 
 ### Required Arduino Libraries
 
-+[I2C library for the MS5803_14BA pressure sensor.](https://github.com/millerlp/MS5803_14)
++ [I2C library for the MS5803_14BA pressure sensor.](https://github.com/millerlp/MS5803_14)
 
-+[Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
++ [Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
 
-+[OneWire**.](http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
++ [OneWire**.](http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
 
-+[SD*.](https://www.arduino.cc/en/Reference/SD) 
++ [SD*.](https://www.arduino.cc/en/Reference/SD) 
 
-+[SoftwareSerial*.](http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.](https://www.arduino.cc/en/Reference/SoftwareSerial)
++ [SoftwareSerial*.](http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.](https://www.arduino.cc/en/Reference/SoftwareSerial)
 
-+[SPI**.](https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
++ [SPI**.](https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
 
-+[Wire*.](http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
++ [Wire*.](http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
 \* Included with Arduino.
 
