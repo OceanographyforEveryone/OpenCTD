@@ -17,6 +17,10 @@ The only downside is that, because Lake Superior is the second freshest large la
 
 I blogged the whole adventure on OpenExplorer. [Go check it out!](https://openexplorer.com/expedition/foreverex)
 
+###The Validation Instrument
+
+*Blue Heron* carries a SeaBird Model 911 plus CTD. 
+
 ###Lessons Learned
 
 * The OpenCTD logs too much. By which I mean you set it up in the dry lab, attach it the the winch, and then wait for the deployment. All the while, it's looging ambient, resulting in thousands of trash data points to clean up. A simple magnetic switch would solve that problem nicely. 
