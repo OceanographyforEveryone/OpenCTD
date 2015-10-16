@@ -55,9 +55,35 @@ The MS5803-14BA pressure sensor previously needed to be special ordered from a p
 
 - D3 - Conductivity 
 
-###Build Instructions
+##Build Instructions
 
-*detailed build instructions are pending.*
+Please be advised: We are continously updating and modifying the OpenCTD prototypes and, as such, no two OpenCTDs are the same. As we approach a more standardized design, these instructions will become more detailed.
+
+###Prepare the housing.
+
+Print the OpenCTD baseplate which will serve as a form to position your sensors. Cut a 12 inch long piece of 3 inch PVC. Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil of other non-compressable liquids. Cut small holes or gaps in one end of the tube to allow water flow, this will be the bottom of the OpenCTD where the sensors go. 
+
+###Prepare the electronics.
+
+Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. 
+
+###Potting
+
+*Warning, after this step, there's no going back!*
+
+Align the baseplate such that it is lightly recessed into the tube (when standing upright, non of the sensors should touch the ground). Hot glue it into place along the edges so the expoy won't leak out during potting. Lay the pressure sensor into the middle hole. Lightly cover the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor and apply more 2-ton epoxy above. This will provide added protection for this circuit. Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. Place the conductivity probe in the only hole big enough for it. 
+
+Once you are satisfied with everything's position, it's time for Hysol-90. Use an applicator to mix the expoxy as you pour it into the tube. I used an entire cartridge and had almost 2 cm of epoxy on the bottom. Let it cure overnight. Check periodically to make sure that nothing is leaking out of the bottom. 
+
+###Your first cast. 
+
+Power up the OpenCTD with your battery pack of choice (you'll want the full 12v). Confirm that it is writing data to the SD card. 
+
+Now for the fun part. 
+
+While everything is powered on, fill it with mineral oil. Mineral oil is non conductive and won't interfere with the electronics. Fill it top a few centimeters below the top. There will be some spillover if you're trying to avoid bubbles in the housing. Gentle lower the test cap down and screw it into place. You CTD is now sealed and logging. Wipe down any spilled oil. I find that these [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small oil spills. It's a good idea to have them with you as you want to minimize any oil release into the water. 
+
+Your OpenCTD is now ready to take the plunge!
 
 ##Calibration
 
