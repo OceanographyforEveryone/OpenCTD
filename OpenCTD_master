@@ -20,7 +20,7 @@ char *SAL_str;     // Used for serial monitor because I think in SAL, but data s
 char *GRAV_str;    // TODO: Parsed but not logged.
 
 byte chars_received = 0;        // How many characters have been received, reading into EC_data.
-byte EC_data_valid = 0;         // Flag to track whether EC_data has been recently parsed into useful values.
+byte string_received = 0;       // Whether it received a string from the EC circuit. TODO: Boolean (1/0)? Remove?
 
 #define rx 2  // Set rx to pin 2 for conductivity.
 #define tx 3  // Set tx to pin 3 for conductivity.
@@ -59,24 +59,19 @@ void setup(void) {
 
 void loop(void) {
 
-  EC_data_valid = 0;  // Reset the data freshness flag.
-
   // Read any pending data from the EC circuit.
   if (ecSerial.available() > 0) {
     chars_received = ecSerial.readBytesUntil(13, EC_data, 48);
 
     // Null terminate the data by setting the value after the final character to 0.
     EC_data[chars_received] = 0;
+  }
 
-    // TODO: Add a comment here depicting an example string from the EC circuit.
+  // TODO: Add a comment here depicting an example string from the EC circuit.
 
-    // Parse data, if EC_data begins with a digit, not a letter (testing ASCII values).
-    if ((EC_data[0] >= 48) && (EC_data[0] <=57)) {
-      parse_data();
-
-      EC_data_valid = 1;  // The latest measurements have been successfully parsed.
-    }
-
+  // Parse data, if EC_data begins with a digit, not a letter (testing ASCII values).
+  if ((EC_data[0] >= 48) && (EC_data[0] <=57)) {
+    parse_data();
   }
 
   delay(10);  // Wait 10 milliseconds.
@@ -111,7 +106,7 @@ void loop(void) {
     dataFile.print("  ");
     dataFile.print(PS_float);
     dataFile.print("  ");      
-    dataFile.print(EC_data_valid != 1 ? "---" : EC_str);
+    dataFile.print(EC_str);
     dataFile.println("");
     dataFile.close();
   }
@@ -128,9 +123,9 @@ void loop(void) {
   monitorSerial.print("  ");
   monitorSerial.print(PS_float);
   monitorSerial.print("  ");
-  monitorSerial.print(EC_data_valid != 1 ? "---" : SAL_str); 
+  monitorSerial.print(SAL_str); 
   monitorSerial.print("  ");
-  monitorSerial.print(EC_data_valid != 1 ? "---" : EC_str);
+  monitorSerial.print(EC_str);
   monitorSerial.println("");
 
   delay(50);  // Wait 50 milliseconds.
@@ -140,9 +135,9 @@ void loop(void) {
 
 void parse_data() {
 
-  EC_str = strtok(EC_data, ",");
-  TDS_str = strtok(NULL, ",");
-  SAL_str = strtok(NULL, ",");
-  GRAV_str = strtok(NULL, ",");
+  EC_str = strtok(EC_data, ",");               
+  TDS_str = strtok(NULL, ",");                
+  SAL_str = strtok(NULL, ",");                
+  GRAV_str = strtok(NULL, ",");                
 
 }
