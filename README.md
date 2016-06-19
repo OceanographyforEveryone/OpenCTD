@@ -43,17 +43,15 @@ The MS5803-14BA pressure sensor previously needed to be special ordered from a p
 
 \** Included with Arduino. A newer version may be available.
 
-### Arduino Pinouts
+### Arduino qDuino Pinouts
 
-- A4 - Pressure Sensor SDA
+- SD Card Reader: CS (D4), SCK (D15), MOSI (D16), MISO (D17)
 
-- A5 - Pressure Sensor SCLK
+- Pressure Sensor: SDA (D2), SCL (D3)
 
-- D7 - Temperature Data
+- Temperature Sensors: Data (D6)
 
-- D2 - Conductivity RX
-
-- D3 - Conductivity 
+- Conductivity Circuit: TX (D8), RX (D9)
 
 ##Build Instructions
 
