@@ -7,7 +7,7 @@ Conductivity, temperature, and depth (CTD). With these three measurements, marin
 
 The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using easy-to-source parts powered by an Arduino-based microcontroller. Our goal is to create a device that is accurate enough to be used for scientific research and can be constructed for less than $300. Source codes, circuit diagrams, and building plans are open souce. Our goal is for the final instrument to be effective to 200 meters depth. For many coastal regions, 200 meters covers the majority of the ocean that is accessible by small boat. The OpenCTD is deisnged for people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt these plans to operate in deeper water.
 
-###Current Status
+###Project Status
 
 Initial field trials have been completed and we are analyzing the data from the first several casts to confirm accuracy. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
 
