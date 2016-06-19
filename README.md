@@ -17,7 +17,7 @@ From June 18 to 21, Andrew Thaler and Kersey Sturdivant conducted a marathon pro
 
 Almost all of the necessary parts can be found through Amazon or Sparkfun. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts.
 
-Additional components, like a pre-fabricated pressure sensor module, LiPo batteries, SMD boards, and the qDuino Mini can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but  [SparkFun](https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
+Additional components, like a pre-fabricated [pressure sensor module](https://www.sparkfun.com/products/12909), [LiPo batteries](https://www.sparkfun.com/products/8483), [SMD boards](https://www.sparkfun.com/products/13655), and the [qDuino Mini](https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but  [SparkFun](https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
 
 PVC pipe can be found at most home supply stores. 
 
