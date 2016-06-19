@@ -75,6 +75,18 @@ PVC pipe can be found at most home supply stores.
 
 The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. 
 
+![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
+
+*SD card reader with bent headers.*
+
+![SD card reader with soldered connections](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD2.jpg?raw=true "SD card reader with soldered connections")
+
+*SD card reader with soldered connections.*
+
+![SD card reader with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD3.jpg?raw=true "SD card reader with heat shrink")
+
+*SD card reader with heat shrink*
+
 To prepare the microSD card, wipe the card and create a single, empty text file called **datalog.txt**.
 
 #### 5.2 Pressure Sensor
