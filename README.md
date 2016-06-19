@@ -37,8 +37,11 @@ PVC pipe can be found at most home supply stores.
 
 + [Wire.](http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
+###Other Useful Libraries and programs
 
-### Arduino qDuino Pinouts
++ [Qduino.h and Qduino fuelGauge](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allow you to measure the charge on you battery. 
+
+### Arduino Qduino Pinouts
 
 - SD Card Reader: CS (D4), SCK (D15), MOSI (D16), MISO (D17)
 
