@@ -7,6 +7,12 @@ Conductivity, temperature, and depth (CTD).  These three measurements allow scie
 
 The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Source codes, circuit diagrams, and building plans are freely available. The device is accurate enough to be used for scientific research, can be constructed for less than $300, and is effective to 200 meters depth.  Why 200 meters depths? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the max depths of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
 
+#### 1.1 Necessary Skills
+
+Building an OpenCTD does require some basic knowledge in soldering and coding. However, for those with backgrounds in neither, honing those skills are relatively easy and not at all time intensive. Developing basic soldering skills necessary to construct an OpenCTD should take only an hour. We have found this descriptive, illustrative comic at [Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) should provide you with the soldering skills you need in an easily digestible manner. 
+
+The next important skill is understanding a bit of coding so you can build the Arduino libraries. You DO NOT need to be a master coder, but just have a perfunctory understanding of how the Arduino libraries work so you can upload/apply them properly. Learning Arduino coding should take you another hour, and is succulently explained at:
+
 ### 2.0 Project Status
 
 After success during our initial field trials in Lake Superior (see *Field Trials* section), and progress with conductivity sensor development, we are finalizing the design of OpenCTD during the Hack the Ocean conference in June 2016. During this build effort we will produce 3 sondes (1 to send to our early crowd fund donor, and 2 for field use), developing a detailed instruction guide, and creating video instructions to go along with the guide.
