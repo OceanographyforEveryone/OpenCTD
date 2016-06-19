@@ -19,6 +19,8 @@ Almost all of the necessary parts can be found through Amazon or Sparkfun. Visit
 
 Additional components, like a pre-fabricated [pressure sensor module](https://www.sparkfun.com/products/12909), [LiPo batteries](https://www.sparkfun.com/products/8483), [SMD boards](https://www.sparkfun.com/products/13655), and the [qDuino Mini](https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but  [SparkFun](https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
 
+Servoflo sells the raw, calibrated pressure sensor in both [14Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. 
+
 PVC pipe can be found at most home supply stores. 
 
 ### Required Arduino Libraries
