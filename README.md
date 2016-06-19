@@ -59,7 +59,7 @@ We are continously updating and improving OpenCTD prototypes. These instuctions 
 
 **A note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
-**We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing.**
+**_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
 ####SD Card Reader
 
