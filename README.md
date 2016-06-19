@@ -55,9 +55,17 @@ PVC pipe can be found at most home supply stores.
 
 ##Build Instructions
 
-Please be advised: We are continously updating and modifying the OpenCTD prototypes and, as such, no two OpenCTDs are the same. As we approach a more standardized design, these instructions will become more detailed.
+We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. 
+
+**A note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
+
+**We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing.**
 
 ####SD Card Reader
+
+The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. 
+
+To prepare the microSD card, wipe the card and create a single, empty text file called **datalog.txt**.
 
 ####Pressure Sensor
 
