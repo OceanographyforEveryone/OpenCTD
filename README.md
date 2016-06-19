@@ -1,53 +1,53 @@
 OpenCTD
 =======
 
-### Overview
+### 1.0 Overview
 
 Conductivity, temperature, and depth (CTD).  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and many other physical characteristics. To reveal these patterns in a tangible format, oceanographers employ a CTD probe. A CTD sonde is found on almost every major research vessel, and it is rare that a scientific expedition--whether it be coastal work in shallow estuaries or journeys to the deepest ocean trenches--begins without casting one.
 
 The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Source codes, circuit diagrams, and building plans are freely available. The device is accurate enough to be used for scientific research, can be constructed for less than $300, and is effective to 200 meters depth.  Why 200 meters depths? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the max depths of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
 
-###Project Status
+### 2.0 Project Status
 
 After success during our initial field trials in Lake Superior (see *Field Trials* section), and progress with conductivity sensor development, we are finalizing the design of OpenCTD during the Hack the Ocean conference in June 2016. During this build effort we will produce 3 sondes (1 to send to our early crowd fund donor, and 2 for field use), developing a detailed instruction guide, and creating video instructions to go along with the guide.
 
 From June 18 to 21, Andrew Thaler and Kersey Sturdivant conducted a marathon prototyping session to produce additional OpenCTDs and streamline the software and hardware. Updates from this event will be available soon. 
 
-###Field Trials
+#### 2.1 Field Trials
 
 Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repo.
 
-### Bill of Materials
+### 3.0 Bill of Materials
 
 Almost all of the necessary parts can be found through Amazon or Sparkfun. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts.
 
-Additional components, like a pre-fabricated [pressure sensor module](https://www.sparkfun.com/products/12909), [LiPo batteries](https://www.sparkfun.com/products/8483), [SMD boards](https://www.sparkfun.com/products/13655), and the [qDuino Mini](https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but  [SparkFun](https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
+Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
 
-Servoflo sells the raw, calibrated pressure sensor in both [14Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. 
+Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2
 
 PVC pipe can be found at most home supply stores. 
 
-### Required Arduino Libraries
+#### 3.1 Required Arduino Libraries
 
 + [SparkFun_MS5803_I2C for the pressure sensor.](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0)
 
 + [Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
 
-+ [OneWire.](http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
++ [OneWire.] (http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
 
-+ [SD.](https://www.arduino.cc/en/Reference/SD) 
++ [SD.] (https://www.arduino.cc/en/Reference/SD) 
 
-+ [SoftwareSerial*.](http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.](https://www.arduino.cc/en/Reference/SoftwareSerial)
++ [SoftwareSerial*.] (http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.] (https://www.arduino.cc/en/Reference/SoftwareSerial)
 
-+ [SPI.](https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
++ [SPI.] (https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
 
-+ [Wire.](http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
++ [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
-###Other Useful Libraries and programs
+#### 3.2 Other Useful Libraries and programs
 
 + [Qduino.h and Qduino fuelGauge](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allow you to measure the charge on you battery. 
 
-### Arduino Qduino Pinouts
+### 4.0 Arduino Qduino Pinouts
 
 - SD Card Reader: CS (D4), SCK (D15), MOSI (D16), MISO (D17)
 
@@ -57,37 +57,37 @@ PVC pipe can be found at most home supply stores.
 
 - Conductivity Circuit: TX (D8), RX (D9)
 
-##Build Instructions
+### 5.0 Build Instructions
 
-We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. 
+*We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change.* 
 
-**A note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
+**IMPORTANT note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
 **_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
-####SD Card Reader
+#### 5.1 SD Card Reader
 
 The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. 
 
 To prepare the microSD card, wipe the card and create a single, empty text file called **datalog.txt**.
 
-####Pressure Sensor
+#### 5.2 Pressure Sensor
 
-####Temperature Sensors
+#### 5.3 Temperature Sensors
 
-####Conductivity Sensor
+#### 5.4 Conductivity Sensor
 
 
 
-###Prepare the housing.
+#### 5.6 Prepare the housing.
 
 Print the OpenCTD baseplate which will serve as a form to position your sensors. Cut a 12 inch long piece of 3 inch PVC. Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil of other non-compressable liquids. Cut small holes or gaps in one end of the tube to allow water flow, this will be the bottom of the OpenCTD where the sensors go. 
 
-###Prepare the electronics.
+####  5.7 Prepare the electronics.
 
 Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. 
 
-###Potting
+#### 5.8 Potting
 
 *Warning, after this step, there's no going back!*
 
@@ -95,7 +95,7 @@ Align the baseplate such that it is lightly recessed into the tube (when standin
 
 Once you are satisfied with everything's position, it's time for Hysol-90. Use an applicator to mix the expoxy as you pour it into the tube. I used an entire cartridge and had almost 2 cm of epoxy on the bottom. Let it cure overnight. Check periodically to make sure that nothing is leaking out of the bottom. 
 
-###Your first cast. 
+### 6.0 Your first cast. 
 
 Power up the OpenCTD with your battery pack of choice (you'll want the full 12v). Confirm that it is writing data to the SD card. 
 
@@ -105,11 +105,11 @@ While everything is powered on, fill it with mineral oil. Mineral oil is non con
 
 Your OpenCTD is now ready to take the plunge!
 
-##Calibration
+### 7.0 Calibration and Data Conversions
 
 Proper calibration of the OpenCTD requires access to already calibrated validation instruments. These can be commercial CTD, handheld systems, or bench-mounted laboratory systems. As the community grows, properly calibrated OpenCTDs can be used to benchmark newly-built instruments. 
 
-###Depth
+#### 7.1 Depth
 
 In order to minimize the amount of processing that happens onboard the OpenCTD, pressure is measured in millibars (the default output for the current pressure sensor). To convert pressure to depth use the following equation:
 
@@ -119,26 +119,26 @@ Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P
 
 No additional calibration shoud be need for the MS5803-14BA pressure sensor. 
 
-###Temperature
+#### 7.2 Temperature
 
 Calibrating the temperature sensors requires access to an already calibrated instrument. Allow both the OpenCTD and the validation instrument to equilibrate in water for 15 minutes. Take the average of the three OpenCTD temperature outputs and note the difference between that average and the validation instrument. Repeat for two additional temperatures of at least 5 degrees difference. There should be a linear relationship between the OpenCTD temperature sensors and the validation instrument. Take the average of the difference between the three temperature readings and use as a calibration coefficient for your OpenCTD. 
 
 This should remain steady for many casts, but it is always good practice to check you temperature calibration whenever you have access to a validation instrument. 
 
-###Conductivity
+#### 7.3 Conductivity
 
 Atlas Instructions
 
-###Resources
+### 8.0 Resources
 
 [Oceanography for Everyone](http://oceanographyforeveryone.com/)
 
 [Original Project Description](https://www.rockethub.com/projects/26388-oceanography-for-everyone-the-openctd)
 
-###Acknowledgments
+### 9.0 Acknowledgments
 
 This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
 
-###Code of Conduct
+### 10.0 Code of Conduct
 
 Please review our [Contributor Code of Conduct](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/CODE_OF_CONDUCT.md) prior to your first contribution. 
