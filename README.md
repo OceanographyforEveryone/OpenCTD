@@ -3,15 +3,19 @@ OpenCTD
 
 ### Overview
 
-Conductivity, temperature, and depth (CTD). With these three measurements, marine scientists can unlock ocean patterns hidden beneath the waves. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and many other physical characteristics. To reveal these patterns, oceanographers use a tool called the CTD. 
+Conductivity, temperature, and depth (CTD).  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and many other physical characteristics. To reveal these patterns in a tangible format, oceanographers employ a CTD probe. A CTD sonde is found on almost every major research vessel, and it is rare that a scientific expedition--whether it be coastal work in shallow estuaries or journeys to the deepest ocean trenches--begins without casting one.
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using easy-to-source parts powered by an Arduino-based microcontroller. Our goal is to create a device that is accurate enough to be used for scientific research and can be constructed for less than $300. Source codes, circuit diagrams, and building plans are open souce. Our goal is for the final instrument to be effective to 200 meters depth. For many coastal regions, 200 meters covers the majority of the ocean that is accessible by small boat. The OpenCTD is deisnged for people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt these plans to operate in deeper water.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Source codes, circuit diagrams, and building plans are freely available. The device is accurate enough to be used for scientific research, can be constructed for less than $300, and is effective to 200 meters depth.  Why 200 meters depths? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the max depths of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
 
 ###Project Status
 
-Initial field trials have been completed and we are analyzing the data from the first several casts to confirm accuracy. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
+After success during our initial field trials in Lake Superior (see *Field Trials* section), and progress with conductivity sensor development, we are finalizing the design of OpenCTD during the Hack the Ocean conference in June 2016. During this build effort we will produce 3 sondes (1 to send to our early crowd fund donor, and 2 for field use), developing a detailed instruction guide, and creating video instructions to go along with the guide.
 
 From June 18 to 21, Andrew Thaler and Kersey Sturdivant conducted a marathon prototyping session to produce additional OpenCTDs and streamline the software and hardware. Updates from this event will be available soon. 
+
+###Field Trials
+
+Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repo.
 
 ### Bill of Materials
 
