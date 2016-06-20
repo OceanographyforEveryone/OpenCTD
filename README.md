@@ -141,7 +141,9 @@ The temeprature probes use a DS18B20 digital thermistor in a stainless steel hou
 
 *Temperature probes treated with additional heat shrink to keep everything tidy.*
 
-#### 5.4 Conductivity Sensor
+Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino) with a 4.7 kOhm pull-up resisitor. This should be done when you solder everything directly to the Arduino. 
+
+####5.4 Conductivity Sensor
 
 
 
