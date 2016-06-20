@@ -11,7 +11,7 @@ The OpenCTD is a low-cost, open-source CTD suitable for both educators and scien
 
 Why 200 meters? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
-*__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other {Oceanography for Everyone}(http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
+*__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone}(http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
 
 #### 1.1 Necessary Skills
 
