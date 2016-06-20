@@ -45,34 +45,33 @@ PVC pipe can be found at most home supply stores.
 - wire stripper
 - soldering iron
 - solder tip cleaner
-- helping hands soldering station (critical soldering component)
-- expoy gun
-- needle nose pliers
-- volt meter
+- helping hands soldering station
+- epoxy gun
+- needle-nosed pliers
+- multimeter
 - utility knife
 - hot glue gun
 - heat gun
-- 
 - saw
 - drill
 - 1" bit (for holes in PVC)
 - laptop
 - micro-USB cable
-- coffe maker (because... coffe, duh) 
+- coffe maker (because coffee)
 
 #### 3.2 Consumables
 
 - sand paper
-- Hysol 90 epoxy
-- ventury tubes for epoxy
-- solid core wiring
+- Hysol E90-FL epoxy
+- venturi mixing nozzles for epoxy
+- solid core wire (6 colors)
 - solder
 - desoldering braid
-- heat shrink tubing
+- heat-shrink tubing
 - electical tape
 - hot glue
 - mineral oil
-- conductivity calibration constant
+- calibration standard for conductivity
 - coffee
 
 #### 3.3 Required Arduino Libraries
@@ -91,11 +90,10 @@ PVC pipe can be found at most home supply stores.
 
 + [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
-+ **There is now an EC library**
-
-#### 3.4 Other Useful Libraries and programs
+#### 3.4 Other Useful Software
 
 + [Qduino.h and Qduino fuelGauge](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allow you to measure the charge on you battery. 
++ [simple_serial_for_EC_calibration](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/simple_serial_for_EC_calibration) is a basic serial monitor program to help you calibrate the conductivity probe. 
 
 ### 4.0 Arduino Qduino Pinouts
 
