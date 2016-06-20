@@ -217,7 +217,7 @@ Mount the SD Card reader on your Arduino board. Connect the temperature probes i
  
  Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors protrude, hot glue the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting. [Picture]
 
-Once you are satisfied with everything's position, it's time for Hysol-90. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We used an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom, and remove the tape from around the pressure sensor membrane. Let it cure overnight. 
+Once you are satisfied with everything's position, it's time for Hysol-90. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We used an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom, and remove the tape from around the pressure sensor membrane. Let it cure overnight. [Picture]
 
 ### 6.0 Your first cast. 
 
