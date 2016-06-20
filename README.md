@@ -69,7 +69,7 @@ PVC pipe can be found at most home supply stores.
 
 **IMPORTANT note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
-**_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing._**
+**_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we recommend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
 ![A complete OpenCTD system moutned to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system moutned to a breadboard for testing before soldering and potting")
 
@@ -77,7 +77,7 @@ PVC pipe can be found at most home supply stores.
 
 #### 5.1 SD Card Reader
 
-The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. Hookup wires whould be at least 8cm long. 
+The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. Hookup wires should be at least 8 cm long. 
 
 ![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
 
@@ -95,7 +95,7 @@ To prepare the microSD card, wipe the card and create a single, empty text file 
 
 #### 5.2 Pressure Sensor
 
-There are several options and configurations for the pressure sensor, all of which rely on the MS5803-14BA sensor module. The simplest solution is a prefabricated model that requires no additional modificaion, just solder headers or connectors to Gound, Vin, SCL, and SDA and connect to the Qduino. 
+There are several options and configurations for the pressure sensor, all of which rely on the MS5803-14BA sensor module. The simplest solution is a prefabricated model that requires no additional modificaion, just solder headers or connectors to Gound, Vin, SCL, and SDA and connect to the Qduino (we strongly recommend this option for people who do not have extensive experience with soldering). 
 
 ![Three possible pressure modules.](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS1.jpg?raw=true "Three possible pressure modules")
 
@@ -169,7 +169,7 @@ Mount the SD Card reader on your Arduino board. Connect the temperature probes i
 
 *Warning, after this step, there's no going back!*
 
-Align the baseplate such that it is lightly recessed into the tube (when standing upright, non of the sensors should touch the ground). Hot glue it into place along the edges so the expoy won't leak out during potting. Lay the pressure sensor into the middle hole. Lightly cover the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor and apply more 2-ton epoxy above. This will provide added protection for this circuit. Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. Place the conductivity probe in the only hole big enough for it. 
+Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors patrude, hot glue the baseplate into place along the edges of the PVC tube to ensure the expoy doesn't leak out during potting. Lay the pressure sensor into the middle hole. Lightly cover the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor and apply more 2-ton epoxy above. This will provide added protection for this circuit. Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. Place the conductivity probe in the only hole big enough for it. 
 
 Once you are satisfied with everything's position, it's time for Hysol-90. Use an applicator to mix the expoxy as you pour it into the tube. I used an entire cartridge and had almost 2 cm of epoxy on the bottom. Let it cure overnight. Check periodically to make sure that nothing is leaking out of the bottom. 
 
