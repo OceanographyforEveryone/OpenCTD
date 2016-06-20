@@ -50,6 +50,7 @@ void setup(void) {
     Serial.println("Card failed");  // Log to serial monitor if SD card doesn't work.
     return; 
   }
+  
   delay(500);  // Wait half a second before continuing.
   
   sensor.reset(); //reset pressure sensor 
