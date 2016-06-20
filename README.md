@@ -123,7 +123,23 @@ Hookup wires for the pressure sensor should be about 5cm longer than the length 
 
 #### 5.3 Temperature Sensors
 
+The temeprature probes use a DS18B20 digital thermistor in a stainless steel housing. We use a battery of 3 probes averaged together for more consistent readings. The OneWire protocol allows mutliple probes to be queried on the same pin, so all three probescan feed into a single data pin. To prepare the probes, cut the wire length to 30 cm. Solder the three data strands, three power strands, and three ground strands together and a ttach a single solid core wire to each. 
 
+![Three termperature probes prepped for soldering](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T1.jpg?raw=true "Three termperature probes prepped for soldering")
+
+*Three termperature probes prepped for soldering.*
+
+![Temperature probes connected](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T2.jpg?raw=true "Temperature probes connected")
+
+*Temperature probes connected.*
+
+![Temperature probes treated with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T3.jpg?raw=true "Temperature probes treated with heat shrink")
+
+*Temperature probes treated with heat shrink.*
+
+![Temperature probes treated with additional heat shrink to keep everything tindy}(https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
+
+*Temperature probes treated with additional heat shrink to keep everything.*
 
 #### 5.4 Conductivity Sensor
 
