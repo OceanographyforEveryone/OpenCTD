@@ -40,7 +40,6 @@ Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.s
 PVC pipe can be found at most home supply stores. 
 
 #### 3.1 Tools
-
 - wire cutter
 - wire stripper
 - soldering iron
@@ -60,7 +59,6 @@ PVC pipe can be found at most home supply stores.
 - coffe maker (because coffee)
 
 #### 3.2 Consumables
-
 - sand paper
 - Hysol E90-FL epoxy
 - venturi mixing nozzles for epoxy
@@ -75,19 +73,12 @@ PVC pipe can be found at most home supply stores.
 - coffee
 
 #### 3.3 Required Arduino Libraries
-
 + [SparkFun_MS5803_I2C for the pressure sensor.](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0)
-
 + [Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
-
 + [OneWire.] (http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
-
 + [SD.] (https://www.arduino.cc/en/Reference/SD) 
-
 + [SoftwareSerial*.] (http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.] (https://www.arduino.cc/en/Reference/SoftwareSerial)
-
 + [SPI.] (https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
-
 + [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
 #### 3.4 Other Useful Software
