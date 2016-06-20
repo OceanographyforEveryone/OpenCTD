@@ -97,15 +97,15 @@ PVC pipe can be found at most home supply stores.
 
 ### 5.0 Build Instructions
 
-*We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change.* 
+We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. 
 
-**IMPORTANT note about power consumption:** All of the sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduino yields inconsistent readings and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
+**Important note about power consumption:** All sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduinos yield inconsistent results and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
 **_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we recommend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
-![A complete OpenCTD system moutned to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system moutned to a breadboard for testing before soldering and potting")
+![A complete OpenCTD system mounted to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system mounted to a breadboard for testing before soldering and potting")
 
-*A complete OpenCTD system moutned to a breadboard for testing before soldering and potting*
+*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
 
 #### 5.1 SD Card Reader
 
