@@ -73,28 +73,27 @@ PVC pipe can be found at most home supply stores.
 - coffee
 
 #### 3.3 Required Arduino Libraries
-+ [SparkFun_MS5803_I2C for the pressure sensor.](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0)
-+ [Dallas Temperature Control for the DS18B20 thermometer.](https://milesburton.com/Dallas_Temperature_Control_Library)
-+ [OneWire.] (http://www.pjrc.com/teensy/td_libs_OneWire.html) [Reference.](http://playground.arduino.cc/Learning/OneWire)
-+ [SD.] (https://www.arduino.cc/en/Reference/SD) 
-+ [SoftwareSerial*.] (http://www.pjrc.com/teensy/td_libs_SoftwareSerial.html) [Reference.] (https://www.arduino.cc/en/Reference/SoftwareSerial)
-+ [SPI.] (https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
-+ [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
++ Included with Arduino IDE:
+  - [**SPI.**] (https://www.arduino.cc/en/Reference/SPI) Serial Peripheral Interface for communicating with a standard SD card reader.
+  - [**SoftwareSerial.**] (https://www.arduino.cc/en/Reference/SoftwareSerial) For communicating with serial devices like the conductivity circuit.
+  - [**Wire.**] (https://www.arduino.cc/en/Reference/Wire) For communicating with I2C devices like the pressure sensor. 
++ Need to download and install ([How to install Arduino libraries](https://www.arduino.cc/en/Guide/Libraries)):
+  + [**SD.**] (https://www.arduino.cc/en/Reference/SD) For reading and writing to a standard SD card reader.
+  + [**SparkFun_MS5803_I2C.**](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0) For the MS5803 14 Bar pressure sensor (*__Note__: if you decide to use a different pressure sensor, you will need to update this library*)
+  + [**Dallas Temperature Control.**](https://milesburton.com/Dallas_Temperature_Control_Library) Allows you to communicate with the DS18B20 thermistor. 
+  + [**OneWire.**] (http://www.pjrc.com/teensy/td_libs_OneWire.html) For controlling the Dallas 1-wire family of devices. 
 
 #### 3.4 Other Useful Software
 
-+ [Qduino.h and Qduino fuelGauge](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allow you to measure the charge on you battery. 
-+ [simple_serial_for_EC_calibration](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/simple_serial_for_EC_calibration) is a basic serial monitor program to help you calibrate the conductivity probe. 
++ [**Qduino.h and Qduino fuelGauge**](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allows you to measure the charge on you battery. 
++ [**simple_serial_for_EC_calibration**](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/simple_serial_for_EC_calibration) is a basic serial monitor program to help you calibrate the conductivity probe. 
 
 ### 4.0 Arduino Qduino Pinouts
 
-- SD Card Reader: CS (D4), SCK (D15), MOSI (D16), MISO (D17)
-
-- Pressure Sensor: SDA (D2), SCL (D3)
-
-- Temperature Sensors: Data (D6)
-
-- Conductivity Circuit: TX (D8), RX (D9)
+- **SD Card Reader:** CS (D4), SCK (D15), MOSI (D16), MISO (D17)
+- **Pressure Sensor:** SDA (D2), SCL (D3)
+- **Temperature Sensors:** Data (D6)
+- **Conductivity Circuit:** TX (D8), RX (D9)
 
 ### 5.0 Build Instructions
 
