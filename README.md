@@ -103,25 +103,25 @@ We are continously updating and improving OpenCTD prototypes. These instuctions 
 
 **_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we recommend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![A complete OpenCTD system mounted to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system mounted to a breadboard for testing before soldering and potting")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![A complete OpenCTD system mounted to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system mounted to a breadboard for testing before soldering and potting")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
 
 #### 5.1 SD Card Reader
 
-The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle (using needle nose pliers) or remove the headers completely. Hookup wires should be at least 8 cm long. 
+The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each header pin 90 degrees (using needle-nosed pliers) or remove the headers completely. Hookup wires should be at least 8 cm long, though you may eventually shorten them to suit your preference. 
 
-![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
 
-*SD card reader with bent headers.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*SD card reader with bent headers.*
 
-![SD card reader with soldered connections](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD2.jpg?raw=true "SD card reader with soldered connections")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![SD card reader with soldered connections](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD2.jpg?raw=true "SD card reader with soldered connections")
 
-*SD card reader with soldered connections.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*SD card reader with soldered connections.*
 
-![SD card reader with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD3.jpg?raw=true "SD card reader with heat shrink")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![SD card reader with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD3.jpg?raw=true "SD card reader with heat shrink")
 
-*SD card reader with heat shrink*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*SD card reader with heat shrink*
 
 To prepare the microSD card, wipe the card and create a single, empty text file called **datalog.txt**.
 
