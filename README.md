@@ -71,9 +71,13 @@ PVC pipe can be found at most home supply stores.
 
 **_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we reccomend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
+![A complete OpenCTD system moutned to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system moutned to a breadboard for testing before soldering and potting")
+
+*A complete OpenCTD system moutned to a breadboard for testing before soldering and potting*
+
 #### 5.1 SD Card Reader
 
-The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. 
+The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a plug and play module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. Hookup wires whould be at least 8cm long. 
 
 ![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
 
@@ -101,7 +105,7 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 
 ![Layout for pressure module](https://edwardmallon.files.wordpress.com/2014/03/pressure-sensor-wiring.jpg?w=640 "Layout for pressure module")
 
-*Layout for pressure module.*
+*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/)*
 
 ![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIY pressure module")
 
@@ -115,7 +119,11 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 
 *Back view of the same DIY pressure module.*
 
+Hookup wires for the pressure sensor should be about 5cm longer than the length of pipe used for the house (we recommend 30cm). 
+
 #### 5.3 Temperature Sensors
+
+
 
 #### 5.4 Conductivity Sensor
 
