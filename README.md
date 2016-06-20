@@ -103,9 +103,9 @@ We are continously updating and improving OpenCTD prototypes. These instuctions 
 
 **_We strongly encourage you to test all the components one by one on a breadboard before soldering modules together. If you're planning to build multiple CTDs, we recommend that you use a dedicated Qduino, with header pins, for breadboard testing._**
 
-![A complete OpenCTD system mounted to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system mounted to a breadboard for testing before soldering and potting")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![A complete OpenCTD system mounted to a breadboard for testing before soldering and potting](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/BB.jpg?raw=true "A complete OpenCTD system mounted to a breadboard for testing before soldering and potting")
 
-*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
 
 #### 5.1 SD Card Reader
 
