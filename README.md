@@ -59,7 +59,7 @@ PVC pipe can be found at most home supply stores.
 #### 3.2 Consumables
 
 - sand paper
-- EFL 90 epoxy
+- Hysol 90 epoxy
 - ventury tubes for epoxy
 - solid core wiring
 - solder
@@ -86,6 +86,8 @@ PVC pipe can be found at most home supply stores.
 + [SPI.] (https://www.pjrc.com/teensy/td_libs_SPI.html) [Reference.](https://www.arduino.cc/en/Reference/SPI)
 
 + [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
+
++ **There is now an EC library**
 
 #### 3.4 Other Useful Libraries and programs
 
@@ -209,11 +211,13 @@ Mount the SD Card reader on your Arduino board. Connect the temperature probes i
 
 *Warning, after this step, there's no going back!*
 
- Grab your 3-D printed base plate and prepare to affix the sensors. **IMPORTANT** *Apply a small amount of electrical tape over the membrane of the pressure sensor.* This membrane is sensitive and covering it with tape will prevent any glue or epoxy from fouling it. You want to first affix the pressure sensore to the base plate. Lightly cover the edge of the indentation with hot glue. Taking care not to let any come in contact with the membrane, seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit.). [Picture] Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. [Picture] Try and keep the 3 temperature sensors roughly the same distance protruding from the base plate.  Apply epoxy around the outside of the base plate around each temperature sensor. The outside of the base plate is the portion of the base plate that will be exposed to the water - this is the side w/o the indentation.  Once the hot glue hardens then place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe sits above the temperature probes (to avoid in ionization interference from these metal probes) and apply hot glue to the outside of the base plate around the conductivity sensor similar in approach to what was done for the temperature sensors. [Picture] 
+ Grab your 3-D printed base plate and prepare to affix the sensors. 
+ **IMPORTANT:** *Apply a small amount of electrical tape over the membrane of the pressure sensor.* 
+ This membrane is sensitive and covering it with tape will prevent any glue or epoxy from fouling it. You want to first affix the pressure sensor to the base plate. Lightly cover the edge of the indentation with hot glue. Taking care not to let any come in contact with the membrane, seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit). [Picture] Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. [Picture] Try and keep the 3 temperature sensors roughly the same distance protruding from the base plate.  Apply epoxy around the outside of the base plate around each temperature sensor. The outside of the base plate is the portion of the base plate that will be exposed to the water - this is the side w/o the indentation for the pressure sensor.  Once the hot glue hardens then place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe sits above the temperature probes (to avoid any ionization interference from these metal probes) and apply hot glue to the outside of the base plate around the conductivity sensor similar in approach to what was done for the temperature sensors. [Picture] 
  
- Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors protrude, hot glue the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting.
+ Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors protrude, hot glue the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting. [Picture]
 
-Once you are satisfied with everything's position, it's time for Hysol-90. Use an applicator to mix the expoxy as you pour it into the tube. I used an entire cartridge and had almost 2 cm of epoxy on the bottom. Let it cure overnight. Check periodically to make sure that nothing is leaking out of the bottom. 
+Once you are satisfied with everything's position, it's time for Hysol-90. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We used an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom, and remove the tape from around the pressure sensor membrane. Let it cure overnight. 
 
 ### 6.0 Your first cast. 
 
