@@ -105,7 +105,7 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 
 ![Layout for pressure module](https://edwardmallon.files.wordpress.com/2014/03/pressure-sensor-wiring.jpg?w=640 "Layout for pressure module")
 
-*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/)*
+*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/).*
 
 ![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIY pressure module")
 
@@ -137,9 +137,9 @@ The temeprature probes use a DS18B20 digital thermistor in a stainless steel hou
 
 *Temperature probes treated with heat shrink.*
 
-![Temperature probes treated with additional heat shrink to keep everything tindy}(https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
+![Temperature probes treated with additional heat shrink to keep everything tindy](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
 
-*Temperature probes treated with additional heat shrink to keep everything.*
+*Temperature probes treated with additional heat shrink to keep everything tidy.*
 
 #### 5.4 Conductivity Sensor
 
