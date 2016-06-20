@@ -5,7 +5,9 @@ OpenCTD
 
 Conductivity, temperature, and depth (CTD).  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and many other physical characteristics. To reveal these patterns in a tangible format, oceanographers employ a CTD probe. A CTD sonde is found on almost every major research vessel, and it is rare that a scientific expedition--whether it be coastal work in shallow estuaries or journeys to the deepest ocean trenches--begins without casting one.
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Source codes, circuit diagrams, and building plans are freely available. The device is accurate enough to be used for scientific research, can be constructed for less than $300, and is effective to 200 meters depth.  Why 200 meters depths? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the max depths of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the Open CTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using readily available parts and is powered by an Arduino-based microcontroller. Source codes, circuit diagrams, and building plans are freely available. The device is accurate enough to be used for scientific research, can be constructed for less than $300, and is effective to 200 meters depth.  Why 200 meters depths? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the max depths of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. However, the OpenCTD is scalable, and anyone with the inclination can adapt our plans to operate in deeper waters.
+
+When you decide to start building an OpenCTD please let the team at Oceanography For Everyone know (our emails are at the bottom of the homepage), we would love to keep up with the community of people who are using these devices. Also, if you are so inclined, during your build session tweet #HackTheOcean so the larger community can follow your open-source development efforts!
 
 #### 1.1 Necessary Skills
 
@@ -33,7 +35,43 @@ Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.s
 
 PVC pipe can be found at most home supply stores. 
 
-#### 3.1 Required Arduino Libraries
+#### 3.1 Tools
+
+- wire cutter
+- wire stripper
+- soldering iron
+- solder tip cleaner
+- helping hands soldering station (critical soldering component)
+- expoy gun
+- needle nose pliers
+- volt meter
+- utility knife
+- hot glue gun
+- heat gun
+- 
+- saw
+- drill
+- 1" bit (for holes in PVC)
+- laptop
+- micro-USB cable
+- coffe maker (because... coffe, duh) 
+
+#### 3.2 Consumables
+
+- sand paper
+- EFL 90 epoxy
+- ventury tubes for epoxy
+- solid core wiring
+- solder
+- desoldering braid
+- heat shrink tubing
+- electical tape
+- hot glue
+- mineral oil
+- conductivity calibration constant
+- coffee
+
+#### 3.3 Required Arduino Libraries
 
 + [SparkFun_MS5803_I2C for the pressure sensor.](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0)
 
@@ -49,7 +87,7 @@ PVC pipe can be found at most home supply stores.
 
 + [Wire.] (http://www.pjrc.com/teensy/td_libs_Wire.html) [Reference](https://www.arduino.cc/en/Reference/Wire)
 
-#### 3.2 Other Useful Libraries and programs
+#### 3.4 Other Useful Libraries and programs
 
 + [Qduino.h and Qduino fuelGauge](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allow you to measure the charge on you battery. 
 
@@ -77,7 +115,7 @@ PVC pipe can be found at most home supply stores.
 
 #### 5.1 SD Card Reader
 
-The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle or remove the headers completely. Hookup wires should be at least 8 cm long. 
+The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each pin at a 90% angle (using needle nose pliers) or remove the headers completely. Hookup wires should be at least 8 cm long. 
 
 ![SD card reader with bent headers](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/SD1.jpg?raw=true "SD card reader with bent headers")
 
@@ -119,7 +157,7 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 
 *Back view of the same DIY pressure module.*
 
-Hookup wires for the pressure sensor should be about 5cm longer than the length of pipe used for the house (we recommend 30cm). 
+Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the house (we recommend a total length of 30 cm). 
 
 #### 5.3 Temperature Sensors
 
@@ -147,8 +185,6 @@ Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino)
 
 Different conductivity probes all have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the electrode aside for potting. 
 
-For more information, please review the [Atlas Scientific Coductivity Circuit Datasheet](http://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf).
-
 The Atlas conductivity circuit needs very little preparation. To help it fit into a tight housing, bend the headers 90% and solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
 
 ![Conductivity circuit with bent headers and hook-up wires](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC1.jpg?raw=true "Conductivity circuit with bent headers and hook-up wires")
@@ -161,17 +197,21 @@ The Atlas conductivity circuit needs very little preparation. To help it fit int
 
 #### 5.6 Prepare the housing.
 
-Print the OpenCTD baseplate which will serve as a form to position your sensors. Cut a 12 inch long piece of 3 inch PVC. Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil of other non-compressable liquids. Cut small holes or gaps in one end of the tube to allow water flow, this will be the bottom of the OpenCTD where the sensors go. 
+Cut your 3" PVC pipe so that it is 25 cm in length.  Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil of other non-compressable liquids. At one end of the pipe drill 4 equidistant holes to allow water flow. The center of each hole should be 2.5 cm from the edge. This will be the bottom of the OpenCTD where the sensors go.
+
+[PICTURE]
 
 ####  5.7 Prepare the electronics.
 
-Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. 
+Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. [PICTURE] Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). [PICTURE] Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. [PICTURES]
 
 #### 5.8 Potting
 
 *Warning, after this step, there's no going back!*
 
-Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors patrude, hot glue the baseplate into place along the edges of the PVC tube to ensure the expoy doesn't leak out during potting. Lay the pressure sensor into the middle hole. Lightly cover the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor and apply more 2-ton epoxy above. This will provide added protection for this circuit. Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. Place the conductivity probe in the only hole big enough for it. 
+ Grab your 3-D printed base plate and prepare to affix the sensors. **IMPORTANT** *Apply a small amount of electrical tape over the membrane of the pressure sensor.* This membrane is sensitive and covering it with tape will prevent any glue or epoxy from fouling it. You want to first affix the pressure sensore to the base plate. Lightly cover the edge of the indentation with hot glue. Taking care not to let any come in contact with the membrane, seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit.). [Picture] Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. [Picture] Try and keep the 3 temperature sensors roughly the same distance protruding from the base plate.  Apply epoxy around the outside of the base plate around each temperature sensor. The outside of the base plate is the portion of the base plate that will be exposed to the water - this is the side w/o the indentation.  Once the hot glue hardens then place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe sits above the temperature probes (to avoid in ionization interference from these metal probes) and apply hot glue to the outside of the base plate around the conductivity sensor similar in approach to what was done for the temperature sensors. [Picture] 
+ 
+ Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors protrude, hot glue the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting.
 
 Once you are satisfied with everything's position, it's time for Hysol-90. Use an applicator to mix the expoxy as you pour it into the tube. I used an entire cartridge and had almost 2 cm of epoxy on the bottom. Let it cure overnight. Check periodically to make sure that nothing is leaking out of the bottom. 
 
