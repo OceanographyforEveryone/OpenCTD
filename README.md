@@ -147,6 +147,8 @@ Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino)
 
 Different conductivity probes all have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the electrode aside for potting. 
 
+For more information, please review the [Atlas Scientific Coductivity Circuit Datasheet](http://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf).
+
 The Atlas conductivity circuit needs very little preparation. To help it fit into a tight housing, bend the headers 90% and solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
 
 ![Conductivity circuit with bent headers and hook-up wires](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC1.jpg?raw=true "Conductivity circuit with bent headers and hook-up wires")
