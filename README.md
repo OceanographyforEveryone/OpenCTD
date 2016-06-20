@@ -13,11 +13,13 @@ Why 200 meters? For many coastal regions, 200 meters of water depth covers the m
 
 *__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
 
-#### 1.1 Necessary Skills
+####1.1 Skills Needed
 
-Building an OpenCTD does require some basic knowledge in soldering and coding. However, for those with backgrounds in neither, honing those skills are relatively easy and not at all time intensive. Developing basic soldering skills necessary to construct an OpenCTD should take only an hour. We have found this descriptive, illustrative comic at [Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) should provide you with the soldering skills you need in an easily digestible manner. 
+Building an OpenCTD does require some basic soldering and coding knowledge, but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the basic soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
 
-The next important skill is understanding a bit of coding so you can build the Arduino libraries. You DO NOT need to be a master coder, but just have a perfunctory understanding of how the Arduino libraries work so you can upload/apply them properly. Learning Arduino coding should take you another hour, and is succulently explained at:
+Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach basic soldering skills to students from ages 10 to 65. 
+
+Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpencTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/28JBqOI) is short, easy to understand, and will also provide you with some ideas for expanding your inventory of open-source environmental sensors. 
 
 ### 2.0 Project Status
 
