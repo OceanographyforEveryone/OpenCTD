@@ -23,13 +23,11 @@ Arduino is a relatively intuitive coding environment, but it can still seem daun
 
 ### 2.0 Project Status
 
-After success during our initial field trials in Lake Superior (see *Field Trials* section), and progress with conductivity sensor development, we are finalizing the design of OpenCTD during the Hack the Ocean conference in June 2016. During this build effort we will produce 3 sondes (1 to send to our early crowd fund donor, and 2 for field use), developing a detailed instruction guide, and creating video instructions to go along with the guide.
-
-From June 18 to 21, Andrew Thaler and Kersey Sturdivant conducted a marathon prototyping session to produce additional OpenCTDs and streamline the software and hardware. Updates from this event will be available soon. 
+The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build instructions provided and a growing user community.  
 
 #### 2.1 Field Trials
 
-Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repo.
+**_Lake Superior, R/V Blue Heron_:**Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD as well as depth tolerance to 140 meters. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
 
 ### 3.0 Bill of Materials
 
