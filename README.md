@@ -129,29 +129,29 @@ To prepare the microSD card, wipe the card and create a single, empty text file 
 
 There are several options and configurations for the pressure sensor, all of which rely on the MS5803-14BA sensor module. The simplest solution is a prefabricated model that requires no additional modificaion, just solder headers or connectors to Gound, Vin, SCL, and SDA and connect to the Qduino (we strongly recommend this option for people who do not have extensive experience with soldering). 
 
-![Three possible pressure modules.](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS1.jpg?raw=true "Three possible pressure modules")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Three possible pressure modules.](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS1.jpg?raw=true "Three possible pressure modules")
 
-*Three possible pressure modules.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Three possible pressure modules.*
 
 Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resistor. The resistor bridges pin 3 and 6 on the pressure module. The capacitor bridges pins 2 and 5. SCLK is pin 1, Ground is pin 2, VCC in pin 5, and SDI/SDA is pin 7. Pins 5 and 6 need to be bridged with a jumper wire. 
 
-![Layout for pressure module](https://edwardmallon.files.wordpress.com/2014/03/pressure-sensor-wiring.jpg?w=640 "Layout for pressure module")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Layout for pressure module](https://edwardmallon.files.wordpress.com/2014/03/pressure-sensor-wiring.jpg?w=640 "Layout for pressure module")
 
-*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/).*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/).*
 
-![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIY pressure module")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIY pressure module")
 
-*Back view of one DIY pressure module.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Back view of one DIY pressure module.*
 
-![Front view of a small DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS3.jpg?raw=true "Front view of a small DIY pressure module")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Front view of a small DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS3.jpg?raw=true "Front view of a small DIY pressure module")
 
-*Front view of a small DIY pressure module.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Front view of a small DIY pressure module.*
 
-![Back view of the same DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS4.jpg?raw=true "Back view of the same DIY pressure module")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Back view of the same DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS4.jpg?raw=true "Back view of the same DIY pressure module")
 
-*Back view of the same DIY pressure module.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Back view of the same DIY pressure module.*
 
-Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the house (we recommend a total length of 30 cm). 
+Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the house (we recommend a total length of 30 cm). You may end up shortening these depending on your preference.  
 
 #### 5.3 Temperature Sensors
 
