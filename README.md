@@ -213,7 +213,7 @@ Create a power bus by soldering the four Vcc wires from each component to a sing
 
 Slot a 4.7 kOhm pullup resistor between Vcc and D46. Feed the Vcc and Ground power buses into their corresponding pinouts. Feed to temperature probe data connection into pin D6. With the pullup resistor, D6 and Vcc may be a tight fit. Solder all three pins. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vcc, Ground, and D6 with pullup resistor](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/RS.jpg?raw=true "Vcc, Ground, and D6 with pullup resistor")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Vcc, Ground, and D6 with pullup resistor](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/RS.jpg?raw=true "Vcc, Ground, and D6 with pullup resistor")
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Vcc, Ground, and D6 with pullup resistor*
 
