@@ -219,7 +219,11 @@ Slot a 4.7 kOhm pullup resistor between Vcc and D46. Feed the Vcc and Ground pow
 
 Solder the SD card reader and pressure sensor to the Qduino Mini following the [pinout guide](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/README.md#40-arduino-qduino-pinouts). Solder the conductivity probe to the PRB headers on the Atlas circuit, then connect the Atlas circruit to the Qduino Mini following the [pinout guide](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/README.md#40-arduino-qduino-pinouts). 
 
-Depending on the size of the housing and how much wire you used in your build, fitting all of the elctornics into the houseing may require some creative placement. 
+Depending on the size of the housing and how much wire you used in your build, fitting all of the electronics into the housing may require some creative placement. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![2-inch and 3-inch OpenCTDs, highlighing electronics placement in the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/inside.jpg?raw=true "2-inch and 3-inch OpenCTDs, highlighing electronics placement in the housing")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2-inch and 3-inch OpenCTDs, highlighing electronics placement in the housing*
 
 #### 5.8 Potting
 
