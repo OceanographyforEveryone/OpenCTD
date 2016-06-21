@@ -107,6 +107,8 @@ We are continously updating and improving OpenCTD prototypes. These instuctions 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
 
+Before you begin, flash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to your Qduino Mini so that you can test each component during the build. 
+
 #### 5.1 SD Card Reader
 
 The [Sainsmart microSD card reader](http://amzn.to/265xAZQ) that we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each header pin 90 degrees (using needle-nosed pliers) or remove the headers completely. Hookup wires should be at least 8 cm long, though you may eventually shorten them to suit your preference. 
@@ -237,7 +239,43 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 Once you are satisfied with everything's position, it's time for Hysol-90. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We used an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom, and remove the tape from around the pressure sensor membrane. Let it cure overnight. [Picture]
 
-### 6.0 Your first cast. 
+### 6.0 Calibration and Data Conversion
+
+Proper calibration of the OpenCTD requires access to already calibrated validation instruments. These can be commercial CTD, handheld systems, or bench-mounted laboratory systems. As the community grows, properly calibrated OpenCTDs can be used to benchmark newly-built instruments. 
+
+#### 6.1 Depth
+
+The pressure sensor outputs absolute pressure, which means that is is self-calibrating. At sea level, pressure should be approximiately 1016 millibars, though local weather and small changes in altitude will affect this baseline. In order to minimize the amount of processing that happens onboard the OpenCTD, pressure is measured in millibars (the default output for the current pressure sensor). To convert pressure to depth use the following equation:
+
+D = (P(depth) - P(surface) * 100) / (g * 1000)
+
+Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P(surface) is the pressure at the surface in millibars; and g is acceleration due to gravity (9.81 m/s2).
+
+#### 6.2 Temperature
+
+Calibrating the temperature sensors requires access to an already calibrated instrument. Allow both the OpenCTD and the validation instrument to equilibrate in water for 15 minutes. Take the average of the three OpenCTD temperature outputs and note the difference between that average and the validation instrument. Repeat for a fluid that is at least 15 degrees hotter or colder than the test fluid. There should be a linear relationship between the OpenCTD temperature sensors and the validation instrument, which will give you a calibration constant. Take the average of the three temperature readings and use the calibration constant to adjust temperature measurements when processing raw data. 
+
+This should remain steady for many casts, but it is always good practice to check you temperature calibration whenever you have access to a validation instrument. We recommend recalibrating temperature at the beginning of each expedition and once a month for prolonged deployments. 
+
+#### 6.3 Conductivity
+
+Calibration of the coductivity meter requires a calibration standard--a bottle of water of precise, known salinity. Calibration is done through software and is explained in detail [here](http://www.atlas-scientific.com/_files/_datasheets/_circuit/EC_EZO_Datasheet.pdf). You can perform either a one or two solution calibration depending on how many standards you have access to. 
+
+To increase the ease of calibration, we [have created a small program for accessing the serial monitor](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/simple_serial_for_EC_calibration). Flash this simple serial program to your Qduino Mini. 
+
+Open the serial monitor through the Arduino IDE. You should see a stream of unprecessed data. 
+
+- Enter **c,0** into the command line and hit enter. This will turn off continuous monitorring.
+- Enter **k,?** this will tell you what the K-value of you probe is set to. It should ke set to K=1.0 for most use cases. 
+  - To change the K-value, enter **k,x** where **x** is the new K-value of the probe. 
+- With the probe dry (be sure there is abosolutely no water on the electrodes) enter **cal,dry**. This with dry calibrate the probe. 
+- For 1-point calibration, suspend the probe in calibration solution. Enter **cal,one,y**, where **y** is the known value of the standard. 
+- For two point calibration, suspend the probe in the less conductive solution and enter **cal,low,y**, where **y** is the known value of the standard. Then suspend in the more conductive solution and enter **cal,high,z**, where **z** is the known value of the solution. 
+- Now enter **c,1** to turn continuous monitorring back on. 
+
+Don't forget to reflash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to the Qduino Mini after calibration is done. Conductivity should be recalibrated at least once per year. 
+
+### 7.0 Your first cast. 
 
 Power up the OpenCTD with your battery pack of choice (you'll want the full 12v). Confirm that it is writing data to the SD card. 
 
@@ -246,30 +284,6 @@ Now for the fun part.
 While everything is powered on, fill it with mineral oil. Mineral oil is non conductive and won't interfere with the electronics. Fill it top a few centimeters below the top. There will be some spillover if you're trying to avoid bubbles in the housing. Gentle lower the test cap down and screw it into place. You CTD is now sealed and logging. Wipe down any spilled oil. I find that these [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small oil spills. It's a good idea to have them with you as you want to minimize any oil release into the water. 
 
 Your OpenCTD is now ready to take the plunge!
-
-### 7.0 Calibration and Data Conversions
-
-Proper calibration of the OpenCTD requires access to already calibrated validation instruments. These can be commercial CTD, handheld systems, or bench-mounted laboratory systems. As the community grows, properly calibrated OpenCTDs can be used to benchmark newly-built instruments. 
-
-#### 7.1 Depth
-
-In order to minimize the amount of processing that happens onboard the OpenCTD, pressure is measured in millibars (the default output for the current pressure sensor). To convert pressure to depth use the following equation:
-
-D = (P(depth) - P(surface) * 100) / (g * 1000)
-
-Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P(surface) is the pressure at the surface in millibars; and g is acceleration due to gravity (9.81 m/s2).
-
-No additional calibration shoud be need for the MS5803-14BA pressure sensor. 
-
-#### 7.2 Temperature
-
-Calibrating the temperature sensors requires access to an already calibrated instrument. Allow both the OpenCTD and the validation instrument to equilibrate in water for 15 minutes. Take the average of the three OpenCTD temperature outputs and note the difference between that average and the validation instrument. Repeat for two additional temperatures of at least 5 degrees difference. There should be a linear relationship between the OpenCTD temperature sensors and the validation instrument. Take the average of the difference between the three temperature readings and use as a calibration coefficient for your OpenCTD. 
-
-This should remain steady for many casts, but it is always good practice to check you temperature calibration whenever you have access to a validation instrument. 
-
-#### 7.3 Conductivity
-
-Atlas Instructions
 
 ### 8.0 Resources
 
