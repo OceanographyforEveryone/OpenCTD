@@ -199,13 +199,31 @@ Cut a 3" PVC pipe to 25 cm in length.  Don't worry if the tube is label "not for
 
 2" pipes should be prepared in the same manner, but will have three equidistant flow-through holes on the bottom. 
 
-####  5.6 Prepare the electronics.
+####  5.6 Connecting the electronics.
 
-Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. [PICTURE] Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). [PICTURE] Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. [PICTURES]
+**Note:** Please test all electronics on a breadboard before permanently soldering to the Qduino. 
+
+**Note:** Depending on how tight your OpenCTD housing is, you may want to pot the probes first, and then connect them. 
+
+Create a power bus by soldering the four Vcc wires from each component to a single solid core wire so that they can all be connected to a single Vcc pin. Do the same with ground wires. Cover the connecctions with heat-shrink tubing. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Power bus, without heatshrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/powerbus.jpg?raw=true "Powerbus, without heatshrink")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Power bus, without heatshrink.*
+
+Slot a 4.7 kOhm pullup resistor between Vcc and D46. Feed the Vcc and Ground power buses into their corresponding pinouts. Feed to temperature probe data connection into pin D6. With the pullup resistor, D6 and Vcc may be a tight fit. Solder all three pins. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vcc, Ground, and D6 with pullup resistor](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/RS.jpg?raw=true "Vcc, Ground, and D6 with pullup resistor")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Vcc, Ground, and D6 with pullup resistor*
+
+Solder the SD card reader and pressure sensor to the Qduino Mini following the [pinout guide](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/README.md#40-arduino-qduino-pinouts). Solder the conductivity probe to the PRB headers on the Atlas circuit, then connect the Atlas circruit to the Qduino Mini following the [pinout guide](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/README.md#40-arduino-qduino-pinouts). 
+
+Depending on the size of the housing and how much wire you used in your build, fitting all of the elctornics into the houseing may require some creative placement. 
 
 #### 5.8 Potting
 
-*Warning, after this step, there's no going back!*
+*__This is the point of no return, after this step, there's no going back!__*
 
  Grab your 3-D printed base plate and prepare to affix the sensors. 
  **IMPORTANT:** *Apply a small amount of electrical tape over the membrane of the pressure sensor.* 
