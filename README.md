@@ -97,7 +97,7 @@ PVC pipe can be found at most home supply stores.
 
 ### 5.0 Build Instructions
 
-We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. 
+We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. Please read through the entire guide before you make any irreversible changes to the hardware. Most manufacturers will consider the warranty void once you being soldering. 
 
 **Important note about power consumption:** All sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduinos yield inconsistent results and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
@@ -155,39 +155,39 @@ Hookup wires for the pressure sensor should be about 5 cm longer than the length
 
 #### 5.3 Temperature Sensors
 
-The temeprature probes use a DS18B20 digital thermistor in a stainless steel housing. We use a battery of 3 probes averaged together for more consistent readings. The OneWire protocol allows mutliple probes to be queried on the same pin, so all three probescan feed into a single data pin. To prepare the probes, cut the wire length to 30 cm. Solder the three data strands, three power strands, and three ground strands together and a ttach a single solid core wire to each. 
+The temperature probes use an off-the-shelf DS18B20 digital thermistor in a stainless steel housing. We use a battery of 3 probes averaged together for more consistent readings. The OneWire protocol allows mutliple probes to be queried on the same pin, so all three probes feed into a single data pin. To prepare the probes, cut the wire length to 30 cm. Solder three data strands, three power strands, and three ground strands together and attach a single solid core wire to each. 
 
-![Three termperature probes prepped for soldering](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T1.jpg?raw=true "Three termperature probes prepped for soldering")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Three termperature probes prepped for soldering](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T1.jpg?raw=true "Three termperature probes prepped for soldering")
 
-*Three termperature probes prepped for soldering.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Three termperature probes prepped for soldering.*
 
-![Temperature probes connected](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T2.jpg?raw=true "Temperature probes connected")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Temperature probes connected](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T2.jpg?raw=true "Temperature probes connected")
 
-*Temperature probes connected.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Temperature probes connected.*
 
-![Temperature probes treated with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T3.jpg?raw=true "Temperature probes treated with heat shrink")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Temperature probes treated with heat shrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T3.jpg?raw=true "Temperature probes treated with heat shrink")
 
-*Temperature probes treated with heat shrink.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Temperature probes treated with heat shrink.*
 
-![Temperature probes treated with additional heat shrink to keep everything tindy](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Temperature probes treated with additional heat shrink to keep everything tindy](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
 
-*Temperature probes treated with additional heat shrink to keep everything tidy.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Temperature probes treated with additional heat shrink to keep everything tidy.*
 
 Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino) with a 4.7 kOhm pull-up resisitor. This should be done when you solder everything directly to the Arduino. 
 
 ####5.4 Conductivity Sensor
 
-Different conductivity probes all have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the electrode aside for potting. 
+There are a variety of options for conductivity probes, but we recommend using the Atlas EC EZO circuit to drive these probes. Different conductivity probes will have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the probe aside for potting. 
 
-The Atlas conductivity circuit needs very little preparation. To help it fit into a tight housing, bend the headers 90% and solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
+The Atlas conductivity circuit needs very little preparation. To help it fit into a tight housing, bend the headers 90 degrees and solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
 
-![Conductivity circuit with bent headers and hook-up wires](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC1.jpg?raw=true "Conductivity circuit with bent headers and hook-up wires")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Conductivity circuit with bent headers and hook-up wires](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC1.jpg?raw=true "Conductivity circuit with bent headers and hook-up wires")
 
-*Conductivity circuit with bent headers and hook-up wires.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Conductivity circuit with bent headers and hook-up wires.*
 
-![Conductivity circuit with heat-shrink to protect contacts](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC2.jpg?raw=true "Conductivity circuit with heat-shrink to protect contacts")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!![Conductivity circuit with heat-shrink to protect contacts](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC2.jpg?raw=true "Conductivity circuit with heat-shrink to protect contacts")
 
-*Conductivity circuit with heat-shrink to protect contacts.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!*Conductivity circuit with heat-shrink to protect contacts.*
 
 #### 5.6 Prepare the housing.
 
