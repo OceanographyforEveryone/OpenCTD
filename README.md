@@ -1,4 +1,4 @@
-OpenCTD
+OpenCTD Introduction and Build Guide
 =======
 
 ### 1.0 Overview
