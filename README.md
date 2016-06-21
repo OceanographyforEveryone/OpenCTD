@@ -231,13 +231,43 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 *__This is the point of no return, after this step, there's no going back!__*
 
- Grab your 3-D printed base plate and prepare to affix the sensors. 
- **IMPORTANT:** *Apply a small amount of electrical tape over the membrane of the pressure sensor.* 
- This membrane is sensitive and covering it with tape will prevent any glue or epoxy from fouling it. You want to first affix the pressure sensor to the base plate. Lightly cover the edge of the indentation with hot glue. Taking care not to let any come in contact with the membrane, seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit). [Picture] Place the three temperature sensor into the 3 small holes. Make sure that they do not sit so far out that you can't see some stainless steel in the inside. [Picture] Try and keep the 3 temperature sensors roughly the same distance protruding from the base plate.  Apply epoxy around the outside of the base plate around each temperature sensor. The outside of the base plate is the portion of the base plate that will be exposed to the water - this is the side w/o the indentation for the pressure sensor.  Once the hot glue hardens then place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe sits above the temperature probes (to avoid any ionization interference from these metal probes) and apply hot glue to the outside of the base plate around the conductivity sensor similar in approach to what was done for the temperature sensors. [Picture] 
- 
- Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground). On the side where the sensors protrude, hot glue the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting. [Picture]
+**Note:** Depending on how tight your OpenCTD housing is, you may want to pot the probes first, and then connect them. 
 
-Once you are satisfied with everything's position, it's time for Hysol-90. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We used an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom, and remove the tape from around the pressure sensor membrane. Let it cure overnight. [Picture]
+ 3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTDv4.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
+ 
+ Place a small amount of heatshrink tubing to prevent hot glue from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with hot glue, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit, for deeper operrations of for added security, you can alos use 2-ton marine epoxy to seat the pressure sensor). Trim away to exposed heat shrink and qpply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Pressure sensor seated in the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting1.jpg?raw=true "Pressure sensor seated in baseplate")
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Pressure sensor seated in baseplate.*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Pressure sensor with heat shrink extending out through baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting2.jpg?raw=true "Pressure sensor with heat shrink extending out through baseplate")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Pressure sensor with heat shrink extending out through baseplate.*
+ 
+ Place the three temperature sensor into the 3 smaller holes. The waterproofing around these probes is not always uniform. Make sure that some stainless steel is exopsed on the inside surface of the baseplat and than at least 1 cm extends out into the water.
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting3.jpg?raw=true "Temperature probes extaneding out through the baseplate")
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes extending out through the baseplate.*
+ 
+ Apply hot glue around the outside of the base plate around each temperature sensor to hold them in place and prevent epoxy from leaking out. Once the hot glue hardens, place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe extends further from the baseplate than the temperature probes (to avoid any interference from these metal probes). Apply hot glue to the outside of the base plate around the conductivity sensor.
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![All probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting4.jpg?raw=true "All probes extending out through the baseplate")
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*All probes extending out through the baseplate.*
+ 
+ Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground) and that it sits just above the top of each flow-through hole. Hot glue the outside of the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting.
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Baseplate seated in the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting5.jpg?raw=true "Baseplate seated in the housing")
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Baseplate seated in the housing.*
+
+Once you are satisfied with everything's position, it's time for EFL-90 epoxy. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We recommend using an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom. Let it cure overnight.
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Epoxy potting on the inside of the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting6.jpg?raw=true "Epoxy potting on the inside of the housing")
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Epoxy potting on the inside of the housing.*
 
 ### 6.0 Calibration and Data Conversion
 
