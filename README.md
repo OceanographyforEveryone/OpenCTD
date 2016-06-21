@@ -309,19 +309,19 @@ Converting conductivity to PSU is a complex equation that is temperature depende
 
 ### 7.0 Your first cast. 
 
-Power up the OpenCTD with your battery pack of choice (you'll want the full 12v). Confirm that it is writing data to the SD card. 
+This is the fun part. 
 
-Now for the fun part. 
+For shallow deployments, the Oatey cap will keep water out. For deeper deployments, pressure compensate the housing with minieral oil or similarly no-conductive fluid. Fill to a few centimeters below the top. There may be some spillover to avoid bubbles in the housing. 
 
-While everything is powered on, fill it with mineral oil. Mineral oil is non conductive and won't interfere with the electronics. Fill it top a few centimeters below the top. There will be some spillover if you're trying to avoid bubbles in the housing. Gentle lower the test cap down and screw it into place. You CTD is now sealed and logging. Wipe down any spilled oil. I find that these [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small oil spills. It's a good idea to have them with you as you want to minimize any oil release into the water. 
+Turn on the CTD. Gently lower the Oatey cap down and screw it into place. It should be tight enought that it cannot be removed wihtout unscrewing. Your CTD is now sealed and logging. Wipe down any spilled oil. These [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small amounts of mineral oil. 
 
-Your OpenCTD is now ready to take the plunge!
+Your OpenCTD is now ready to take the plunge! Gently lower into the water and descend no more than 1 meter per second. The slower the better. For the first cast, descend to 5 meters, then recover and check that no leakage has occured. With mineral oil, it will be very clear if the device is leaking. Once it passes the first soak test, your reading to go forth and collect ocean data. 
+
+Welcome to the Oceanography for Everyone community!
 
 ### 8.0 Resources
 
 [Oceanography for Everyone](http://oceanographyforeveryone.com/)
-
-[Original Project Description](https://www.rockethub.com/projects/26388-oceanography-for-everyone-the-openctd)
 
 ### 9.0 Acknowledgments
 
