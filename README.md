@@ -189,13 +189,17 @@ The Atlas conductivity circuit needs very little preparation. To help it fit int
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Conductivity circuit with heat-shrink to protect contacts.*
 
-#### 5.6 Prepare the housing.
+#### 5.5 Prepare the housing.
 
-Cut your 3" PVC pipe so that it is 25 cm in length.  Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil of other non-compressable liquids. At one end of the pipe drill 4 equidistant holes to allow water flow. The center of each hole should be 2.5 cm from the edge. This will be the bottom of the OpenCTD where the sensors go.
+Cut a 3" PVC pipe to 25 cm in length.  Don't worry if the tube is label "not for pressure" as the device will be filled with mineral oil or other non-compressable liquids for deep casts. At one end of the pipe drill 4 equidistant holes to allow water flow around the sensors. The center of each hole should be 2.5 cm from the bottom edge.
 
-[PICTURE]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![2 inch and 3inch OpenCTDs highlighting position of flow-through holes and probes](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/ctds.jpg?raw=true "2 inch and 3 inch OpenCTDs highlighting position of flow-through holes and probes")
 
-####  5.7 Prepare the electronics.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*2" and 3" OpenCTDs highlighting position of flow-through holes and probes*
+
+2" pipes should be prepared in the same manner, but will have three equidistant flow-through holes on the bottom. 
+
+####  5.6 Prepare the electronics.
 
 Mount the SD Card reader on your Arduino board. Connect the temperature probes in series; mount a 1 KOhm resistor between the positive and signal leads. [PICTURE] Mount the pressure sensor by following the instructions provided by [the Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/) (and send them a hearty thank you for providing such excellent, clear, directions). [PICTURE] Mount the conductivity probe and circuit in accordance with the guidelines at [Atlas Scientific](https://www.atlas-scientific.com/conductivity.html). Get creative with how you plan on packing everything into the tube. It will be a tight fit! I like to use plenty of connectors that allow you to quickly detach different components. [PICTURES]
 
