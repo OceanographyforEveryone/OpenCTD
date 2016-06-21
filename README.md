@@ -305,7 +305,7 @@ Open the serial monitor through the Arduino IDE. You should see a stream of unpr
 
 Don't forget to reflash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to the Qduino Mini after calibration is done. Conductivity should be recalibrated at least once per year. 
 
-Converting conductivity to PSU is a complex equation that is temperature dependent. This [UNESCO paper](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf) outlines the basic equations. We are working on an Excel template that will perform those conversion for you. 
+Converting conductivity to PSU is a complex equation that is temperature dependent. This [UNESCO paper](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf) outlines the basic equations. We are working on an Excel template that will perform those conversions for you. 
 
 ### 7.0 Your first cast. 
 
