@@ -3,11 +3,11 @@ OpenCTD Introduction and Build Guide
 
 ### 1.0 Overview
 
-**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns in, oceanographers employ a CTD--an oceanographic instument that, at its core, measures temeprature, salinity, and depth down a water column. The CTD is the workhorse of oceanographic research. 
+**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temeprature, salinity, and depth down a water column. The CTD is the workhorse of oceanographic research. 
 
 CTDs are expensive, and that expense can act as a barrier-to-entry for researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device sufficeintly accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficeintly accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
 
 Why 200 meters? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
@@ -19,7 +19,7 @@ Building an OpenCTD does require some basic soldering and coding knowledge, but 
 
 Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach basic soldering skills to students from ages 10 to 65. 
 
-Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpencTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/28JBqOI) is short, easy to understand, and will also provide you with some ideas for expanding your inventory of open-source environmental sensors. 
+Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpenCTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/28JBqOI) is short, easy to understand, and will also provide you with some ideas for expanding your inventory of open-source environmental sensors. 
 
 ### 2.0 Project Status
 
@@ -27,7 +27,7 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 
 #### 2.1 Field Trials
 
-**_Lake Superior, R/V Blue Heron_:**Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD as well as depth tolerance to 140 meters. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
+**_Lake Superior, R/V Blue Heron_: **Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD at it was cast against a commercial CTD. Additionaly, OpenCTD was successfully deployed to a depth of 140 meters. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
 
 ### 3.0 Bill of Materials
 
@@ -139,19 +139,27 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Layout for pressure module](https://edwardmallon.files.wordpress.com/2014/03/pressure-sensor-wiring.jpg?w=640 "Layout for pressure module")
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Layout for pressure module. From [The Cave Pearl Project](https://edwardmallon.wordpress.com/2014/03/27/adding-a-ms5803-02-high-resolution-pressure-sensor/).*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIY pressure module")
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Back view of one DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS2.jpg?raw=true "Back view of one DIYpressure module")
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Back view of one DIY pressure module.*
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Front view of a small DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS3.jpg?raw=true "Front view of a small DIY pressure module")
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Front view of a small DIY pressure module.*
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Back view of the same DIY pressure module](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/PS4.jpg?raw=true "Back view of the same DIY pressure module")
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Back view of the same DIY pressure module.*
+
 
 Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the house (we recommend a total length of 30 cm). You may end up shortening these depending on your preference.  
 
@@ -235,7 +243,7 @@ Depending on the size of the housing and how much wire you used in your build, f
 
  3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTDv4.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
  
- Place a small amount of heatshrink tubing to prevent hot glue from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with hot glue, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit, for deeper operrations of for added security, you can alos use 2-ton marine epoxy to seat the pressure sensor). Trim away to exposed heat shrink and qpply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.
+ Place a small amount of heatshrink tubing to prevent hot glue from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with hot glue, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit, for deeper operations or for added security, you can also use 2-ton marine epoxy to seat the pressure sensor). Trim away the exposed heat shrink taking care not to damage the pressure sensor. Apply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Pressure sensor seated in the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting1.jpg?raw=true "Pressure sensor seated in baseplate")
  
@@ -275,11 +283,11 @@ Proper calibration of the OpenCTD requires access to already calibrated validati
 
 #### 6.1 Depth
 
-The pressure sensor outputs absolute pressure, which means that is is self-calibrating. At sea level, pressure should be approximiately 1016 millibars, though local weather and small changes in altitude will affect this baseline. In order to minimize the amount of processing that happens onboard the OpenCTD, pressure is measured in millibars (the default output for the current pressure sensor). To convert pressure to depth use the following equation:
+The pressure sensor outputs absolute pressure, which means that it is self-calibrating. At sea level, pressure should be approximiately 1016 millibars, though local weather and small changes in altitude will affect this baseline. In order to minimize the amount of processing that happens onboard the OpenCTD, pressure is measured in millibars (the default output for the current pressure sensor). To convert pressure to depth use the following equation:
 
 D = (P(depth) - P(surface) * 100) / (g * 1000)
 
-Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P(surface) is the pressure at the surface in millibars; and g is acceleration due to gravity (9.81 m/s2).
+Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P(surface) is the pressure at the surface in millibars; and g is acceleration due to gravity (9.81 m/s^2).
 
 #### 6.2 Temperature
 
@@ -298,7 +306,7 @@ Open the serial monitor through the Arduino IDE. You should see a stream of unpr
 - Enter **c,0** into the command line and hit enter. This will turn off continuous monitorring.
 - Enter **k,?** this will tell you what the K-value of you probe is set to. It should ke set to K=1.0 for most use cases. 
   - To change the K-value, enter **k,x** where **x** is the new K-value of the probe. 
-- With the probe dry (be sure there is abosolutely no water on the electrodes) enter **cal,dry**. This with dry calibrate the probe. 
+- With the probe dry (be sure there is abosolutely no water on the electrodes) enter **cal,dry**. This will dry calibrate the probe. 
 - For 1-point calibration, suspend the probe in calibration solution. Enter **cal,one,y**, where **y** is the known value of the standard. 
 - For two point calibration, suspend the probe in the less conductive solution and enter **cal,low,y**, where **y** is the known value of the standard. Then suspend in the more conductive solution and enter **cal,high,z**, where **z** is the known value of the solution. 
 - Now enter **c,1** to turn continuous monitorring back on. 
