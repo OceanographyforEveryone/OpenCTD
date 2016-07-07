@@ -3,11 +3,11 @@ OpenCTD Introduction and Build Guide
 
 ### 1.0 Overview
 
-**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temeprature, salinity, and depth down a water column. The CTD is the workhorse of oceanographic research. 
+**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temperature, salinity, and depth down a water column. The CTD is the workhorse of oceanographic research. 
 
 CTDs are expensive, and that expense can act as a barrier-to-entry for researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficeintly accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
 
 Why 200 meters? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
