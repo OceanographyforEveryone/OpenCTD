@@ -30,7 +30,7 @@ This is the cleaned data from the second unit, which used a cheaper conductivity
 
 **Salinity:** Salinity climbs rapidly as Hermine drives salty seawater up into the Chesapeake and then Mobjack Bay. It declines slightly in conjunction with the heaviest rainfall, and then rises. It fluctuates slightly with changes in sea level, but remains high throughout the deployment. 
 
-**Depth:** This is *a lot* of flooding for the region. Low tide during the storm is almost as high as pre-flood high tide. Because this is a drainage ditch, tides don't fall like they normally would, since runoff continuously adds more water during the storm, leading to low-tide spikes rather than gradual curves as seen druing the first and last low tide. 
+**Depth:** This is *a lot* of flooding for the region. Low tide during the storm is almost as high as pre-flood high tide. Because this is a drainage ditch, tides don't fall like they normally would, since runoff continuously adds more water during the storm, leading to low-tide spikes rather than gradual curves as seen during the first and last low tide. 
 
 As important as sensor validation against other equipment, these readings are consistent with observed environmental conditions during the time of deployment. 
 
