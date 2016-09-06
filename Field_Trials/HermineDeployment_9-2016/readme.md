@@ -11,7 +11,7 @@ Hurricane Hermine is a tropical cyclone that passed over our field site in coast
 
 Data processing is still in progress, only raw data is available. Use at your own risk. 
 
-One salinity probe appears to have lost calibration, furthur investigation will determine if the data is recoverable. 
+One salinity probe appears to have lost calibration ([mid-level graphite probe](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Field_Trials/HermineDeployment_9-2016/RAW%20Data/Hermine_1_graphiteprobe.txt)), furthur investigation will determine if the data is recoverable. 
 
 ###Lessons Learned
 
