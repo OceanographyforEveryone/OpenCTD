@@ -9,7 +9,7 @@ CTDs are expensive, and that expense can act as a barrier-to-entry for researche
 
 The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
 
-Why 200 meters? For many coastal regions, 200 meters of water depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
+Why 200 meters? For many coastal regions, 200 meters depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
 *__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
 
@@ -32,6 +32,8 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 ### 3.0 Bill of Materials
 
 Almost all of the necessary parts can be found through Amazon or Sparkfun. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts.
+
+**Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manutfacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us**
 
 Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
 
@@ -95,9 +97,11 @@ PVC pipe can be found at most home supply stores.
 - **Temperature Sensors:** Data (D6)
 - **Conductivity Circuit:** TX (D8), RX (D9)
 
+**It is possible to use other Arduino-based single board computers, but please check the pinouts and schematics. Different Arduino boards may use various pins for internal functions which can interfere with signals to and from the sensors.**
+
 ### 5.0 Build Instructions
 
-We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. Please read through the entire guide before you make any irreversible changes to the hardware. Most manufacturers will consider the warranty void once you being soldering. 
+*We are continously updating and improving OpenCTD prototypes. These instuctions are subject to change. Please read through the entire guide before you make any irreversible changes to the hardware. Most manufacturers will consider the warranty void once you being soldering.*
 
 **Important note about power consumption:** All sourced modules are rated to work at 3.3V, however, when two or more are running simultaneously, the 3.3V output on most Arduinos yield inconsistent results and the SD card reader may not function at all. We recommend powering the entire system with a minimum of 3.7V. On standard Arduino's, the 5V output should be used. On the Qduino, VCC with a 3.7V battery is sufficient. 
 
@@ -241,9 +245,9 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 **Note:** Depending on how tight your OpenCTD housing is, you may want to pot the probes first, and then connect them. 
 
- 3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTDv4.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
+3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTDv4.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
  
- Place a small amount of heatshrink tubing to prevent hot glue from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with hot glue, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more hot glue (This will provide added protection for this circuit, for deeper operations or for added security, you can also use 2-ton marine epoxy to seat the pressure sensor). Trim away the exposed heat shrink taking care not to damage the pressure sensor. Apply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.
+Place a small amount of heatshrink tubing to prevent epoxy from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more epoxy (This will provide added protection for this circuit, for deeper operations). Trim away the exposed heat shrink taking care not to damage the pressure sensor. Let the epoxy cure for 20 minutes. Apply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work. 
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Pressure sensor seated in the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting1.jpg?raw=true "Pressure sensor seated in baseplate")
  
@@ -253,19 +257,19 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Pressure sensor with heat shrink extending out through baseplate.*
  
- Place the three temperature sensor into the 3 smaller holes. The waterproofing around these probes is not always uniform. Make sure that some stainless steel is exopsed on the inside surface of the baseplat and than at least 1 cm extends out into the water.
+Place the three temperature sensor into the 3 smaller holes. The waterproofing around these probes is not always uniform. Make sure that some stainless steel is exopsed on the inside surface of the baseplat and than at least 1 cm extends out into the water.
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting3.jpg?raw=true "Temperature probes extaneding out through the baseplate")
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes extending out through the baseplate.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes extending out through the baseplate.*
  
- Apply hot glue around the outside of the base plate around each temperature sensor to hold them in place and prevent epoxy from leaking out. Once the hot glue hardens, place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe extends further from the baseplate than the temperature probes (to avoid any interference from these metal probes). Apply hot glue to the outside of the base plate around the conductivity sensor.
+Apply hot glue around the outside of the base plate around each temperature sensor to hold them in place and prevent epoxy from leaking out. Once the hot glue hardens, place the conductivity probe in the only hole big enough for it. Make sure the conductivity probe extends further from the baseplate than the temperature probes (to avoid any interference from these metal probes). Apply hot glue to the outside of the base plate around the conductivity sensor.
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![All probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting4.jpg?raw=true "All probes extending out through the baseplate")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![All probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting4.jpg?raw=true "All probes extending out through the baseplate")
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*All probes extending out through the baseplate.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*All probes extending out through the baseplate.*
  
- Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground) and that it sits just above the top of each flow-through hole. Hot glue the outside of the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting.
+Align the baseplate such that it is lightly recessed into the tube (when standing upright [i.e. sensors facing down], none of the sensors should touch the ground) and that it sits just above the top of each flow-through hole. Hot glue the outside of the baseplate into place along the wall of the PVC tube to ensure the expoy doesn't leak out during potting.
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Baseplate seated in the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting5.jpg?raw=true "Baseplate seated in the housing")
  
@@ -273,9 +277,9 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 Once you are satisfied with everything's position, it's time for EFL-90 epoxy. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We recommend using an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom. Let it cure overnight.
 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Epoxy potting on the inside of the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting6.jpg?raw=true "Epoxy potting on the inside of the housing")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Epoxy potting on the inside of the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting6.jpg?raw=true "Epoxy potting on the inside of the housing")
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Epoxy potting on the inside of the housing.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Epoxy potting on the inside of the housing.*
 
 ### 6.0 Calibration and Data Conversion
 
