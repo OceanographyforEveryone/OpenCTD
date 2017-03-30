@@ -58,7 +58,7 @@ Additional components, like a pre-fabricated [pressure sensor module] (https://w
 
 Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2. Mouser now sells individual MS5803-14BA sensor modules for a reasonable cost.
 
-PVC pipe can be found at most home supply stores. 
+PVC pipe can be found at most home supply stores. If you want to get fancy, a [clear acrylic tube](http://amzn.to/2njFhqw) can add some flare to your build. 
 
 #### 3.1 Tools
 - wire cutter
