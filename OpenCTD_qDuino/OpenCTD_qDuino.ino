@@ -1,16 +1,16 @@
 //Wire and MS5803_I2C libraries for communicating with the pressure sensor. 
 
 #include <Wire.h>               
-#include <SparkFun_MS5803_I2C.h>
+#include <SparkFun_MS5803_I2C.h> //CAN WE MAKE THIS LIBRARY SMALLER?
 
 //EC Circuit uses software serial
 #include <SoftwareSerial.h>     // For use by EC circuit.
 
 //OneWire is used to get data from both temperature and conductivity sensors
-#include <OneWire.h> 
+#include <OneWire.h>  //CAN WE MAKE THIS LIBRARY SMALLER?
 
 //DallasTemperature is used to query the temeprature sensors           
-#include <DallasTemperature.h>  
+#include <DallasTemperature.h>   //CAN WE MAKE THIS LIBRARY SMALLER?
 
 // For the SD card reader.
 #include <SPI.h>               
