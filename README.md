@@ -50,6 +50,7 @@ SOIC to DIP Adapter	|	Sparkfun	| $2.95	| https://www.sparkfun.com/products/13655
 4.7kOhm Resistor | Amazon	| $6.16	| http://amzn.to/2oBXW1U					
 Hook-up wire	|	Amazon	| $22.00	| http://amzn.to/2mSyqJs	
 Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2njvj8R	
+3" Gripper Plug | Amazon | $4.99 | http://amzn.to/2njMTtn
 
 **Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that are excessively overpriced, but you may have better luck finding cheaper options.** 
 
