@@ -94,14 +94,14 @@ PVC pipe can be found at most home supply stores.
 
 #### 3.3 Required Arduino Libraries
 + Included with Arduino IDE:
-  - [**SPI.**] (https://www.arduino.cc/en/Reference/SPI) Serial Peripheral Interface for communicating with a standard SD card reader.
-  - [**SoftwareSerial.**] (https://www.arduino.cc/en/Reference/SoftwareSerial) For communicating with serial devices like the conductivity circuit.
-  - [**Wire.**] (https://www.arduino.cc/en/Reference/Wire) For communicating with I2C devices like the pressure sensor. 
+  - [**SPI.**](https://www.arduino.cc/en/Reference/SPI) Serial Peripheral Interface for communicating with a standard SD card reader.
+  - [**SoftwareSerial.**](https://www.arduino.cc/en/Reference/SoftwareSerial) For communicating with serial devices like the conductivity circuit.
+  - [**Wire.**](https://www.arduino.cc/en/Reference/Wire) For communicating with I2C devices like the pressure sensor. 
 + Need to download and install ([How to install Arduino libraries](https://www.arduino.cc/en/Guide/Libraries)):
-  + [**SD.**] (https://www.arduino.cc/en/Reference/SD) For reading and writing to a standard SD card reader.
+  + [**SD.**](https://www.arduino.cc/en/Reference/SD) For reading and writing to a standard SD card reader.
   + [**SparkFun_MS5803_I2C.**](https://github.com/sparkfun/SparkFun_MS5803-14BA_Breakout_Arduino_Library/tree/V_1.1.0) For the MS5803 14 Bar pressure sensor (*__Note__: if you decide to use a different pressure sensor, you will need to update this library*)
   + [**Dallas Temperature Control.**](https://milesburton.com/Dallas_Temperature_Control_Library) Allows you to communicate with the DS18B20 thermistor. 
-  + [**OneWire.**] (http://www.pjrc.com/teensy/td_libs_OneWire.html) For controlling the Dallas 1-wire family of devices. 
+  + [**OneWire.**](http://www.pjrc.com/teensy/td_libs_OneWire.html) For controlling the Dallas 1-wire family of devices. 
 
 #### 3.4 Other Useful Software
 
