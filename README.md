@@ -346,7 +346,7 @@ For shallow deployments, the Oatey cap will keep water out. For deeper deploymen
 
 Turn on the CTD. Gently lower the Oatey cap down and screw it into place. It should be tight enought that it cannot be removed wihtout unscrewing. Your CTD is now sealed and logging. Wipe down any spilled oil. These [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small amounts of mineral oil. 
 
-Your OpenCTD is now ready to take the plunge! Gently lower into the water and descend no more than 1 meter per second. The slower the better. For the first cast, descend to 5 meters, then recover and check that no leakage has occured. With mineral oil, it will be very clear if the device is leaking. Once it passes the first soak test, your reading to go forth and collect ocean data. 
+Your OpenCTD is now ready to take the plunge! Gently lower into the water and descend no more than 1 meter per second. The slower the better. For the first cast, descend to 5 meters, then recover and check that no leakage has occured. With mineral oil, it will be very clear if the device is leaking. Once it passes the first soak test, you're ready to go forth and collect ocean data. 
 
 Welcome to the Oceanography for Everyone community!
 
