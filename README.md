@@ -31,13 +31,31 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 
 ### 3.0 Bill of Materials
 
-Almost all of the necessary parts can be found through Amazon or Sparkfun. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts.
+We try to source as many parts from accesible distibutors. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts. Many components can be purchased directly through the supplier, found on AliExpress, or sourced through auction sites for significantly cheaper. Quality across suppliers for most parts has been generally consistent. 
 
-**Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manutfacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us**
+**Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manufacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us**
 
-Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor.
+Part	| Suplier	| Price	| Link	
+---|---|---|---
+Qduino Mini |	Sparkfun	| $29.95	| https://www.sparkfun.com/products/13614	
+SD Card Reader Module	|  Amazon	| $5.66	| http://amzn.to/2oem1Qr 
+MicroSD Card Read Module	|  Amazon	| $9.49	| http://amzn.to/2mSmS8Q	
+3.7V 2000mAh LiPo	| Amazon	| $14.98	| http://amzn.to/2nyUrKx						
+Conductivity K 1.0 Kit |	Atlas Scientific  |	$195.71	| https://www.atlas-scientific.com/product_pages/kits/ec_k1_0_kit.html	
+DS18B20 Temperature Sensor | Amazon | $9.88 |	http://amzn.to/2oeohH4				
+MS5803-14BA	|	Mouser	| $22.85	| http://www.mouser.com/ProductDetail/Measurement-Specialties/MS580314BA01-00
+SOIC to DIP Adapter	|	Sparkfun	| $2.95	| https://www.sparkfun.com/products/13655
+0.1uF Capacitor	| Amazon	| $4.79	| http://amzn.to/2oe8ckH
+10k Ohm Resistor	|	Amazon	| $4.19	| http://amzn.to/2nji6N4	
+4.7kOhm Resistor | Amazon	| $6.16	| http://amzn.to/2oBXW1U					
+Hook-up wire	|	Amazon	| $22.00	| http://amzn.to/2mSyqJs	
+Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2njvj8R	
 
-Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2
+**Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that are excessively overpriced, but you may have better luck finding cheaper options.** 
+
+Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor. 
+
+Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2. Mouser now sells individual MS5803-14BA sensor modules for a reasonable cost.
 
 PVC pipe can be found at most home supply stores. 
 
