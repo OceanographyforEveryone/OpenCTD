@@ -3,27 +3,27 @@ OpenCTD Introduction and Build Guide
 
 ### 1.0 Overview
 
-**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temperature, salinity, and depth down a water column. The CTD is the workhorse of oceanographic research. 
+**Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temperature, salinity, and depth for a water column. The CTD is the workhorse of oceanographic research. 
 
-CTDs are expensive, and that expense can act as a barrier-to-entry for researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
+CTDs are expensive, and that expense can act as a barrier-to-entry for formal and informal researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and scientists. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 200 meters depth.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and researchers. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 140 meters depth.
 
-Why 200 meters? For many coastal regions, 200 meters depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
+Why 140 meters? For many coastal regions, 140 meters depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
 *__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
 
 ####1.1 Skills Needed
 
-Building an OpenCTD does require some basic soldering and coding knowledge, but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the basic soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
+Building an OpenCTD requires some basic soldering and coding knowledge but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
 
-Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach basic soldering skills to students from ages 10 to 65. 
+Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach soldering and basic electronic principles to students from ages 10 to 65. 
 
 Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpenCTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/28JBqOI) is short, easy to understand, and will also provide you with some ideas for expanding your inventory of open-source environmental sensors. 
 
 ### 2.0 Project Status
 
-The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build instructions provided and a growing user community.  
+The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build instructions provided and a growing user community. Users around the world are testing their own units and helping with instrument validation.  
 
 #### 2.1 Field Trials
 
@@ -31,7 +31,7 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 
 ### 3.0 Bill of Materials
 
-We try to source as many parts from accesible distibutors. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts. Many components can be purchased directly through the supplier, found on AliExpress, or sourced through auction sites for significantly cheaper. Quality across suppliers for most parts has been generally consistent. 
+We try to source as many parts as possible from accesible distibutors. Visit our [Parts Depot](http://oceanographyforeveryone.com/depot.html) for a list of Amazon-sourceable parts. Many components can also be purchased directly through the supplier, found on AliExpress, or sourced through auction sites for significantly less. Quality across suppliers for most parts has been generally consistent, though we have noticed a defect rate of about 10% with the sealed temperature sensors. 
 
 **Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manufacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us**
 
@@ -52,7 +52,7 @@ Hook-up wire	|	Amazon	| $22.00	| http://amzn.to/2mSyqJs
 Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2njvj8R	
 3" Gripper Plug | Amazon | $4.99 | http://amzn.to/2njMTtn
 
-**Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that are excessively overpriced, but you may have better luck finding cheaper options.** 
+**Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that aren't excessively overpriced, but you may have better luck finding cheaper options, especially "intro to electronics"-type kits, which include many standard resistors and capacitors in small lots.** 
 
 Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor. 
 
@@ -83,10 +83,8 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 - sand paper
 - Hysol E90-FL epoxy
 - venturi mixing nozzles for epoxy
-- solid core wire (6 colors)
 - solder
 - desoldering braid
-- heat-shrink tubing
 - electical tape
 - hot glue
 - mineral oil
