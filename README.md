@@ -13,7 +13,7 @@ Why 140 meters? For many coastal regions, 140 meters depth covers the majority o
 
 *__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tool, tweet [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) so the community can follow your efforts!__*
 
-####1.1 Skills Needed
+###1.1 Skills Needed
 
 Building an OpenCTD requires some basic soldering and coding knowledge but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
 
