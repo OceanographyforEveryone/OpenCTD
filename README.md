@@ -114,7 +114,7 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 - **Temperature Sensors:** Data (D6)
 - **Conductivity Circuit:** TX (D8), RX (D9)
 
-**It is possible to use other Arduino-based single board computers, but please check the pinouts and schematics. Different Arduino boards may use various pins for internal functions which can interfere with signals to and from the sensors.**
+**It is possible to use other Arduino-based single board computers, but please check the pinouts and schematics. Different Arduino boards may use various pins for internal functions which can interfere with signals to and from the sensors (for example, using this pinout on an Arduino Uno will result in failed conductivity readings).**
 
 ### 5.0 Build Instructions
 
