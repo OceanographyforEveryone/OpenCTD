@@ -354,7 +354,7 @@ Welcome to the Oceanography for Everyone community!
 
 ### 9.0 Acknowledgments
 
-This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
+This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was initially designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
 
 ### 10.0 Code of Conduct
 
