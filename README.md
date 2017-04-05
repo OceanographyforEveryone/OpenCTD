@@ -186,7 +186,7 @@ Hookup wires for the pressure sensor should be about 5 cm longer than the length
 
 #### 5.3 Temperature Sensors
 
-The temperature probes use an off-the-shelf DS18B20 digital thermistor in a stainless steel housing. We use a battery of 3 probes averaged together for more consistent readings. The OneWire protocol allows mutliple probes to be queried on the same pin, so all three probes feed into a single data pin. To prepare the probes, cut the wire length to 30 cm. Solder three data strands, three power strands, and three ground strands together and attach a single solid core wire to each. 
+The temperature probes use an off-the-shelf DS18B20 digital thermistor in a stainless steel housing. We use a battery of 3 probes averaged together for more consistent readings. The OneWire protocol allows mutliple probes to be queried on the same pin, so all three probes feed into a single data pin. With these low-cost thermistors, we've found the failure rate to be about 10% out of the box. It's worth testing each thermistor on a breadboard before proceeding to save yourself a headache down the line. To prepare the probes, cut the wire length to 30 cm. Solder three data strands, three power strands, and three ground strands together and attach a single solid core wire to each. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Three temperature probes prepped for soldering](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T1.jpg?raw=true "Three termperature probes prepped for soldering")
 
@@ -311,6 +311,8 @@ D = (P(depth) - P(surface) * 100) / (g * 1000)
 Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P(surface) is the pressure at the surface in millibars; and g is acceleration due to gravity (9.81 m/s^2).
 
 #### 6.2 Temperature
+
+The Cave Pearl Project has provided an excellent guide to thorough temperature sensor calibration: [DS18B20 Calibration: Finally nailed it!](https://edwardmallon.wordpress.com/2016/03/05/ds18b20-calibration-we-finally-nailed-it/). This process may be overkill for most users, but anyone intending to produce replacatable, peer-review ready results should put in the extra time for a comprehensive calibration. 
 
 Calibrating the temperature sensors requires access to an already calibrated instrument. Allow both the OpenCTD and the validation instrument to equilibrate in water for 15 minutes. Take the average of the three OpenCTD temperature outputs and note the difference between that average and the validation instrument. Repeat for a fluid that is at least 15 degrees hotter or colder than the test fluid. There should be a linear relationship between the OpenCTD temperature sensors and the validation instrument, which will give you a calibration constant. Take the average of the three temperature readings and use the calibration constant to adjust temperature measurements when processing raw data. 
 
