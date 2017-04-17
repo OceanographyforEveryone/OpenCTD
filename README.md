@@ -354,10 +354,19 @@ Welcome to the Oceanography for Everyone community!
 
 [Oceanography for Everyone](http://oceanographyforeveryone.com/)
 
-### 9.0 Acknowledgments
+### 9.0 Partners and Projects
+
+If you are building you're own OpenCTD or have recieved one of ours, please add yourself to the following list. 
+
+Partner | Project | Location | Link | Other Contact Info
+---|---|---|---|---
+Ian Black||||
+Jonny Teague||||
+
+### 10.0 Acknowledgments
 
 This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was initially designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
 
-### 10.0 Code of Conduct
+### 11.0 Code of Conduct
 
 Please review our [Contributor Code of Conduct](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/CODE_OF_CONDUCT.md) prior to your first contribution. 
