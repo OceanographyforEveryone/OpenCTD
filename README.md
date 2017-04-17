@@ -358,10 +358,10 @@ Welcome to the Oceanography for Everyone community!
 
 If you are building you're own OpenCTD or have recieved one of ours, please add yourself to the following list. 
 
-Partner | Project | Location | Link | Other Contact Info
----|---|---|---|---
-Ian Black||||
-Jonny Teague||||
+Partner | Affiliation | Project | Location | Link | Other Contact Info
+---|---|---|---|---|---
+Ian Black | Oregon State University | CTDizzle |USA | http://blogs.oregonstate.edu/ianblack/ | [@Ian_CTDizzle](https://twitter.com/Ian_CTDizzle)
+Jonny Teague | University of Bristol | | England | |[@jonny_teague](https://twitter.com/jonny_teague)  
 
 ### 10.0 Acknowledgments
 
