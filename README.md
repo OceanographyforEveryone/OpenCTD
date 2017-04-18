@@ -15,7 +15,7 @@ Why 140 meters? For many coastal regions, 140 meters depth covers the majority o
 
 #### 1.1 Skills Needed
 
-Building an OpenCTD requires some basic soldering and coding knowledge but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm] (http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
+Building an OpenCTD requires some basic soldering and coding knowledge but it is also a great opportunity to learn those skills. With an hour or two of practice, you can develop the soldering skills needed to build an OpenCTD. [This descriptive, illustrative comic from Mighty Ohm](http://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) presents soldering fundamentals in an accesible and approachable format.
 
 Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach soldering and basic electronic principles to students from ages 10 to 65. 
 
@@ -54,9 +54,9 @@ Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2njvj8R
 
 **Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that aren't excessively overpriced, but you may have better luck finding cheaper options, especially "intro to electronics"-type kits, which include many standard resistors and capacitors in small lots.** 
 
-Additional components, like a pre-fabricated [pressure sensor module] (https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards] (https://www.sparkfun.com/products/13655), and the [qDuino Mini] (https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun] (https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor. 
+Additional components, like a pre-fabricated [pressure sensor module](https://www.sparkfun.com/products/12909), [LiPo batteries] (https://www.sparkfun.com/products/8483), [SMD boards](https://www.sparkfun.com/products/13655), and the [qDuino Mini](https://www.sparkfun.com/products/13614) can be found at Sparkfun. The MS5803-14BA pressure sensor previously needed to be special ordered from a parts supplier, but [SparkFun](https://www.sparkfun.com/products/12909) has a (much more expensive) commercial 14-bar unit using the same sensor. 
 
-Servoflo sells the raw, calibrated pressure sensor in both [14Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar] (http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2. Mouser now sells individual MS5803-14BA sensor modules for a reasonable cost.
+Servoflo sells the raw, calibrated pressure sensor in both [14Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/614-ms5803-14ba) and [30Bar](http://www.servoflo.com/download-archive/data-sheets/220-calibrated-digital-sensor-modules/613-ms5803-30ba) modules. These are surface mounted sensors and require significant soldering skills to mount properly. Detailed descriptions of the differeces and benefits between the two pressure sensors is discussed in section 5.2. Mouser now sells individual MS5803-14BA sensor modules for a reasonable cost.
 
 PVC pipe can be found at most home supply stores. If you want to get fancy, a [clear acrylic tube](http://amzn.to/2njFhqw) can add some flare to your build. 
 
