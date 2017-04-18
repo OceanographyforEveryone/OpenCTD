@@ -128,7 +128,7 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*A complete OpenCTD system mounted to a breadboard for testing before soldering and potting.*
 
-Before you begin, flash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to your Qduino Mini so that you can test each component during the build. 
+Before you begin, set up you Qduino Mini following this [helpful quickstart guide from Qtechknow](https://www.hackster.io/team-qtechknow/qduino-mini-quickstart-guide-8b2d68) and flash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to your Qduino Mini so that you can test each component during the build. 
 
 #### 5.1 SD Card Reader
 
