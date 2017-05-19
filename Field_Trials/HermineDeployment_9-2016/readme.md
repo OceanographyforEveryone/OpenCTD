@@ -3,7 +3,7 @@ Storms a brewin'
 
 We deployed two OpenCTDs in a tidal estuary ahead of Hurricane Hermine. 
 
-##Background
+###Background
 
 Hurricane Hermine is a tropical cyclone that passed over our field site in coastal Virginia on September 4, 2016. To test the longevity of the batteries and the durability of the OpenCTD during long term deployments, I placed two units in our Test Ditch (a tidally influence drainage ditch connected to the Mobjack Bay estuary that is conveniently located on our property), where they remained for 74 hours. 
 
