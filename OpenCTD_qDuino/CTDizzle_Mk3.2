@@ -2,8 +2,7 @@
 //For questions about the CTDizzle Mk3 build, contact Ian Black (blackia@oregonstate.edu).
 //Please view the build guide for more information.
 
-//This build uses the BlueRobotics TSYS01 and MS5837 for T and P.
-//This build uses the Sparkfun DeadOn RTC to keep time.
+//This build uses the Blue Robotics T and P sensors, and the SparkFun DeadOn RTC.
 
 #include <SD.h>
 #include <SPI.h>
@@ -13,7 +12,7 @@
 #include "MS5837.h" //Visit BlueRobotics for documentation.
 #include <SparkFunDS3234RTC.h>  //Visit SparkFun for documentation
 
-SoftwareSerial ecSerial(9,8);  //rx,tx for EZO.
+SoftwareSerial ecSerial(8,9);  //rx,tx for EZO.
 float EC_float = 0; //Visit Atlas-Scientific for documentation on EZ EZO.
 char EC_data[48];
 char *EC;
@@ -32,7 +31,7 @@ void setup() {      //Start your engines.
   Wire.begin();
   
   if (SD.begin(4)) {
-  char filename[]= "LOGGER00.CSV"; //See Adafruit Light and Temp Logger example for more on this.
+  char filename[]= "rawCTD00.CSV"; //File names on SD card start with RAWCTD.
   for(uint8_t i=0;i<100;i++){
     filename[6]=i/10+'0';
     filename[7]=i%10+'0';
@@ -47,20 +46,24 @@ void setup() {      //Start your engines.
   tsensor.init();   //Initialize the temperature sensor.
   psensor.init();   //Initialize the pressure sensor.
   psensor.setModel(MS5837::MS5837_30BA);    //Define the model of the pressure sensor.
-  psensor.setFluidDensity(1024); //Set approximate fluid density (kg/m^3) for pressure sensor.
-  rtc.begin(5);    //Chip select for the DeadOn RTC is pin 5.
-  //rtc.autoTime();  //Time updates with IDE time everytime you upload. Comment out after time sync and re upload to have rtc maintain time.
+  psensor.setFluidDensity(1024); //Set approximate fluid density for pressure sensor.
+  rtc.begin(5);    //Chip select for the DeadOn RTC.
+  rtc.autoTime();  //Time updates with IDE time everytime you upload. Comment out after time sync to have rtc maintain time.
   delay(500);   //Wait half a second before continuing.
 }
 
 
 
 void loop() {     //And around we go.
+  tsensor.read();  //Read what the temperature is and hold it.
+  delay(10);
+  psensor.read();  //Read what the pressure is and hold it.
+  delay(10);
   if (ecSerial.available() > 0) {     //If comms are established with the EC EZO.
     inputstring = ecSerial.readStringUntil(13);     //The Atlas EC EZO reads the incoming string until a <CR> is received.
     ecSerial.print('T');    
     ecSerial.print(',');
-    ecSerial.print(tsensor.temperature());     //Change the default temp on the EC EZO to the TSYS01 reported temperature.
+    ecSerial.print(tsensor.temperature());     //Change the default temp on the EC EZO to the current unit temperature.
     ecSerial.print('\r');     //Add a <CR> to send the command.  
     inputstring = "";         //Make sure the string is clear.
     delay(100);      //Wait 100 milliseconds for good measure.
@@ -70,11 +73,6 @@ void loop() {     //And around we go.
   if ((EC_data[0] >= 48) && (EC_data[0] <= 57)){
     parse_data(); //If incoming EZO data is a digit and not a letter, parse it. 
   }
-  
-  delay(50);
-  tsensor.read();  //Read what the temperature is and hold it.
-  delay(10);
-  psensor.read();  //Read what the pressure is and hold it.
   delay(10);
   rtc.update();   //Update the time.
   
@@ -90,10 +88,7 @@ void loop() {     //And around we go.
     datafile.println(psensor.pressure());   //Print pressure to SD card.
     datafile.flush();   //Close the file.
 
-    Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year()));    //Print it all to the serial monitor.
-    Serial.print(","); 
-    Serial.print(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));
-    Serial.print(",");
+// This sketch maxes out the Qduino, hence serial printing for date and time are removed. 
     Serial.print(EC);
     Serial.print(",");
     Serial.print(tsensor.temperature());
@@ -107,3 +102,5 @@ void loop() {     //And around we go.
 void parse_data() {   //If the parse_data function is called, parse incoming EZO data at the commas.
   EC = strtok(EC_data, ",");
 }
+
+
