@@ -3,11 +3,11 @@ Field Trials
 
 Are you ready to take your own OpenCTD into the field for testing? Thank you, this repo is for you! Please note that *Field Trials* are note the same as expeditions. Field trials are about testing the OpenCTD against validated, commercial instruments to better help us understand their strengths and weaknesses. 
 
-###Data is the source of all our power
+### Data is the source of all our power
 
 We need to see how the OpenCTD performs in the wild, in a variety of conditions, from freshwater lakes and rivers to hypersaline seas. We need data, both raw and cleanly processed. We need the original OpenCTD data as well as the data from the instuments you are testing it against. We need station logs, field notes, and pictures of your device. All of this will help make the OpenCTD and Oceanography for Everyone better. 
 
-###Style Guide
+### Style Guide
 
 In order to streamline these Field Trials and make them accessible to everyone, we'd like to follow a relatively standardized form. Each field trial should be contained within its own folder--you can use the name of the vessel, the geographic location, the expedition number, or any other signifier that is consistent and clear. Each folder should then contain:
 
@@ -21,6 +21,6 @@ In order to streamline these Field Trials and make them accessible to everyone, 
 
 417. Images: Any relevent images from the Field Trial, including graphs of your data output and photographs of the deployment. 
 
-###Future Goals
+### Future Goals
 
 As this project evolves, we will be developing ways to easily database your OpenCTD casts and make them accessible to other citizen oceanographers and the general public. 
