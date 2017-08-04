@@ -1,7 +1,7 @@
 //Wire and MS5803_I2C libraries for communicating with the pressure sensor. 
 
 #include <Wire.h>               
-#include <SparkFun_MS5803_I2C.h>
+#include <SparkFun_MS5803_I2C.h>                                                                   
 
 //EC Circuit uses software serial
 #include <SoftwareSerial.h>     // For use by EC circuit.
