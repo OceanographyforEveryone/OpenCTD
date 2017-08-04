@@ -1,6 +1,8 @@
 OpenCTD Introduction and Build Guide
 =======
 
+*__NOTE: As of 8/4/2017 Andrew is in the porcess of significantly revising the build guide following extensive testing of the latest prototypes. If you ware planning to begin assembling your own OpenCTD, please check with Andrew prior to ordering any components.__*
+
 ### 1.0 Overview
 
 **Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ a CTD--an oceanographic instrument that, at its core, measures temperature, salinity, and depth for a water column. The CTD is the workhorse of oceanographic research. 
@@ -206,7 +208,7 @@ The temperature probes use an off-the-shelf DS18B20 digital thermistor in a stai
 
 Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino) with a 4.7 kOhm pull-up resisitor. This should be done when you solder everything directly to the Arduino. 
 
-####5.4 Conductivity Sensor
+#### 5.4 Conductivity Sensor
 
 There are a variety of options for conductivity probes, but we recommend using the [Atlas EC EZO circuit](http://www.atlas-scientific.com/product_pages/circuits/ezo_ec.html) to drive these probes. Different conductivity probes will have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the probe aside for potting. 
 
