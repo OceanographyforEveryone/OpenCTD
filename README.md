@@ -1,7 +1,7 @@
 OpenCTD Introduction and Build Guide
 =======
 
-*__NOTE: As of 8/4/2017 Andrew is in the porcess of significantly revising the build guide following extensive testing of the latest prototypes. If you are planning to begin assembling your own OpenCTD, please check with Andrew prior to ordering any components.__*
+*__NOTE: As of 8/4/2017 Andrew is in the process of significantly revising the build guide following extensive testing of the latest prototypes. If you are planning to begin assembling your own OpenCTD, please check with Andrew prior to ordering any components.__*
 
 ### 1.0 Overview
 
