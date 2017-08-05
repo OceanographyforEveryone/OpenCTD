@@ -1,11 +1,11 @@
-Pressure Test at OpenROV HQ
+Pressure Test at OpenROV HQ 7-20-2016 (3" OpenCTD)
 ===================================
 
-###Background
+### Background
 
 We took the Lake Superior prototype to OpenROV headquarters to find out the failure limit for non-pressure compensated operation. 
 
-###Lessons Learned
+### Lessons Learned
 
 * The first test held until 25m. 
 
