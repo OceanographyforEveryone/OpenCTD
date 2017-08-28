@@ -31,11 +31,13 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 
 **_Lake Superior, R/V Blue Heron_:** Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD at it was cast against a commercial CTD. Additionaly, OpenCTD was successfully deployed to a depth of 140 meters. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
 
-**_Gloucester Point, VA, Hurricane Hermine_:**
+**_Gloucester Point, VA, Hurricane Hermine_:** Hurricane Hermine is a tropical cyclone that passed over our field site in coastal Virginia on September 4, 2016. To test the longevity of the batteries and the durability of the OpenCTD during long term deployments, Andrew placed two units in our Test Ditch (a tidally influence drainage ditch connected to the Mobjack Bay estuary), where they remained for 74 hours. Notes and data files can be found in the [HermineDeployment_9-2016](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/HermineDeployment_9-2016) respository.
 
-**_Pressure Tests, 3-inch configuration_:**
+**_Pressure Tests, 3-inch configuration_:** We sent the Lake Superior prototype to OpenROV headquarters to find out the failure limit for non-pressure compensated operation. Failures occured at 25m and 6m. Notes and data can be found in the [Pressure_Test_7-20-16](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Pressure_Test_7-20-16) respository.
 
-**_Pressure Tests, 2-inch configuration_:**
+**_Temperature Sensor Equilibration Test_:** One of the big trade-offs between the OpenCTD and a commercial unit is that, while the sensors we use aren't actually less accurate than those you would find in a commercial unit, they are slower. Particularly the temperature sensors. This means that they take longer to reach equilibrium with their environment and in order to get accurate readings, users must be patient and do their conventional CTD casts just a little bit slower. Andrew conducted a bulk sensor equilibration test using the steel-clad thermistors. Notes and data can be found in the [Temperature_Test_8_4_2017](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Temperature_Test_8_4_2017) repository. 
+
+**_Pressure Tests, 2-inch configuration_:** We sent a 2-inch pipe prototype to OpenROV headquarters to find out the failure limit for non-pressure compensated operation. **Test will be conducted August 28, 2017 and uploaded soon after.**
 
 ### 3.0 Bill of Materials
 
