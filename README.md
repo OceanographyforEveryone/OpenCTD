@@ -43,7 +43,7 @@ The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build 
 
 We try to source as many parts as possible from accesible distibutors. **_NOTE: As Amazon is in the process of phasing out its aStore program, the Parts Depot is no longer being maintained. Please consult the below list for the most recent part recommendations._** Many components can also be purchased directly through the supplier, found on AliExpress, or sourced through auction sites for significantly less. Quality across suppliers for most parts has been generally consistent, though we have noticed a defect rate of about 10% with the sealed temperature sensors. 
 
-**Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manufacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us**
+**Please be aware: Part availability varies from month to month, and some components may become permanently unavailble or listed under a new manufacturer and product name. We do our best to keep the bill of material up to date, If you find any discrepancies, please email us.**
 
 **Recommended Components**
 
@@ -96,7 +96,7 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 - 1" bit (for holes in PVC)
 - laptop
 - micro-USB cable
-- coffe maker (because coffee)
+- coffee maker (because coffee)
 
 #### 3.2 Consumables
 - sand paper
@@ -111,7 +111,11 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 - coffee
 
 #### 3.3 3D printed parts
-Several useful parts that will significantly improve the build process are 3D printable. While 3D printing allows rapid fabricating of small custome parts for very low cost, we recognize that access to a 3D printer is not universal. The OpenCTD can be entirely constructed without 3D printed parts. The sensor plate can be fabricated from cardboard if necessary (its purpose is to hold the sensors in place while the expoxy cures, one the epoxy is set, the plate serve no further function). The wire jig helps keep everything organized but is not necessary. The Jaunty CTD Cap is funny, but not particularly useful. If you would like to build an OpenCTD but do not have access o a 3D printer, please contact either Andrew or Russell and we will print one for you. 
+Several useful parts that will significantly improve the build process are 3D printable: [3D Printer Files](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/3D_Printer_Files). While 3D printing allows rapid fabricating of small custome parts for very low cost, we recognize that access to a 3D printer is not universal. The OpenCTD can be entirely constructed without 3D printed parts. The sensor plate can be fabricated from cardboard if necessary (its purpose is to hold the sensors in place while the expoxy cures, one the epoxy is set, the plate serve no further function). The wire jig helps keep everything organized but is not necessary. The Jaunty CTD Cap is funny, but not particularly useful. If you would like to build an OpenCTD but do not have access to a 3D printer, please contact either Andrew or Russell and we will print one for you. If you're on Thingiverse, please like, collect, or I made one! our designs to help boost our profile in the 3D printing community. 
+
++ [OpenCTD sensor template](https://www.thingiverse.com/thing:1641934)
++ [OpenCTD hardware frame and wire guide](https://www.thingiverse.com/thing:2500591)
++ [Jaunty Red Cap for the OpenCTD](https://www.thingiverse.com/thing:2470929)
 
 #### 3.3 Required Arduino Libraries
 + Included with Arduino IDE:
