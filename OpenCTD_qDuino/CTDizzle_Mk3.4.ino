@@ -12,13 +12,12 @@
 #include "MS5837.h" //Visit BlueRobotics for documentation.
 #include <SparkFunDS3234RTC.h>  //Visit SparkFun for documentation
 
-SoftwareSerial ecSerial(8,9);  //rx,tx for EZO.
+SoftwareSerial ecSerial(9,8);  //rx,tx for EZO.
 float EC_float = 0; //Visit Atlas-Scientific for documentation on EZ EZO.
 char EC_data[48];
 char *EC;
 byte received_from_sensor = 0;
 byte string_received = 0;
-String inputstring = "";
 TSYS01 tsensor; //Define temperature functions.
 MS5837 psensor;   //Define pressure functions.
 
@@ -27,16 +26,15 @@ File datafile;
 void setup() {      //Start your engines.
   Serial.begin(9600);     //Set the baud rate to 9600.
   ecSerial.begin(9600);     //Communicate with the EZO at 9600 bps.
-  inputstring.reserve(10);      //Leave some room to send data to the EC EZO.
   Wire.begin();
   
-  if (SD.begin(4)) {
-  char filename[]= "rawCTD00.CSV"; //File names on SD card start with RAWCTD.
+  if (SD.begin(4)) {  //If an SD card is detected on pin 4.
+  char filename[]= "rawCTD00.CSV";
   for(uint8_t i=0;i<100;i++){
     filename[6]=i/10+'0';
     filename[7]=i%10+'0';
     if(!SD.exists(filename)){
-      datafile=SD.open(filename,FILE_WRITE); //Create a file with a name in series. Example: LOGGER00.csv, LOGGER01.csv
+      datafile=SD.open(filename,FILE_WRITE); //Create a file with a name in series. Example: RAWCTD00.csv, RAWCTD01.csv
       break;
     }
   }
@@ -47,9 +45,9 @@ void setup() {      //Start your engines.
   psensor.init();   //Initialize the pressure sensor.
   psensor.setModel(MS5837::MS5837_30BA);    //Define the model of the pressure sensor.
   psensor.setFluidDensity(1024); //Set approximate fluid density for pressure sensor.
-  rtc.begin(5);    //Chip select for the DeadOn RTC.
-  rtc.autoTime();  //Time updates with IDE time everytime you upload. Comment out after time sync to have rtc maintain time.
-  delay(500);   //Wait half a second before continuing.
+  rtc.begin(5);    //Chip select for RTC is pin 5.
+  //rtc.autoTime();  //Time updates with IDE time everytime you upload. Comment out after time sync to have rtc maintain time.
+  delay(1000);   //Wait half a second before continuing.
 }
 
 
@@ -60,13 +58,7 @@ void loop() {     //And around we go.
   psensor.read();  //Read what the pressure is and hold it.
   delay(10);
   if (ecSerial.available() > 0) {     //If comms are established with the EC EZO.
-    inputstring = ecSerial.readStringUntil(13);     //The Atlas EC EZO reads the incoming string until a <CR> is received.
-    ecSerial.print('T');    
-    ecSerial.print(',');
-    ecSerial.print(tsensor.temperature());     //Change the default temp on the EC EZO to the current unit temperature.
-    ecSerial.print('\r');     //Add a <CR> to send the command.  
-    inputstring = "";         //Make sure the string is clear.
-    delay(100);      //Wait 100 milliseconds for good measure.
+    delay(100);
     received_from_sensor = ecSerial.readBytesUntil(13,EC_data,48);  //Read incoming data from the EZO.
     EC_data[received_from_sensor] = 0;    //Null terminate the data.
     } 
@@ -88,7 +80,10 @@ void loop() {     //And around we go.
     datafile.println(psensor.pressure());   //Print pressure to SD card.
     datafile.flush();   //Close the file.
 
-// This sketch maxes out the Qduino, hence serial printing for date and time are removed. 
+    Serial.print(String(rtc.month()) + "/" + String(rtc.date()) + "/" + String(rtc.year())); //Print date to SD card.
+    Serial.print(",");   //Comma delimited.
+    Serial.println(String(rtc.hour()) + ":" + String(rtc.minute())+":"+String(rtc.second()));  //Print hours, minutes, seconds to SD card.
+    Serial.print(",");
     Serial.print(EC);
     Serial.print(",");
     Serial.print(tsensor.temperature());
@@ -102,5 +97,7 @@ void loop() {     //And around we go.
 void parse_data() {   //If the parse_data function is called, parse incoming EZO data at the commas.
   EC = strtok(EC_data, ",");
 }
+
+
 
 
