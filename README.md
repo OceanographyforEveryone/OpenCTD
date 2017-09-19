@@ -138,7 +138,7 @@ Several useful parts that will significantly improve the build process are 3D pr
 
 ### 4.0 Arduino Qduino Pinouts
 
-- **SD Card Reader:** CS (D4), SCK (D15), MOSI (D16), MISO (D17)
+- **SD Card Reader:** CS (D4), SCK (D15), MOSI (D16), MISO (D14)
 - **Pressure Sensor:** SDA (D2), SCL (D3)
 - **Temperature Sensors:** Data (D6)
 - **Conductivity Circuit:** TX (D8), RX (D9)
