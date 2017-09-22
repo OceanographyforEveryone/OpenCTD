@@ -1,7 +1,7 @@
 Support Code
 ============
 
-Here you will find supplmental software to simplify building and testing the OpenCTD. 
+Here you will find supplemental software to simplify building and testing the OpenCTD. 
 
 [**MS5803_14_test**](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Support_Code/MS5803_14_test) reads just the pressure sensor in standard configuration so that your can confirm its functionality.
 
