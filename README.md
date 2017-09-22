@@ -199,7 +199,7 @@ Other solutions require a small 100nF (104) capacitor and 10kOhm pull-up resisto
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Back view of the same DIY pressure module.*
 
 
-Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the housing. You may end up shortening these depending on your preference.  
+Hookup wires for the pressure sensor should be about 5 cm longer than the length of pipe used for the housing. You may end up shortening these depending on your preference. The [MS5803_14_test](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Support_Code/MS5803_14_test) code can be used to test the pressure sensor after assembly.
 
 #### 5.3 Temperature Sensors
 
