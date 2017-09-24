@@ -138,10 +138,12 @@ Several useful parts that will significantly improve the build process are 3D pr
 
 ### 4.0 Arduino Qduino Pinouts
 
-- **SD Card Reader:** CS (D4), SCK (D15), MOSI (D16), MISO (D14)
+- **SD Card Reader:** CS (D4), SCK (D15), MOSI (D16), MISO (D14*)
 - **Pressure Sensor:** SDA (D2), SCL (D3)
 - **Temperature Sensors:** Data (D6)
 - **Conductivity Circuit:** TX (D8), RX (D9)
+
+\*older Qduinos may have this labeled D17
 
 **It is possible to use other Arduino-based single board computers, but please check the pinouts and schematics. Different Arduino boards may use various pins for internal functions which can interfere with signals to and from the sensors (for example, using this pinout on an Arduino Uno will result in failed conductivity readings).**
 
