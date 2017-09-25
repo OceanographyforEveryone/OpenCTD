@@ -7,13 +7,13 @@ OpenCTD Introduction and Build Guide
 
 **Conductivity, temperature, and depth (CTD).**  These three measurements allow scientists to unlock ocean patterns hidden beneath the sea's surface. The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to an observer floating upon its surface. To reveal these patterns oceanographers employ the CTD--an oceanographic instrument that, at its core, measures temperature, salinity, and depth for a water column. The CTD is the workhorse of oceanographic research. 
 
-CTDs are expensive, and that expense can act as a barrier-to-entry for formal and informal researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
+CTDs are expensive, and that expense can is a barrier-to-entry for formal and informal researchers with limited budgets, scientists from developing nations, citizen oceanographers, and students of all levels interested in learning more about their local coasts and waterways. 
 
-The OpenCTD is a low-cost, open-source CTD suitable for both educators and researchers. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 140 meters depth.
+The OpenCTD is a low-cost, open-source CTD suitable for both educators and researchers. The platform is built using reasonably accessible parts and is powered by an Arduino-based microcontroller. Source codes and building instructions are freely available. The device, sufficiently accurate for scientific research, can be constructed for approximately $300, and is effective to 100 meters depth.
 
-Why 140 meters? For many coastal regions, 140 meters depth covers the majority of the ocean that is accessible by small boat and generally the maximum depth of the continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable, and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
+Why 100 meters? For many coastal regions, 100 meters depth covers the majority of the ocean that is accessible by small boat and generally the average depth of the outer continental shelf. The OpenCTD is targeted to people working in this niche, where entire research projects can be conducted for less than the cost of a commercial CTD. The OpenCTD is scalable and someone with the inclination and expertise can adapt an OpenCTD to operate in deeper waters.
 
-*__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people building and using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tool, please consider tweeting using the [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) hashtag so the community can follow your efforts!__*
+*__If you build an OpenCTD please let the [team at Oceanography For Everyone](http://oceanographyforeveryone.com/#meetAnchor) know. We love to keep up with the community of people building and using these devices. During your build session, or while using an OpenCTD or other [Oceanography for Everyone](http://oceanographyforeveryone.com/) tools, please consider tweeting using the [#HackTheOcean](https://twitter.com/hashtag/HackTheOcean?src=hash) hashtag so the community can follow your efforts!__*
 
 #### 1.1 Skills Needed
 
@@ -21,25 +21,19 @@ Building an OpenCTD requires some basic soldering and coding knowledge but it is
 
 Andrew has used this [MightyOhn Geiger Counter Kit](http://mightyohm.com/blog/products/geiger-counter/) and this [Mega Menorah 9000 Soldering Kit](http://shop.evilmadscientist.com/productsmenu/756) to teach soldering and basic electronic principles to students from ages 10 to 65. 
 
-Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpenCTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/28JBqOI) is short, easy to understand, and will provide you with some ideas for expanding your inventory of open-source environmental sensors. 
+Arduino is a relatively intuitive coding environment, but it can still seem daunting to first-time users. Practically, we have already created the code you will need to run the OpenCTD, but it is extremely beneficial, particularly for end users, to understand what the software is doing. The book [Environmental Monitoring with Arduino: Building Simple Devices to Collect Data About the World Around Us](http://amzn.to/2xB15Xi) is short, easy to understand, and will provide you with some ideas for expanding your inventory of open-source environmental sensors. 
 
 ### 2.0 Project Status
 
-The OpenCTD is now stable on the Qduino Mini platform, with comprehensive build instructions provided and a growing user community. We have validated the OpenCTD against commercial CTDs and are confident in the quality of the data. Users around the world are testing their own units and helping with instrument validation.  
+The OpenCTD is stable on the Qduino Mini platform with comprehensive build instructions provided and a growing user community. We have validated the OpenCTD against commercial CTDs and are confident in the quality of the data. Users around the world are building and testing their own units and helping with instrument validation.  
 
 #### 2.1 Field Trials
 
-As we test and refine the design of the OpenCTD, critical field trials with essential data for assessing the quality, accuracy, and durability of the device will be archived in the [Field_Trials](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials) repository.
+As we test and refine the design of the OpenCTD, critical field trials with essential data for assessing the quality, accuracy, and durability of the device are archived in the [Field_Trials](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials) repository.
 
 + **_Lake Superior, R/V Blue Heron_:** Initial field trials were completed in October of 2015 and analysis of the data from the first several casts confirms the accuracy of OpenCTD at it was cast against a commercial CTD. Additionaly, OpenCTD was successfully deployed to a depth of 140 meters. All data and field notes from the first Field Trial can be found in the [Blue Heron 15-11](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Blue_Heron_2015-11) repository.
 
 + **_Gloucester Point, VA, Hurricane Hermine_:** Hurricane Hermine is a tropical cyclone that passed over our field site in coastal Virginia on September 4, 2016. To test the longevity of the batteries and the durability of the OpenCTD during long term deployments, Andrew placed two units in our Test Ditch (a tidally influence drainage ditch connected to the Mobjack Bay estuary), where they remained for 74 hours. Notes and data files can be found in the [HermineDeployment_9-2016](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/HermineDeployment_9-2016) respository.
-
-+ **_Pressure Tests, 3-inch configuration_:** We sent the Lake Superior prototype to OpenROV headquarters to find out the failure limit for non-pressure compensated operation. Failures occured at 25m and 6m. Notes and data can be found in the [Pressure_Test_7-20-16](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Pressure_Test_7-20-16) respository.
-
-+ **_Temperature Sensor Equilibration Test_:** One of the big trade-offs between the OpenCTD and a commercial unit is that, while the sensors we use aren't actually less accurate than those you would find in a commercial unit, they are slower. Particularly the temperature sensors. This means that they take longer to reach equilibrium with their environment and in order to get accurate readings, users must be patient and do their conventional CTD casts just a little bit slower. Andrew conducted a bulk sensor equilibration test using the steel-clad thermistors. Notes and data can be found in the [Temperature_Test_8_4_2017](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Field_Trials/Temperature_Test_8_4_2017) repository. 
-
-+ **_Pressure Tests, 2-inch configuration_:** We sent a 2-inch pipe prototype to OpenROV headquarters to find out the failure limit for non-pressure compensated operation. **Test will be conducted August 28, 2017 and uploaded soon after.**
 
 ### 3.0 Bill of Materials
 
@@ -51,27 +45,27 @@ We try to source as many parts as possible from accesible distibutors. **_NOTE: 
 
 Part	| Suplier	| Price	| Link	
 ---|---|---|---
-Qduino Mini |	Sparkfun/Amazon	| $29.95	| https://www.sparkfun.com/products/13614	/ http://amzn.to/2ubBhks
-SD Card Reader Module	|  Amazon	| $5.66	| http://amzn.to/2oem1Qr 	
-3.7V 2000mAh LiPo	| Amazon	| $14.98	| http://amzn.to/2nyUrKx						
+Qduino Mini |	Sparkfun/Amazon	| $29.95	| https://www.sparkfun.com/products/13614	/ http://amzn.to/2wS8YUp
+SD Card Reader Module	|  Amazon	| $5.66	| http://amzn.to/2jXSNnv 	
+3.7V 2000mAh LiPo	| Amazon	| $14.98	| http://amzn.to/2y3nDRQ						
 Conductivity K 1.0 Kit |	Atlas Scientific  |	$195.71	| https://www.atlas-scientific.com/product_pages/kits/ec_k1_0_kit.html	
-DS18B20 Temperature Sensor | Amazon | $9.88 |	http://amzn.to/2oeohH4				
+DS18B20 Temperature Sensor | Amazon | $9.88 |	http://amzn.to/2yoBUo6				
 MS5803-14BA	|	Mouser	| $22.85	| http://www.mouser.com/ProductDetail/Measurement-Specialties/MS580314BA01-00
 SOIC to DIP Adapter	|	Sparkfun	| $2.95	| https://www.sparkfun.com/products/13655
-0.1uF Capacitor	| Amazon	| $4.79	| http://amzn.to/2oe8ckH
-10k Ohm Resistor	|	Amazon	| $4.19	| http://amzn.to/2nji6N4	
-4.7kOhm Resistor | Amazon	| $6.16	| http://amzn.to/2oBXW1U					
-Hook-up wire	|	Amazon	| $22.00	| http://amzn.to/2mSyqJs	
-Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2njvj8R	
-2" Gripper Plug | Amazon | $9.41 | http://amzn.to/2ubxgfJ
+0.1uF Capacitor	| Amazon	| $4.79	| http://amzn.to/2humBn9
+10k Ohm Resistor	|	Amazon	| $4.19	| http://amzn.to/2yoCjqC	
+4.7kOhm Resistor | Amazon	| $6.16	| http://amzn.to/2fMfmHe					
+Hook-up wire	|	Amazon	| $22.00	| http://amzn.to/2hu54eJ	
+Heat shrink tubing |	Amazon	| $5.99	|http://amzn.to/2wRQtPO	
+2" Gripper Plug | Amazon | $9.41 | http://amzn.to/2jWVjdz
 
 **Alternate Components**
 
 Part	| Suplier	| Price	| Link	
 ---|---|---|---
-MicroSD Card Read Module	|  Amazon	| $9.49	| http://amzn.to/2mSmS8Q
+MicroSD Card Read Module	|  Amazon	| $9.49	| http://amzn.to/2y4nSvS
 Pressure Sensor Breakout - MS5803-14BA | SparkFun | $59.95 | https://www.sparkfun.com/products/12909
-3" Gripper Plug | Amazon | $4.99 | http://amzn.to/2njMTtn
+3" Gripper Plug | Amazon | $4.99 | http://amzn.to/2wS9qlC
 
 **Some parts, such as resistors and capacitors, are very cheap but hard to source individually. We have tried to find the smallest lots that aren't excessively overpriced, but you may have better luck finding cheaper options, especially "intro to electronics"-type kits, which include many standard resistors and capacitors in small lots.** 
 
@@ -113,7 +107,7 @@ PVC pipe can be found at most home supply stores. If you want to get fancy, a [c
 - coffee
 
 #### 3.3 3D printed parts
-Several useful parts that will significantly improve the build process are 3D printable: [3D Printer Files](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/3D_Printer_Files). While 3D printing allows rapid fabricating of small custome parts for very low cost, we recognize that access to a 3D printer is not universal. The OpenCTD can be entirely constructed without 3D printed parts. The sensor plate can be fabricated from cardboard if necessary (its purpose is to hold the sensors in place while the expoxy cures, one the epoxy is set, the plate serve no further function). The wire jig helps keep everything organized but is not necessary. The Jaunty CTD Cap is funny, but not particularly useful. If you would like to build an OpenCTD but do not have access to a 3D printer, please contact either Andrew or Russell and we will print one for you. If you're on Thingiverse, please Like, Collect, or I Made One our designs to help boost our profile in the 3D printing community. 
+Several useful parts that will significantly improve the build process are 3D printable: [3D Printer Files](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/3D_Printer_Files). While 3D printing allows rapid fabricating of small custom parts for very low cost, we recognize that access to a 3D printer is not universal. The OpenCTD can be entirely constructed without 3D printed parts. The sensor plate can be fabricated from cardboard if necessary (its purpose is to hold the sensors in place while the expoxy cures, once the epoxy is set, the plate serves no further function). The wire jig helps keep everything organized but is not necessary. The Jaunty CTD Cap is funny, but not particularly useful. If you would like to build an OpenCTD but do not have access to a 3D printer, please contact either Andrew or Russell and we will print the parts for you. If you're on [Thingiverse](https://www.thingiverse.com/), please Like, Collect, or Make our designs to help boost our profile in the 3D-printing community. 
 
 + [OpenCTD sensor template](https://www.thingiverse.com/thing:1641934)
 + [OpenCTD hardware frame and wire guide](https://www.thingiverse.com/thing:2500591)
@@ -135,6 +129,7 @@ Several useful parts that will significantly improve the build process are 3D pr
 + [**Qduino.h and Qduino fuelGauge**](https://github.com/sparkfun/Arduino_Boards/tree/master/sparkfun/avr/libraries/Qduino) allows you to measure the charge on you battery. 
 + [**simple_serial_for_EC_calibration**](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Support_Code/simple_serial_for_EC_calibration) is a basic serial monitor program to help you calibrate the conductivity probe. 
 + [**TempProbeTester**](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Support_Code/TempProbeTester) allows you to test up to 26 temperature probes simultaneously and is useful for quality control and temperature calibrations. 
++ [**MS5803_14_test**](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/Support_Code/MS5803_14_test) For testing the pressure sensor prior to installation. 
 
 ### 4.0 Arduino Qduino Pinouts
 
@@ -163,9 +158,9 @@ Before you begin, set up you Qduino Mini following this [helpful quickstart guid
 
 #### 5.1 SD Card Reader
 
-The [SD card reader](http://amzn.to/2oem1Qr) we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each header pin 90 degrees (using needle-nosed pliers) or remove the headers completely. Hookup wires should be at least 60 mm long, though you may eventually shorten them to suit your preference. For SD card readers with two sets of pins, bend the 6 pins you need 90 degrees and snip the others flush with the board. Make sure you're connecting to the 3.3V terminal, not the 5V terminal. 
+The [SD card reader](http://amzn.to/2xEPbM9) we recommend is a 'plug and play' module. Connect each pin following the pinout guide above. For fitting into a tight housing, you may want to bend each header pin 90 degrees (using needle-nosed pliers) or remove the headers completely. Hookup wires should be at least 60 mm long, though you may eventually shorten them to suit your preference. For SD card readers with two sets of pins, bend the 6 pins you need 90 degrees and snip the others flush with the board. Make sure you're connecting to the 3.3V terminal, not the 5V terminal. 
 
-To prepare the SD card, wipe the card and create a single, empty text file called **datalog.txt**.
+To prepare the SD card, format the card and create a single, empty text file called **datalog.txt**.
 
 #### 5.2 Pressure Sensor
 
@@ -221,9 +216,9 @@ We recommend sealing each solder joint with waterproof heat shrink tubing for in
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes treated with heat shrink.*
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes treated with additional heat shrink to keep everything tindy](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink to keep everything")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes treated with additional heat shrink to keep everything tindy](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/T4.jpg?raw=true "Temperature probes treated with additional heat shrink.")
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes treated with additional heat shrink to keep everything tidy.*
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes treated with additional heat shrink.*
 
 Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino) with a 4.7 kOhm pull-up resisitor. This should be done when you solder everything directly to the Arduino. 
 
@@ -231,11 +226,7 @@ Finally, you will need to bridge the Vcc and Data pin (Vcc and D6 on the Qduino)
 
 There are a variety of options for conductivity probes, but we recommend using the [Atlas EC EZO circuit](http://www.atlas-scientific.com/product_pages/circuits/ezo_ec.html) to drive these probes. Different conductivity probes will have different configurations. In many cases, there will be more wires than are used. Use a multimeter to trace which wires are actually connected to each electrode. Once you have the electrodes traced, cut the wire to approximately 25cm and set the probe aside for potting. 
 
-The Atlas conductivity circuit needs very little preparation. To help it fit into a tight housing, bend the headers 90 degrees and solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Conductivity circuit with bent headers and hook-up wires](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC1.jpg?raw=true "Conductivity circuit with bent headers and hook-up wires")
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Conductivity circuit with bent headers and hook-up wires.*
+The Atlas conductivity circuit needs very little preparation. Solder hook-up wires to all contacts except the two probe contacts. The conductivity probe will eventually be attached to these. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Conductivity circuit with heat-shrink to protect contacts](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/EC2.jpg?raw=true "Conductivity circuit with heat-shrink to protect contacts")
 
@@ -261,7 +252,7 @@ The 3D printed hardware frame and wire guide will make it easier to produce a ni
 
 **Note:** Depending on how tight your OpenCTD housing is, you may want to pot the probes first, and then connect them. 
 
-Create a power bus by soldering the four Vcc wires from each component to a single solid core wire so that they can all be connected to a single Vcc pin. Do the same with ground wires. Cover the connecctions with heat-shrink tubing. 
+Create a power bus by soldering the four Vcc wires from each component to a single solid core wire so that they can all be connected to a single Vcc pin. Do the same with ground wires. Cover the connections with heat-shrink tubing. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Power bus, without heatshrink](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/powerbus.jpg?raw=true "Powerbus, without heatshrink")
 
@@ -287,9 +278,9 @@ Depending on the size of the housing and how much wire you used in your build, f
 
 **Note:** Depending on how tight your OpenCTD housing is, you may want to pot the probes first, and then connect them. 
 
-3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTDv4.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
+3D print the [OpenCTD baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/3D_Printer_Files/OpenCTD_2in.stl). The outside of the baseplate is the portion of the base plate that will be exposed to the water--this is the side w/o the indentation for the pressure sensor.
  
-Place a small amount of heatshrink tubing on the pressure sensor to prevent epoxy from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more epoxy (This will provide added protection for this circuit, for deeper operations). Let the epoxy cure for 20 minutes. Trim away the exposed heat shrink taking care not to damage the pressure sensor. **Optional: Apply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.**
+Place a small amount of heatshrink tubing on the pressure sensor to prevent epoxy from coming in contact with the membrane. Affix the pressure sensor to the center indentation in the base plate. Lightly cover the edge of the indentation with 2-ton epoxy, taking care not to let any come in contact with the membrane. Seat the sensor in the indentation and apply more epoxy (This will provide added protection for this circuit). Let the epoxy cure for 20 minutes. Trim away the exposed heat shrink taking care not to damage the pressure sensor. **Optional: Apply a small amount of electrical tape over the membrane of the pressure sensor to protect it while you work.**
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Pressure sensor seated in the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting1.jpg?raw=true "Pressure sensor seated in baseplate")
  
@@ -299,9 +290,9 @@ Place a small amount of heatshrink tubing on the pressure sensor to prevent epox
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Pressure sensor with heat shrink extending out through baseplate.*
  
-Place the three temperature sensor into the 3 smaller holes. The waterproofing around these probes is not always uniform. Make sure that some stainless steel is exposed on the inside surface of the baseplat and than at least 1 cm extends out into the water.
+Place the three temperature sensors into the 3 small holes. The waterproofing around these probes is not always uniform. Make sure that some stainless steel is exposed on the inside surface of the baseplate and than at least 1 cm extends out into the water.
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting3.jpg?raw=true "Temperature probes extaneding out through the baseplate")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Temperature probes extending out through the baseplate](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting3.jpg?raw=true "Temperature probes extaneding out through the baseplate")
  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Temperature probes extending out through the baseplate.*
  
@@ -317,7 +308,7 @@ Align the baseplate such that it is lightly recessed into the tube (when standin
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Baseplate seated in the housing.*
 
-Once you are satisfied with everything's position, it's time for EFL-90 epoxy. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We recommend using an entire cartridge and had almost 2 cm of epoxy on the bottom.  Check periodically to make sure that nothing is leaking out of the bottom. Let it cure overnight.
+Once you are satisfied with everything's position, it's time for EFL-90 epoxy. Using the epoxy gun apply the epoxy on the inside of the tube around the sensors. We recommend using an entire cartridge.  Check periodically to make sure that nothing is leaking out of the bottom. Let it cure overnight.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Epoxy potting on the inside of the housing](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/potting6.jpg?raw=true "Epoxy potting on the inside of the housing")
  
@@ -337,7 +328,7 @@ Where D is depth in meters; P(depth) is the pressure (in millibars) at depth); P
 
 #### 6.2 Temperature
 
-The Cave Pearl Project has provided an excellent guide to thorough temperature sensor calibration: [DS18B20 Calibration: Finally nailed it!](https://edwardmallon.wordpress.com/2016/03/05/ds18b20-calibration-we-finally-nailed-it/). This process may be overkill for most users, but anyone intending to produce replacatable, peer-review ready results should put in the extra time for a comprehensive calibration. 
+The Cave Pearl Project has provided an excellent guide to thorough temperature sensor calibration: [DS18B20 Calibration: Finally nailed it!](https://edwardmallon.wordpress.com/2016/03/05/ds18b20-calibration-we-finally-nailed-it/). This process may be overkill for most users, but anyone intending to produce replicatable, peer-review ready results should put in the extra time for a comprehensive calibration. 
 
 Calibrating the temperature sensors requires access to an already calibrated instrument. Allow both the OpenCTD and the validation instrument to equilibrate in water for 15 minutes. Take the average of the three OpenCTD temperature outputs and note the difference between that average and the validation instrument. Repeat for a fluid that is at least 15 degrees hotter or colder than the test fluid. There should be a linear relationship between the OpenCTD temperature sensors and the validation instrument, which will give you a calibration constant. Take the average of the three temperature readings and use the calibration constant to adjust temperature measurements when processing raw data. 
 
@@ -361,15 +352,17 @@ Open the serial monitor through the Arduino IDE. You should see a stream of unpr
 
 Don't forget to reflash the [OpenCTD software](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_qDuino) to the Qduino Mini after calibration is done. Conductivity should be recalibrated at least once per year. 
 
-Converting conductivity to PSU is a complex equation that is temperature dependent. This [UNESCO paper](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf) outlines the basic equations. We are working on an Excel template that will perform those conversions for you. 
+Converting conductivity to PSU is a complex equation that is temperature dependent. This [UNESCO paper](http://unesdoc.unesco.org/images/0005/000598/059832eb.pdf) outlines the basic equations. We are working on an Excel template that will perform those conversions for you. The [OpenCTD_DataConversion_Template](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Data_Processing/OpenCTD_DataConversion_Template.xlsx) will take raw data from the OpenCTD and make these conversions for you. 
 
 ### 7.0 Your first cast. 
 
 This is the fun part. 
 
-For shallow deployments, the Oatey cap will keep water out. For deeper deployments, pressure compensate the housing with minieral oil or similarly no-conductive fluid. Fill to a few centimeters below the top. There may be some spillover to avoid bubbles in the housing. 
+For shallow deployments (<100 m), the test cap will keep water out. For deeper deployments (<100 m), pressure compensate the housing with mineral oil or similarly no-conductive fluid. 
 
-Turn on the CTD. Gently lower the Oatey cap down and screw it into place. It should be tight enought that it cannot be removed without unscrewing. Your CTD is now sealed and logging. Wipe down any spilled oil. These [microfiber cloths from Amazon](http://amzn.to/1RLdKZd) do a great job of sopping up small amounts of mineral oil. 
+**No Mineral Oil:** Ensure that the inside surface of the PVC pipe is clean and free of debris. Hairs can be particularly difficult to see. Seat the test cap onto the housing and tighten the wingnut. Wingnut should be as tigh as possible without tool assistance and the cap should not move or turn. 
+
+**Mineral Oil:** Fill to a few centimeters below the top. There may be some spillover to avoid bubbles in the housing. Turn on the CTD. Gently lower the test cap down and screw it into place. It should be tight enought that it cannot be removed without unscrewing. Your CTD is now sealed and logging. Wipe down any spilled oil. These [microfiber cloths from Amazon](http://amzn.to/2xAVyjg) do a great job of sopping up small amounts of mineral oil. 
 
 Your OpenCTD is now ready to take the plunge! Gently lower into the water and descend no more than 1 meter per second. The slower the better. For the first cast, descend to 5 meters, then recover and check that no leakage has occured. With mineral oil, it will be very clear if the device is leaking. Once it passes the first soak test, you're ready to go forth and collect ocean data. 
 
@@ -391,7 +384,7 @@ Steve Haan | | PiCTD | | | [@HaanHouse](https://twitter.com/HaanHouse)
 
 ### 10.0 Acknowledgments
 
-This software has been kludged together by Andrew Thaler, based on code from Walt Holm, arduino.cc samples, Atlas scientific, Vhati, and Russell Neches. OpenCTD was initially designed by Andrew Thaler, Kersey Sturdivant, and Russell Neches. 
+This software has been compiled by [Andrew Thaler](https://github.com/SouthernFriedScientist), based on code from Walt Holm, arduino.cc samples, Atlas Scientific, [Vhati](https://github.com/Vhati), and [Russell Neches](https://github.com/orgs/OceanographyforEveryone/people/ryneches). OpenCTD was initially designed by Andrew Thaler, [Kersey Sturdivant](https://github.com/goldsphininx), and Russell Neches. 
 
 ### 11.0 Code of Conduct
 
