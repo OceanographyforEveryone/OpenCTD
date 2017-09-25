@@ -1,7 +1,7 @@
 OpenCTD Introduction and Build Guide
 =======
 
-*__Updated 8/28/2017__*
+*__Updated 9/25/2017__*
 
 ### 1.0 Overview
 
