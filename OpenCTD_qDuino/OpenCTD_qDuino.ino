@@ -1,7 +1,5 @@
 //Wire and MS5803_I2C libraries for communicating with the pressure sensor. 
-
-#include <Wire.h>               
-#include <SparkFun_MS5803_I2C.h>                                                                   
+#include <Wire.h>                                                                                
 #include <SparkFun_MS5803_I2C.h> //CAN WE MAKE THIS LIBRARY SMALLER?
 
 //EC Circuit uses software serial
@@ -15,7 +13,10 @@
 
 // For the SD card reader.
 #include <SPI.h>               
-#include <SD.h>                
+#include <SD.h>
+
+// For the Real-Time Clock
+// #include <RTClib.h>
 
 // Declare global variables.
 float tempA;
@@ -38,7 +39,7 @@ MS5803 sensor(ADDRESS_HIGH);          // Define pressure sensor.
 double pressure_abs; //define absolute pressure variable
 
 // Starts it up.
-//
+
 void setup(void) {
 
   Serial.begin(9600);   // Set baud rate.
@@ -58,6 +59,16 @@ void setup(void) {
   sensors.begin();  // Intialize the temperature sensors.
   
   delay(250);       // Wait a quarter second to continue.
+
+  File dataFile = SD.open("datalog.txt", FILE_WRITE);
+  if (dataFile) {
+    dataFile.println("");
+    dataFile.println("=== New Cast ===");
+    dataFile.close();
+  }
+  else {
+
+  }
 
 }
 

@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial gtSerial(8, 9); // Arduino RX, Arduino TX
+SoftwareSerial gtSerial(12, 13); // Arduino RX, Arduino TX
 
 void setup() {
   Serial.begin(9600);    // serial / USB port
