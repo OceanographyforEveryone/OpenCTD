@@ -2,6 +2,8 @@
 
 The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to surface observers (Sverdrup et al., 1942). By measuring salinity, temperature, and depth, scientists can unlock ocean patterns hidden beneath the sea's surface. To reveal these patterns, oceanographers use a CTD—an instrument that measures Conductivity (which serves as a proxy for salinity), Temperature, and absolute pressure (used to determine water Depth; Thomson and Emery, 2014). 
 
+![OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/IMG_20190614_141121.jpg)
+
 CTDs come in a variety of shapes, sizes, and applications. Most oceanographic vessels have a CTD connected to a rosette system, which can house other instruments and collect physical water samples in parallel with real-time data collection. CTDs are also commonly attached to moorings, autonomous underwater vehicles (AUVs), remote-operated vehicles (ROVs), and, on occasion, marine animals (Hooker and Boyd, 2003).  
 
 Commercial CTDs are expensive, with the most affordable models costing as much as $6,000.00. For near-shore oceanographic research on the continental shelf, where the water depth rarely exceeds 200 meters, this can be a prohibitive cost. The expense of the CTD is a barrier-to-entry for formal and informal researchers working with limited budgets, including scientists from developing nations, citizen oceanographers, environmental educators, and students of all levels interested in understanding their local coasts and waterways. 
