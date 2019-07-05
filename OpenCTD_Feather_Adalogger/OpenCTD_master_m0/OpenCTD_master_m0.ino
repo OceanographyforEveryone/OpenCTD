@@ -45,9 +45,9 @@ byte string_received = 0; // Whether it received a string from the EC circuit.
 void setup () {
 
 // comment the following three lines out for final deployment
-  #ifndef ESP8266
-    while (!Serial);   //for Leonardo/Micro/Zero
- #endif
+//  #ifndef ESP8266
+//    while (!Serial);   //for Leonardo/Micro/Zero
+// #endif
 
   Serial.begin(9600);
 
