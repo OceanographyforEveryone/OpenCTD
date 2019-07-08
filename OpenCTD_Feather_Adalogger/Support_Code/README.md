@@ -1,0 +1,1 @@
+This folder contains support code for the OpenCTD. Please reference the [OpenCTD Construction and Operation Manual](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/OpenCTD_ConstructionOperation.pdf) for a full description of its function and use. 

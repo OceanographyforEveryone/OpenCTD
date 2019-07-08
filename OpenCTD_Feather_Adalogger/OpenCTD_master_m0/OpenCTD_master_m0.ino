@@ -1,3 +1,4 @@
+
 //Date and time functions using a DS3231 RTC connected via I2C and Wire lib
 #include <Wire.h>
 #include "RTClib.h"
@@ -43,9 +44,10 @@ byte string_received = 0; // Whether it received a string from the EC circuit.
 
 void setup () {
 
+// comment the following three lines out for final deployment
 //  #ifndef ESP8266
 //    while (!Serial);   //for Leonardo/Micro/Zero
-//  #endif
+// #endif
 
   Serial.begin(9600);
 
