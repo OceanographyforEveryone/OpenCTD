@@ -1,3 +1,5 @@
+//For use calibrating the Atlas EZO conductivity sensor and circuit. 
+
 #include <SoftwareSerial.h>
 
 SoftwareSerial gtSerial(12, 13); // Arduino RX, Arduino TX
