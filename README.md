@@ -1,4 +1,4 @@
-# OpenCTD Construction and Operation
+# Meet the OpenCTD!
 
 The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to surface observers. By measuring salinity, temperature, and depth, scientists can unlock ocean patterns hidden beneath the sea's surface. To reveal these patterns, oceanographers use a CTD—an instrument that measures Conductivity (which serves as a proxy for salinity), Temperature, and absolute pressure (used to determine water Depth). 
 
@@ -14,11 +14,13 @@ The OpenCTD is a low-cost, open-source CTD designed intentionally for citizen sc
 
 The OpenCTD is design to be built by the end-user, providing both access to the tools of oceanography and the skills to maintain, repair, and replace OpenCTDs. For educators looking a for novel, in-depth, hands-on STEM experience for advanced students, the process of building an OpenCTD can offer a great introduction to coding, 3D-printing, hardware prototyping, and electronics. Construction of an OpenCTD can provide a practical foundation for courses in oceanography, environmental science, or physics. 
 
+In this repository, you will find all the support documentation necessary to construct and operrate your own OpenCTD. All software and shapefiles are released open-source with no restrictions on use. 
+
 As you build your OpenCTD please reach out to the team at Oceanography for Everyone if you have any questions or feedback about the process. We love to keep up with the community of people constructing and using these devices. During assembly and while using an OpenCTD or other Oceanography for Everyone tools, please consider tweeting or Instagramming using the hashtag #HackTheOcean so that the community can follow your efforts.
 
-## Resources
+## Core Resources
 
-The full construction and operation manual is maintained here: __[OpenCTD Construction and Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/OpenCTD_ConstructionOperation.pdf)__. Please note that this summer (2019) we are conducting ongoing focus tests to validate the build process for students of varying skill levels and that substantive changes to the guide, though not the CTD platform, are anticipated. 
+The full construction and operation manual is maintained here: __[OpenCTD Construction and Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/OpenCTD_ConstructionOperation.pdf)__.
 
 The OpenCTD core software is found here: [__OpenCTD_master_m0.ino__](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_Feather_Adalogger/OpenCTD_master_m0)
 
