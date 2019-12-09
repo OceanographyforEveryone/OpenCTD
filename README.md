@@ -1,4 +1,4 @@
-# OpenCTD Construction and Operation
+# Meet the OpenCTD!
 
 The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to surface observers. By measuring salinity, temperature, and depth, scientists can unlock ocean patterns hidden beneath the sea's surface. To reveal these patterns, oceanographers use a CTD—an instrument that measures Conductivity (which serves as a proxy for salinity), Temperature, and absolute pressure (used to determine water Depth). 
 
