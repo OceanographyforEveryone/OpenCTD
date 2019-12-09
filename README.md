@@ -20,7 +20,7 @@ As you build your OpenCTD please reach out to the team at Oceanography for Every
 
 ## Core Resources
 
-The full construction and operation manual is maintained here: [__OpenCTD Construction and Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/OpenCTD_ConstructionOperation.pdf)__.
+The full construction and operation manual is maintained here: [__OpenCTD Construction and Operation__](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/OpenCTD_ConstructionOperation.pdf)__.
 
 The OpenCTD core software is found here: [__OpenCTD_master_m0.ino__](https://github.com/OceanographyforEveryone/OpenCTD/tree/master/OpenCTD_Feather_Adalogger/OpenCTD_master_m0)
 
