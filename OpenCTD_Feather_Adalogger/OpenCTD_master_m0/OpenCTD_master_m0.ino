@@ -102,10 +102,13 @@ void setup () {
   File dataFile = SD.open(datalogFileName, FILE_WRITE);
 
   if (dataFile) {
-
+    Serial.println("====================================================");
+    Serial.println("Date Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
     dataFile.println("Date Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
     dataFile.close();
 
+  } else {
+    Serial.println("Err: Can't open datalog!")
   }
 
   //Initialize real-time clock
