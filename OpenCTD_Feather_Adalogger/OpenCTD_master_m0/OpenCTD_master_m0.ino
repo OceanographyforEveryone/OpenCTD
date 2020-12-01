@@ -23,9 +23,11 @@ const int chipSelect = 4; //sets chip select pin for SD card reader
 char datalogFileName[12];
 
 /* This integer specifies how high accuracy you want your pressure sensor to be (oversampling resolution).
+
    Ok values: 256, 512, 1024, 2048, or 4096 (Higher = more accuracy but slower sampling frequency**)
  * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
    sampling/response frequency of the ec sensor [default = 1 sec] (this is to avoid the case where both sensors send data at the same time). */
+
 #define PRESSURE_SENSOR_RESOLUTION 4096
 MS_5803 sensor = MS_5803(PRESSURE_SENSOR_RESOLUTION); // Define pressure sensor.
 
@@ -37,9 +39,11 @@ SoftwareSerial ecSerial(12, 13); // Define the SoftwareSerial port for conductiv
 double pressure_abs; //define absolute pressure variable
 
 /* This integer specifies how high resolution you want your temperature sensors to be.
+
    Ok values: 9,10,11,12 (Higher = more accuracy but slower sampling frequency**)
  * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
    sampling/response frequency of the ec sensor [default = 1 second] (this is to avoid the case where both sensors send data at the same time). */
+
 #define TEMP_SENSOR_RESOLUTION 12
 
 //Declare global temperature variables.
@@ -59,6 +63,7 @@ byte received_from_sensor = 0; // How many characters have been received.
 byte string_received = 0; // Whether it received a string from the EC circuit.
 
 #define EC_SAMPLING_FREQUENCY 1 // Set the requested sampling frequency of the conductivity probe in seconds (NO Decimals) (this by extension sets the overall frequency of logging).
+
 
 void setup () {
 
@@ -133,6 +138,7 @@ void setup () {
   tempA = get_temp_c_by_index(0);
   tempB = get_temp_c_by_index(1);
   tempC = get_temp_c_by_index(2);
+
   sensors.setWaitForConversion(false);  // Now tell the Dallas Temperature library to not block this script while it's waiting for the temperature mesurement to happen
 
   ecSerial.begin(9600); // Set baud rate for conductivity circuit.
@@ -158,6 +164,7 @@ void setup () {
   EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
   Serial.print("EC Frequency Set Sucessfully? -> "); Serial.println(EC_data);
   Serial.println("--- Starting Datalogging ---");
+
 }
 
 void loop () {
@@ -231,7 +238,7 @@ void loop () {
       dataFile.println(EC);
       dataFile.close();
 
-    }
+      }
 
   }
 
@@ -281,7 +288,7 @@ float get_temp_c_by_index(int sensor_index) {
   } else {
     return value; // otherwise return the measured value.
   }
-  
+
 }
 
 void parse_data() { // Parses data from the EC Circuit.
