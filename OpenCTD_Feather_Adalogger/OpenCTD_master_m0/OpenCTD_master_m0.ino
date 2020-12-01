@@ -113,7 +113,7 @@ void setup () {
     dataFile.close();
 
   } else {
-    Serial.println("Err: Can't open datalog!")
+    Serial.println("Err: Can't open datalog!");
   }
 
   //Initialize real-time clock
