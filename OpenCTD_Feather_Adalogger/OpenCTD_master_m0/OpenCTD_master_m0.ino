@@ -8,8 +8,8 @@
 #include <SD.h> //library for SD card reader
 
 //communication protocols for temperature sensors
-#include <OneWire.h>  
-#include <DallasTemperature.h>   
+#include <OneWire.h>
+#include <DallasTemperature.h>
 
 //Software libary for the pressure sensor
 #include <MS5803_14.h>
@@ -21,7 +21,12 @@ RTC_DS3231 rtc; //define real-time clock
 
 const int chipSelect = 4; //sets chip select pin for SD card reader
 
-MS_5803 sensor = MS_5803(512); // Define pressure sensor.
+/* This integer specifies how high accuracy you want your pressure sensor to be (oversampling resolution).
+ * Ok values: 256, 512, 1024, 2048, or 4096 (Higher = more accuracy but slower sampling frequency**)
+ * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
+ * sampling/response frequency of the ec sensor [default = 1 sec] (this is to avoid the case where both sensors send data at the same time). */
+#define PRESSURE_SENSOR_RESOLUTION 4096
+MS_5803 sensor = MS_5803(PRESSURE_SENSOR_RESOLUTION); // Define pressure sensor.
 
 OneWire oneWire(6); // Define the OneWire port for temperature.
 DallasTemperature sensors(&oneWire); //Define DallasTemperature input based on OneWire.
@@ -30,295 +35,348 @@ SoftwareSerial ecSerial(12, 13); // Define the SoftwareSerial port for conductiv
 
 double pressure_abs; //define absolute pressure variable
 
+/* This integer specifies how high resolution you want your temperature sensors to be.
+ * Ok values: 9,10,11,12 (Higher = more accuracy but slower sampling frequency**)
+ * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
+ * sampling/response frequency of the ec sensor [default = 1 second] (this is to avoid the case where both sensors send data at the same time). */
+#define TEMP_SENSOR_RESOLUTION 12
+
 //Declare global temperature variables.
 float tempA;
 float tempB;
 float tempC;
+int tempADelayStartTime; // Define a variable to mark when we requested a temperature mesurement from A so we can wait the required delay before reading the value.
+int tempBDelayStartTime; // Define a variable to mark when we requested a temperature mesurement from B so we can wait the required delay before reading the value.
+int tempCDelayStartTime; // Define a variable to mark when we requested a temperature mesurement from C so we can wait the required delay before reading the value.
+int requiredMesurementDelay = sensors.millisToWaitForConversion(TEMP_SENSOR_RESOLUTION);
 
 //Declare global variables for eletrical conductivity
-float EC_float = 0;  
-char EC_data[48]; // A 48 byte character array to hold incoming data from the conductivity circuit. 
+float EC_float = 0;
+char EC_data[48]; // A 48 byte character array to hold incoming data from the conductivity circuit.
 char *EC; // Character pointer for string parsing.
 byte received_from_sensor = 0; // How many characters have been received.
 byte string_received = 0; // Whether it received a string from the EC circuit.
 
+#define EC_SAMPLING_FREQUENCY 1 // Set the sampling frequency in seconds (no decimals) of the conductivity probe (which by extension sets the overall frequency of logging to the sd).
+
 void setup () {
 
-// comment the following three lines out for final deployment
-  #ifndef ESP8266
-    while (!Serial);   //for Leonardo/Micro/Zero
- #endif
+  // comment the following three lines out for final deployment
+#ifndef ESP8266
+  while (!Serial && millis() < 20000); //for Leonardo/Micro/Zero - Wait for a computer to connect via serial or until a 20 second timeout has elapsed (This works because millis() starts counting the mlliseconds since the board turns on)
+#endif
 
   Serial.begin(9600);
 
-//Initialize SD card reader
+  //Initialize SD card reader
   Serial.print("Initializing SD card...");
 
-  if (!SD.begin(chipSelect)) {
-    
+  while (!SD.begin(chipSelect)) {
+
     Serial.println("Card failed, or not present");
     return;
-    
+
   }
-  
+
   Serial.println("card initialized.");
 
-  delay(1000); 
+  delay(1000);
 
   if (! rtc.begin()) {
-    
+
     Serial.println("Couldn't find RTC");
     while (1);
-    
+
   }
 
   File dataFile = SD.open("datalog.txt", FILE_WRITE);
-  
+
   if (dataFile) {
-    
+
     dataFile.println("");
     dataFile.println("=== New Cast ===");
     dataFile.println("");
     dataFile.close();
-    
+
   }
 
-//Initialize real-time clock
+  //Initialize real-time clock
   if (rtc.lostPower()) {
 
     //reset RTC with time when code was compiled if RTC loses power
-    Serial.println("RTC lost power, lets set the time!"); 
+    Serial.println("RTC lost power, lets set the time!");
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    
+
   }
-  
+
   delay(250);       // Wait a quarter second to continue.
 
-//Initialize sensors  
-  sensor.initializeMS_5803(); // Initialize pressure sensor   
-  
-  sensors.begin();  // Intialize the temperature sensors.
+  //Initialize sensors
+  sensor.initializeMS_5803(); // Initialize pressure sensor
 
-  ecSerial.begin(9600); // Set baud rate for conductivity circuit.  
+  sensors.begin();  // Intialize the temperature sensors.
+  sensors.setResolution(TEMP_SENSOR_RESOLUTION);  // Set the resolution (accuracy) of the temperature sensors.
+  sensors.requestTemperatures(); // on the first pass request all temperatures in a blocking way to start the variables with true data.
+  tempA = sensors.getTempCByIndex(0);
+  tempB = sensors.getTempCByIndex(1);
+  tempC = sensors.getTempCByIndex(2);
+  sensors.setWaitForConversion(false);  // Now tell the Dallas Temperature library to not block this script while it's waiting for the temperature mesurement to happen
+
+  ecSerial.begin(9600); // Set baud rate for conductivity circuit.
+
+  do {
+
+    ecSerial.write('i');  // Tell electrical conductivity board to reply with the board information by sending the 'i' character ...
+    ecSerial.write('\r'); // ... Finish the command with the charage return character.
+    received_from_sensor = ecSerial.readBytesUntil('\r', EC_data, 30); // Wait for the ec circut to send the data before moving on...
+    EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
+
+  } while (EC_data[1] != 'I'); // Keep looping until the ecSerial has sent the board info string (also indicating it has booted up, I think...)
+
+  Serial.print("EC Board Info (Format: ?I,[board type],[Firmware Version]) -> "); Serial.println(EC_data);
+  
+  delay(10);
+  ecSerial.write('C');  // Tell electrical conductivity board to continously ("C") transmit mesurements ...
+  ecSerial.write(',');  //
+  ecSerial.print(EC_SAMPLING_FREQUENCY);    // ... every x seconds (here x is the EC_SAMPLING_FREQUENCY variable)
+  ecSerial.write('\r'); // Finish the command with the carrage return character. 
+  
+  received_from_sensor = ecSerial.readBytesUntil('\r', EC_data, 10); // keep reading the reply until the return character is recived (or it gets to be 10 characters long, which shouldn't happen)
+  EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
+  Serial.print("EC Frequency Set Sucessfully? -> "); Serial.println(EC_data);
 
 }
 
 void loop () {
-  
-  DateTime now = rtc.now(); //check RTC
 
-  sensor.readSensor(); //read pressure sensor
-  pressure_abs = sensor.pressure();
-
-//read temperature sensor
-  sensors.requestTemperatures();
-  tempA = sensors.getTempCByIndex(0);
-  tempB = sensors.getTempCByIndex(1);
-  tempC = sensors.getTempCByIndex(2);
-
-//Read electrical conductivity sensor
+  //Read electrical conductivity sensor
   if (ecSerial.available() > 0) {
 
     received_from_sensor = ecSerial.readBytesUntil(13, EC_data, 48);
     EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
-  
-  }
 
-  if ((EC_data[0] >= 48) && (EC_data[0] <=57)) { // Parse data, if EC_data begins with a digit, not a letter (testing ASCII values).
+    if ((EC_data[0] >= 48) && (EC_data[0] <= 57)) { // Parse data, if EC_data begins with a digit, not a letter (testing ASCII values).
 
-    parse_data();
-    
-  }  
-  
-//output readings to serial monitor. A whole mess of if/else statements to keep numbers formatted correctly
-  Serial.print(now.year(), DEC);
-  Serial.print('/');
+      parse_data();
 
-  if (now.month()<10) {
-    
-    Serial.print(0);
-    Serial.print(now.month(), DEC);
-    
-  }
+    }
 
-  else {
-    
-  Serial.print(now.month(), DEC);
-  
-  }
-  
-  Serial.print('/');
-  
-  if (now.day()<10) {
-    
-    Serial.print(0);
-    Serial.print(now.day(), DEC);
-    
-  }
+    // Read the temperature sensors.
+    if (millis() - tempADelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe A's value;
+      tempA = sensors.getTempCByIndex(0);
+      sensors.requestTemperaturesByIndex(0);  // request temp sensor A start mesuring so it can be read on the following loop (if enough time elapses).
+      tempADelayStartTime = millis();  // mark when we made the request to make sure we wait long enough before reading it.
+    }
 
-  else {
-    
-  Serial.print(now.day(), DEC);
-  
-  }
-  
-  Serial.print("  ");
-  
-  if (now.hour()<10) {
-    
-    Serial.print(0);
-    Serial.print(now.hour(), DEC);
-    
-  }
+    if (millis() - tempBDelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe B's value;
+      tempB = sensors.getTempCByIndex(1);
+      sensors.requestTemperaturesByIndex(1);  // request temp sensor B start mesuring so it can be read on the following loop (if enough time elapses).
+      tempBDelayStartTime = millis();  // mark when we made the request to make sure we wait long enough before reading it.
+    }
 
-  else {
-    
-  Serial.print(now.hour(), DEC);
-  
-  } 
-  
-  Serial.print(':');
-  
-  if (now.minute()<10) {
-    
-    Serial.print(0);
-    Serial.print(now.minute(), DEC);
-    
-  }
 
-  else {
-    
-  Serial.print(now.minute(), DEC);
-  
-  }  
+    if (millis() - tempCDelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe C's value;
+      tempC = sensors.getTempCByIndex(2);
+      sensors.requestTemperaturesByIndex(2);  // request temp sensor C start mesuring so it can be read on the following loop (if enough time elapses).
+      tempCDelayStartTime = millis(); // mark when we made the request to make sure we wait long enough before reading it.
+    }
 
-  Serial.print(':');
-  
-  if (now.second()<10) {
-    
-    Serial.print(0);
-    Serial.print(now.second(), DEC);
-    
-  }
+    sensor.readSensor(); //read pressure sensor
+    pressure_abs = sensor.pressure();
 
-  else {
-    
-  Serial.print(now.second(), DEC);
-  
-  }
-  
-  Serial.print("  ");
-  Serial.print(pressure_abs);
-  Serial.print("  ");  
-  Serial.print(tempA);
-  Serial.print("  ");
-  Serial.print(tempB);
-  Serial.print("  ");
-  Serial.print(tempC); 
-  Serial.print("  "); 
-  Serial.println(EC);
+    DateTime now = rtc.now(); //check RTC
 
-  //output readings to data file. A whole mess of if/else statements to keep numbers formatted correctly
-  File dataFile = SD.open("datalog.txt", FILE_WRITE);
-  
-  if (dataFile) {
-      
-    dataFile.print(now.year(), DEC);
-    dataFile.print('/');
- 
-    if (now.month()<10) {
-    
-    dataFile.print(0);
-    dataFile.print(now.month(), DEC);
-    
+    //output readings to serial monitor. A whole mess of if/else statements to keep numbers formatted correctly
+    Serial.print(now.year(), DEC);
+    Serial.print('/');
+
+    if (now.month() < 10) {
+
+      Serial.print(0);
+      Serial.print(now.month(), DEC);
+
     }
 
     else {
-    
-     dataFile.print(now.month(), DEC);
-  
+
+      Serial.print(now.month(), DEC);
+
     }
-  
-    dataFile.print('/');
-  
-    if (now.day()<10) {
-    
-      dataFile.print(0);
-      dataFile.print(now.day(), DEC);
-    
+
+    Serial.print('/');
+
+    if (now.day() < 10) {
+
+      Serial.print(0);
+      Serial.print(now.day(), DEC);
+
     }
 
     else {
-    
-      dataFile.print(now.day(), DEC);
-  
+
+      Serial.print(now.day(), DEC);
+
     }
-  
-    dataFile.print("  ");
-  
-    if (now.hour()<10) {
-    
-      dataFile.print(0);
-      dataFile.print(now.hour(), DEC);
-    
+
+    Serial.print("  ");
+
+    if (now.hour() < 10) {
+
+      Serial.print(0);
+      Serial.print(now.hour(), DEC);
+
     }
 
     else {
-    
-      dataFile.print(now.hour(), DEC);
-  
-    } 
-  
-    dataFile.print(':');
-  
-    if (now.minute()<10) {
-    
-      dataFile.print(0);
-      dataFile.print(now.minute(), DEC);
-    
+
+      Serial.print(now.hour(), DEC);
+
+    }
+
+    Serial.print(':');
+
+    if (now.minute() < 10) {
+
+      Serial.print(0);
+      Serial.print(now.minute(), DEC);
+
     }
 
     else {
-    
-      dataFile.print(now.minute(), DEC);
-  
-    }  
 
-    dataFile.print(':');
-  
-    if (now.second()<10) {
-    
-      dataFile.print(0);
-      dataFile.print(now.second(), DEC);
-    
+      Serial.print(now.minute(), DEC);
+
+    }
+
+    Serial.print(':');
+
+    if (now.second() < 10) {
+
+      Serial.print(0);
+      Serial.print(now.second(), DEC);
+
     }
 
     else {
-    
-     dataFile.print(now.second(), DEC);
-  
+
+      Serial.print(now.second(), DEC);
+
     }
-  
-    dataFile.print("  ");
-    dataFile.print(pressure_abs);
-    dataFile.print("  ");  
-    dataFile.print(tempA);
-    dataFile.print("  ");
-    dataFile.print(tempB);
-    dataFile.print("  ");
-    dataFile.print(tempC);
-    dataFile.print("  "); 
-    dataFile.println(EC);
-    dataFile.close();    
+
+    Serial.print("  ");
+    Serial.print(pressure_abs);
+    Serial.print("  ");
+    Serial.print(tempA);
+    Serial.print("  ");
+    Serial.print(tempB);
+    Serial.print("  ");
+    Serial.print(tempC);
+    Serial.print("  ");
+    Serial.println(EC);
+
+    //output readings to data file. A whole mess of if/else statements to keep numbers formatted correctly
+    File dataFile = SD.open("datalog.txt", FILE_WRITE);
+
+    if (dataFile) {
+
+      dataFile.print(now.year(), DEC);
+      dataFile.print('/');
+
+      if (now.month() < 10) {
+
+        dataFile.print(0);
+        dataFile.print(now.month(), DEC);
+
+      }
+
+      else {
+
+        dataFile.print(now.month(), DEC);
+
+      }
+
+      dataFile.print('/');
+
+      if (now.day() < 10) {
+
+        dataFile.print(0);
+        dataFile.print(now.day(), DEC);
+
+      }
+
+      else {
+
+        dataFile.print(now.day(), DEC);
+
+      }
+
+      dataFile.print("  ");
+
+      if (now.hour() < 10) {
+
+        dataFile.print(0);
+        dataFile.print(now.hour(), DEC);
+
+      }
+
+      else {
+
+        dataFile.print(now.hour(), DEC);
+
+      }
+
+      dataFile.print(':');
+
+      if (now.minute() < 10) {
+
+        dataFile.print(0);
+        dataFile.print(now.minute(), DEC);
+
+      }
+
+      else {
+
+        dataFile.print(now.minute(), DEC);
+
+      }
+
+      dataFile.print(':');
+
+      if (now.second() < 10) {
+
+        dataFile.print(0);
+        dataFile.print(now.second(), DEC);
+
+      }
+
+      else {
+
+        dataFile.print(now.second(), DEC);
+
+      }
+
+      dataFile.print("  ");
+      dataFile.print(pressure_abs);
+      dataFile.print("  ");
+      dataFile.print(tempA);
+      dataFile.print("  ");
+      dataFile.print(tempB);
+      dataFile.print("  ");
+      dataFile.print(tempC);
+      dataFile.print("  ");
+      dataFile.println(EC);
+      dataFile.close();
+
+    }
 
   }
-  
-  delay(50);
+
+  // Tip: For a slower overall logging frequency, set the EC_SAMPLING_FREQUENCY variable rather than adding a delay (this will avoid the possibility of garbled ec sensor readings)
 
 }
 
 void parse_data() { // Parses data from the EC Circuit.
 
-  EC = strtok(EC_data, ",");                  
+  EC = strtok(EC_data, ",");
 
 }
