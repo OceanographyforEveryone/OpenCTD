@@ -1,7 +1,7 @@
 
 # Project Updates 12/2/2020
 
-There are several update projects occuring concurrently.
+There are several development and testing projects occuring concurrently.
 
 - Field testing of various epoxy housings in deep, cold casts.
 - Development of a custom PCB to dramatically simplify the construction process. 
