@@ -1,3 +1,15 @@
+
+# Project Updates 12/2/2020
+
+There are several update projects occuring concurrently.
+
+- Field testing of various epoxy housings in deep, cold casts.
+- Development of a custom PCB to dramatically simplify the construction process. 
+- Integration and testing of p1000 temperature sensors.
+- Integration and testing of 30 bar pressure sensor. 
+- Code revisions. 
+- Construction and Opperation Manual revisions. 
+
 # Meet the OpenCTD!
 
 The ocean is not uniform, it its filled with swirling eddies, temperature boundaries, layers of high and low salinity, changing densities, and other physical characteristics invisible to surface observers. By measuring salinity, temperature, and depth, scientists can unlock ocean patterns hidden beneath the sea's surface. To reveal these patterns, oceanographers use a CTD—an instrument that measures Conductivity (which serves as a proxy for salinity), Temperature, and absolute pressure (used to determine water Depth). 
