@@ -269,7 +269,7 @@ void get_numbered_filename(char* outStr, char* filePrefix, char* fileExtension) 
 
 void get_date_time_string(char* outStr, DateTime date) {
   // outputs the date as a date time string,
-  sprintf(outStr, "%02d/%02d/%02d %02d:%02d:%02d", date.month(), date.day(), date.year(), date.hour(), date.minute(), date.second());
+  sprintf(outStr, "%02d/%02d/%02d,%02d:%02d:%02d", date.month(), date.day(), date.year(), date.hour(), date.minute(), date.second());
   // Note: If you would like the date & time to be seperate columns chabge the space in the formatting string to a comma - this works because the file type is CSV (Comma Seperated Values)
 }
 
