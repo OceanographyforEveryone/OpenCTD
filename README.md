@@ -1,14 +1,14 @@
 
-# Project Updates 12/2/2020
+# Project Updates 5/25/2021
 
 There are several development and testing projects occuring concurrently.
 
-- Field testing of various epoxy housings in deep, cold casts.
-- Development of a custom PCB to dramatically simplify the construction process. 
+- Development and testing of a custom PCB to dramatically simplify the construction process. 
 - Integration and testing of p1000 temperature sensors.
 - Integration and testing of 30 bar pressure sensor. 
 - Code revisions. 
-- Construction and Opperation Manual revisions. 
+- Construction and Operation Manual revisions.
+- R and D on the more advance OpenCTDx with greater depth rating and sensor accuracy 
 
 # Meet the OpenCTD!
 
