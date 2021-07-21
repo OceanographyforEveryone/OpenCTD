@@ -1,14 +1,12 @@
 
-# Project Updates 5/25/2021
+# Project Updates 7/21/2021
 
 There are several development and testing projects occuring concurrently.
 
-- Development and testing of a custom PCB to dramatically simplify the construction process. 
-- Integration and testing of p1000 temperature sensors.
-- Integration and testing of 30 bar pressure sensor. 
-- Code revisions. 
-- Construction and Operation Manual revisions.
-- R and D on the more advance OpenCTDx with greater depth rating and sensor accuracy 
+- Finalizing custom PCB for both standard OpenCTD and upgraded OpenCTDx 
+- Developing alternative internal switch option for OpenCTD
+- Field testing OpenCTDs with commercial whale watching operators
+- Significant, comprehensive revisions to the build guide and instruction manual
 
 # Meet the OpenCTD!
 
