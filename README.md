@@ -8,7 +8,7 @@ There are several development and testing projects occuring concurrently.
 - Field testing OpenCTDs with commercial whale watching operators
 - Significant, comprehensive revisions to the build guide and instruction manual
 
-# Meet the OpenCTD!
+# The OpenCTD
 
 To reveal ocean patterns hidden beneath the sea's surface, oceanographers use an instrument called a CTD that measures conductivity (which serves as a proxy for salinity), temperature, and depth. Commercial CTDs are expensive, with the most affordable models costing as much as $6,000.00. For near-shore work on the continental shelf, where water depths rarely exceeds 200 meters, this can be a prohibitive cost. The expense of commercial CTDs is a barrier-to-entry for formal and informal researchers working with limited budgets, including scientists from small island developing states, concerned citizens, environmental educators, managers, practicioners, students, and ocean stakeholders interested in understanding their local coasts and waterways.
 
