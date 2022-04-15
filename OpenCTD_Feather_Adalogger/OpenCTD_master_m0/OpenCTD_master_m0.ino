@@ -1,4 +1,3 @@
-  
 //Date and time functions using a DS3231 RTC connected via I2C and Wire lib
 #include <Wire.h>
 #include "RTClib.h"
@@ -23,7 +22,6 @@ const int chipSelect = 4; //sets chip select pin for SD card reader
 char datalogFileName[12];
 
 /* This integer specifies how high accuracy you want your pressure sensor to be (oversampling resolution).
-
    Ok values: 256, 512, 1024, 2048, or 4096 (Higher = more accuracy but slower sampling frequency**)
  * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
    sampling/response frequency of the ec sensor [default = 1 sec] (this is to avoid the case where both sensors send data at the same time). */
@@ -39,7 +37,6 @@ SoftwareSerial ecSerial(12, 13); // Define the SoftwareSerial port for conductiv
 double pressure_abs; //define absolute pressure variable
 
 /* This integer specifies how high resolution you want your temperature sensors to be.
-
    Ok values: 9,10,11,12 (Higher = more accuracy but slower sampling frequency**)
  * ** There is no reason not to use the highest accuracy. This is because the datalogging rate is set by the
    sampling/response frequency of the ec sensor [default = 1 second] (this is to avoid the case where both sensors send data at the same time). */
@@ -67,17 +64,10 @@ byte string_received = 0; // Whether it received a string from the EC circuit.
 
 void setup () {
 
-<<<<<<< Updated upstream
   // comment the following three lines out for final deployment
-#ifndef ESP8266
-  while (!Serial && millis() < 20000); //for Leonardo/Micro/Zero - Wait for a computer to connect via serial or until a 20 second timeout has elapsed (This works because millis() starts counting the mlliseconds since the board turns on)
-#endif
-=======
-// comment the following three lines out for final deployment
-//  #ifndef ESP8266
-//    while (!Serial);   //for Leonardo/Micro/Zero
-//  #endif
->>>>>>> Stashed changes
+//#ifndef ESP8266
+// while (!Serial && millis() < 20000); //for Leonardo/Micro/Zero - Wait for a computer to connect via serial or until a 20 second timeout has elapsed (This works because millis() starts counting the mlliseconds since the board turns on)
+//#endif
 
   Serial.begin(9600);
 
@@ -106,7 +96,7 @@ void setup () {
 
   }
 
-  get_numbered_filename(datalogFileName, "LOG", "CSV");
+  get_numbered_filename(datalogFileName, "WW07", "CSV");
 
   Serial.print("Writing to datalog: ");
   Serial.println(datalogFileName);
@@ -115,8 +105,8 @@ void setup () {
 
   if (dataFile) {
     Serial.println("====================================================");
-    Serial.println("Date Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
-    dataFile.println("Date Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
+    Serial.println("Date, Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
+    dataFile.println("Date, Time,Pressure,Temp A,Temp B,Temp C,Conductivity");
     dataFile.close();
 
   } else {
