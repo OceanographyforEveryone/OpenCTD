@@ -1,4 +1,4 @@
-This folder contains support code for the OpenCTD. In Arduino Libraries, you will find all compressed folders for all of the libraries that are required to run the OpenCTD software. These include:
+This folder contains support code for the OpenCTD. In Arduino Libraries, you will find compressed folders for all of the libraries that are required to run the OpenCTD software. These include:
 
 - [Arduino-Temperature-Control-Library.zip](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/Support%20Code/Arduino%20Libraries/Arduino-Temperature-Control-Library.zip) which allows you to communicate with the temperature sensor array
 - [MS5803_14.zip](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/OpenCTD_Feather_Adalogger/Support%20Code/Arduino%20Libraries/MS5803_14.zip) which supports the 14-bar pressure sensors
