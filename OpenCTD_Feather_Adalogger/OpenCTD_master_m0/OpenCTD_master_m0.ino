@@ -96,7 +96,7 @@ void setup () {
 
   }
 
-  get_numbered_filename(datalogFileName, "WW07", "CSV");
+  get_numbered_filename(datalogFileName, "LOG", "CSV");
 
   Serial.print("Writing to datalog: ");
   Serial.println(datalogFileName);
