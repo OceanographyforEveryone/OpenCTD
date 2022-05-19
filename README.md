@@ -4,6 +4,8 @@ There is something radical about making and using your own scientific instrument
 
 By building your own instruments to study and understand the natural world, by taking ownership over the tools of scientific inquiry, you contribute to expanding that circle of knowledge production. A scientist who can make their own instruments is not beholden to the cycles of funding and access that pervade formal, institutional inquiry. A researcher who can build and repair their own equipment is not dependent on the ever-changing wind of academic sentiment to decide what is and is not worthy of study. A community leader who has the tools to create their own data does not have to wait for institutions to take notice of an emerging crisis before taking action. 
 
+![The OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/master/Images/IMG_20190727_150858%20(2).jpg)
+
 **You don’t need to ask for permission to understand your world.**
 
 Nowhere is this inequality of access more pronounced than in the ocean sciences, where all but a few entities have the capital to mount major oceanographic research campaigns. Even localized coastal research can be stymied by the need for vessels, equipment, and instruments, access to which is often controlled by research institutions. As the need to understand the dramatic changes happening both at the surface and beneath the waves accelerates, barriers to access that precludes the participation of ocean stakeholders further erode our potential to understand, anticipate, and mitigate those changes. 
