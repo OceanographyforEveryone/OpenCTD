@@ -7,22 +7,25 @@ another device (such as a personal computer) for analysis.
 
 ### Firmware
 
-The OpenCTD is controlled by an 
-[Adalogger Feather M0](https://www.adafruit.com/product/2796) microcontroller 
-development board. Instructions on how to upload OpenCTD firmware to the microcontroller board
-can be found in the [Documentation](../Documentation). General instructions and
+The OpenCTD is controlled by an [Adalogger Feather
+M0](https://www.adafruit.com/product/2796) microcontroller development board.
+Instructions on how to upload OpenCTD firmware to the microcontroller board can
+be found in the [Documentation](../Documentation). General instructions and
 learning resources about the Adalogger Feather M0 board itself can be found in
-the [Adafruit Learning Guide](https://learn.adafruit.com/adafruit-feather-m0-adalogger/).
+the [Adafruit Learning
+Guide](https://learn.adafruit.com/adafruit-feather-m0-adalogger/).
 
-Core software: [`OpenCTD_master_m0.ino`](Firmware/OpenCTD_master_m0)
+[`OpenCTD_master_m0`](Firmware/OpenCTD_master_m0) : This is the core software
+for the OpenCTD. The file `OpenCTD_master_m0.ino` contains the basic firmware
+used in normal deployment of the OpenCTD instrument.
 
-Calibration firmware, including the revised Serial Protocol described in the
-manual and the conductivity calibration firmware:
-[`Calibration`](Firmware/Calibration)
+[`OpenCTD_master_m0_30bar`](Firmware/OpenCTD_master_m0_30Bar/) : An alternative
+to the basic firmware for use with a 30bar pressure sensor instead of the
+standard 14bar sensor.
 
-If you are using a 30bar pressure sensor instead of the 14bar sensor, use the
-alternative [`OpenCTD_master_m0_30bar.ino`](Firmware/OpenCTD_master_m0_30Bar/)
-firmware.
+[`Calibration`](Firmware/Calibration) : The calibration firmware, including the
+revised Serial Protocol described in the manual and the conductivity
+calibration firmware.
 
 ### Analysis
 
