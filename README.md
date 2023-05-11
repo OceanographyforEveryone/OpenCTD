@@ -1,3 +1,5 @@
+Built your own research-quality ocenaographic instrument for a fraction of the cost of commercial alternative and explore the ocean, together. 
+
 # OpenCTD : Oceanography for Everyone
 
 There is something radical about making and using your own scientific
@@ -79,20 +81,19 @@ oceanography and marine or environmental science.
 ### Core Resources
 
 The [OpenCTD Construction and
-Operation](Documentation/Complete%20Manual/OpenCTD_ConstructionOperation.pdf)
+Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf)
 manual provides a comprehensive, step-by-step guide to building your own
 OpenCTD, with a standard construction pathway as well as numerous alternatives
 depending on parts availability and technical skills.
 
-The OpenCTD [core software](Software/Firmware/OpenCTD_master_m0) is designed
+The OpenCTD [core software](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software) is designed
 to be used with an M0-style Arduino microcontroller, for which we recommend the
 [Adafruit Adalogger Feather M0](https://www.adafruit.com/product/2796). 
 
 You can find all the Arduino libraries as described in the manual, as well as
 software for calibrating the conductivity sensors in
-[`Calibration`](Software/Firmware/Calibration).
+[`Support`](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support).
 
-Models for making [3D printable components](Hardware/Enclosure) are provided
-for structural elements, switches, and other support structures. 
+Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
 **Updated 3/17/2023**
