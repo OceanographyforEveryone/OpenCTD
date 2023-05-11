@@ -1,6 +1,6 @@
 Build your own research-quality ocenaographic instrument for a fraction of the cost of commercial alternative and explore the ocean, together. 
 
-# OpenCTD : Oceanography for Everyone
+# OpenCTD: Oceanography for Everyone
 
 There is something radical about making and using your own scientific
 instruments. The structure of scientific inquiry has coalesced around a model
