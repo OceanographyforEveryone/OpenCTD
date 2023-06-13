@@ -96,7 +96,7 @@ void setup () {
 
   }
 
-  get_numbered_filename(datalogFileName, "LOG", "CSV");
+  get_numbered_filename(datalogFileName, "CAST", "CSV");
 
   Serial.print("Writing to datalog: ");
   Serial.println(datalogFileName);
@@ -243,7 +243,7 @@ void loop () {
 
 }
 
-void get_numbered_filename(char* outStr, char* filePrefix, char* fileExtension) {
+void get_numbered_filename(char* outStr, const char* filePrefix, const char* fileExtension) {
 
   // Make base filename
   sprintf(outStr, "%s000.%s", filePrefix, fileExtension);
