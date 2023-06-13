@@ -44,6 +44,9 @@ void setup() {
   received_from_sensor = ecSerial.readBytesUntil('\r', EC_data, 10); // keep reading the reply until the return character is recived (or it gets to be 10 characters long, which shouldn't happen)
   EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
   Serial.println("");
+  Serial.println("Please review the OpenCTD Calibration Guide or the Atlas Scientific EZO_EC");
+  Serial.println("embedded conductivity circuit datasheet for more details on calibration.");
+  Serial.println("");
   Serial.println("----Useful Commands----"); 
   Serial.println("");
   Serial.println("c,0              --> disable continuous readings");
@@ -55,6 +58,11 @@ void setup() {
   Serial.println("cal,low,12880    --> set the low standard calibration to 12880");
   Serial.println("cal,high,80000   --> set the high standard calibration to 80000");
   Serial.println("cal,?            --> query calibration status of probe");
+  Serial.println("t,x              --> set temperature compensation to x degrees celsius");
+  Serial.println("t,?              --> query temperature compensation value in degrees celsius");
+  Serial.println("");
+  Serial.println("----Useful Commands----"); 
+  Serial.println("");
 
 }
 
