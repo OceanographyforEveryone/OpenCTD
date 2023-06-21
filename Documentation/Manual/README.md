@@ -1,5 +1,7 @@
 ## OpenCTD Primary Documentation
 
+Please Note: The OpenCTD Manual is currently undergoing significant revisions during Summer 2023. Please check with the Oceanography for Everyone team for the latest updates.  
+
 Here you can find the primary documentation for the OpenCTD, including:
 
 - [Construction and Operation of the OpenCTD](Documentation/Manual/OpenCTD_ConstructionOperation.pdf). The ultimate guide for building, calibrating, testing, and deploying your own OpenCTD. The document is currently undergoing significant revisions following a documentation workshop in June 2023. A [markdown version](Documentation/Manual/OpenCTD_ConstructionOperation.md) of this guide is also available. 
