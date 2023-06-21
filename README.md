@@ -81,10 +81,10 @@ oceanography and marine or environmental science.
 ### Core Resources
 
 The [OpenCTD Construction and
-Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf)
+Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual)
 manual provides a comprehensive, step-by-step guide to building your own
 OpenCTD, with a standard construction pathway as well as numerous alternatives
-depending on parts availability and technical skills.
+depending on parts availability and technical skills. A shoter manual covering just the calibration process is also available. 
 
 The OpenCTD [core software](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software) is designed
 to be used with an M0-style Arduino microcontroller, for which we recommend the
@@ -92,8 +92,8 @@ to be used with an M0-style Arduino microcontroller, for which we recommend the
 
 You can find all the Arduino libraries as described in the manual, as well as
 software for calibrating the conductivity sensors in
-[`Support`](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support).
+[Support](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support).
 
 Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
-**Updated 3/17/2023**
+**Updated 6/21/2023**
