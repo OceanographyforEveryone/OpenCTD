@@ -1,13 +1,9 @@
 # OpenCTD 3D Printed Models
 
+The  primary 3D printer files for assembling an OpenCTD are:
 
-- `2-inch_PVC_PaintCap_Bottom.stl`
-- `2-inch_PVC_PaintCap_Top.stl`
-- `OpenCTD_Connector_M0.stl`
-- `OpenCTD_ElectronicsChassis_M0_Reinforced_Switch.stl`
-- `OpenCTD_M0_Baseplate.3mf`
-- `OpenCTD_M0_Baseplate_OpenROV_IMU.3mf`
-- `OpenCTD_M0_Baseplate_SparkfunBreakout.3mf`
-- `OpenCTD_MagneticSwitch_External_M0.stl`
-- `OpenCTD_MagneticSwitch_Internal_M0.stl`
-- `OpenCTD_MagneticSwitch_Pin_M0.stl`
+- [OpenCTD_14Bar_Baseplate.3mf](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/3DPrints/Models/OpenCTD_14Bar_Baseplate.3mf)
+- [OpenCTD_ElectronicsChassis_Bottom.3mf](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/3DPrints/Models/OpenCTD_ElectronicsChassis_Bottom.3mf)
+- [OpenCTD_ElectronicsChassis_Top.3mf](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/3DPrints/Models/OpenCTD_ElectronicsChassis_Top.3mf)
+
+For [alternative](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/3DPrints/Models/Alternatives) build pathways, several ooptions for the sensor baseplate and electronics chassis are available. [Accessories](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/3DPrints/Models/Accessories) that aid in the storage of the CTD are also available. 
