@@ -34,7 +34,7 @@ power to understand, anticipate, and mitigate those changes.
 The ocean belongs to everyone. The tools to study the ocean should be
 accessible to anyone with the curiosity and motivation to pursue that inquiry.
 Chief among these tools is the workhorse of oceanography, the CTD, an
-instrument that measures salitnity, temperature, and depth. By these
+instrument that measures salinity, temperature, and depth. By these
 characteristics, scientists can begin to unlock ocean patterns hidden beneath
 the sea's surface.
 
