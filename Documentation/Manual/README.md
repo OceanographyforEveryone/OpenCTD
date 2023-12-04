@@ -4,7 +4,7 @@ Please Note: The OpenCTD Manual is currently undergoing significant revisions du
 
 Here you can find the primary documentation for the OpenCTD, including:
 
-- [Construction and Operation of the OpenCTD](Documentation/Manual/OpenCTD_ConstructionOperation.pdf). The ultimate guide for building, calibrating, testing, and deploying your own OpenCTD. The document is currently undergoing significant revisions following a documentation workshop in June 2023. A [markdown version](Documentation/Manual/OpenCTD_ConstructionOperation.md) of this guide is also available. 
-- [OpenCTD: Calibration and Data Management](Documentation/Manual/OpenCTD_CalibrationDataManagement.pdf). An abreviated guide covering the process of calibrating your OpenCTD and processing data. 
+- [Construction and Operation of the OpenCTD]([Documentation/Manual/OpenCTD_ConstructionOperation.pdf](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf)). The ultimate guide for building, calibrating, testing, and deploying your own OpenCTD. The document is currently undergoing significant revisions following a documentation workshop in June 2023. A [markdown version]([Documentation/Manual/OpenCTD_ConstructionOperation.md](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.md)) of this guide is also available. 
+- [OpenCTD: Calibration and Data Management]([Documentation/Manual/OpenCTD_CalibrationDataManagement.pdf](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_CalibrationDataManagement.pdf)). An abreviated guide covering the process of calibrating your OpenCTD and processing data. 
 
 To download .pdfs, click on the link and then click "download raw file" in the upper right corner below the "history" icon. 
