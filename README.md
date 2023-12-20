@@ -1,4 +1,4 @@
-Build your own research-quality ocenaographic instrument for a fraction of the cost of commercial alternative and explore the ocean, together. 
+Build your own research-quality ocenaographic instrument for a fraction of the cost of commercial alternative. Let's explore the ocean, together. 
 
 # OpenCTD: Oceanography for Everyone
 
