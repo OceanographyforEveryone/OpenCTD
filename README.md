@@ -1,6 +1,22 @@
-Build your own research-quality oceanographic instrument for a fraction of the cost of commercial alternatives. Let's explore the ocean, together. 
+Build your own research-quality oceanographic instrument for a fraction of the cost of commercial alternatives. 
+
+Let's explore the ocean, together. 
+
+**Updated 12/20/2023**
 
 # OpenCTD: Oceanography for Everyone
+
+The [OpenCTD Construction and
+Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual)
+manual provides a comprehensive, step-by-step guide to building your own
+OpenCTD, with a standard construction pathway as well as numerous alternatives
+depending on parts availability and technical skills. 
+
+The OpenCTD [core software](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software) is designed
+to be used with an M0-style Arduino microcontroller, for which we recommend the
+[Adafruit Adalogger Feather M0](https://www.adafruit.com/product/2796). 
+
+---
 
 There is something radical about making and using your own scientific
 instruments. The structure of scientific inquiry has coalesced around a model
@@ -84,7 +100,7 @@ The [OpenCTD Construction and
 Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual)
 manual provides a comprehensive, step-by-step guide to building your own
 OpenCTD, with a standard construction pathway as well as numerous alternatives
-depending on parts availability and technical skills. A shoter manual covering just the calibration process is also available. 
+depending on parts availability and technical skills. A shorter manual covering just the calibration process is also available. 
 
 The OpenCTD [core software](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software) is designed
 to be used with an M0-style Arduino microcontroller, for which we recommend the
