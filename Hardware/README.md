@@ -11,7 +11,7 @@ oceanographic instrument.
 The OpenCTD is controlled by an [Adalogger Feather
 M0](https://www.adafruit.com/product/2796) microcontroller development board.
 Instructions on how to upload OpenCTD firmware to the microcontroller board can
-be found in the [Documentation](../Documentation). General instructions and
+be found in the [Documentation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual). General instructions and
 learning resources about the Adalogger Feather M0 board itself can be found in
 the [Adafruit Learning
 Guide](https://learn.adafruit.com/adafruit-feather-m0-adalogger/).
@@ -26,4 +26,4 @@ using the files located in the [PCB](Electronics/PCB) directory.
 Most of the OpenCTD enclosure is constructed from PCV plumbing tubing and
 components. However, there are some specialized parts that should be 3D printed
 for mounting the electronics and sensor array. These files are located in the
-[Enclosure](Enclosure/Models) directory.
+[3D Prints](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/3DPrints/Models) directory.
