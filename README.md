@@ -1,4 +1,4 @@
-Build your own research-quality ocenaographic instrument for a fraction of the cost of commercial alternative and explore the ocean, together. 
+Build your own research-quality oceanographic instrument for a fraction of the cost of commercial alternatives. Let's explore the ocean, together. 
 
 # OpenCTD: Oceanography for Everyone
 
@@ -96,4 +96,4 @@ software for calibrating the conductivity sensors in
 
 Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
-**Updated 6/21/2023**
+**Updated 12/20/2023**
