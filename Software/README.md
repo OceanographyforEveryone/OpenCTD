@@ -24,7 +24,9 @@ to the basic firmware for use with a 30bar pressure sensor instead of the
 standard 14bar sensor.
 
 ### Support
-[Calibration](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Software/Support/Serial_for_EC_Calibration_m0.ino): The calibration software which allows users to calibrate the Atlas Scientific EZO conductivity sensor.
+[Calibration](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support/Serial_for_EC_Calibration_m0): The calibration software which allows users to calibrate the Atlas Scientific EZO conductivity sensor.
+
+[RTC Reset](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support/RTC_Reset): A small program to help you reset the real-time clock if it falls out of sync. 
 
 [Arduino Libraries](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support/Arduino%20Libraries): Five Arduino Libraries required to run the OpenCTD, in downloadable ZIP files. 
 
