@@ -5,6 +5,10 @@ software here: firmware, which runs on the OpenCTD itself, support software whic
 software, which is used to process data files copied from the OpenCTD to
 another device (such as a personal computer) for analysis.
 
+### Support Notes
+
+Users may encounter the following issue: ["Code doesn't compile due to problem in RTCLib. Happens for both OpenCTD_mo.ino and RTC_Reset.ino"](https://github.com/OceanographyforEveryone/OpenCTD/issues/37) which can be solved by installing the library [Adafruit_BusIO](https://www.arduino.cc/reference/en/libraries/adafruit-busio/)
+
 ### Firmware
 
 The OpenCTD is controlled by an [Adalogger Feather
