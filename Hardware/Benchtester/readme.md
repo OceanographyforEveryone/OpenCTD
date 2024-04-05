@@ -1,6 +1,8 @@
 ## OpenCTD Beanchtest Board
 
-Congratulations! If you've landed here, you've recieved one of the OpenCTD benchtest boards/calling cards. This card allwos you to build a working CTD that you can use to practice your soldering skills, test OpenCTD components before permanently sealing them into epoxy, or build a benchtop instrument for measuring  salinity, temperature, and air pressure. This board works with the components listed in the [OpenCTD Construction and Operation](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf) manual bill of materials. 
+Congratulations! If you've landed here, you've recieved one of the OpenCTD benchtest boards/calling cards. This card allows you to build a working CTD that you can use to practice your soldering skills, test OpenCTD components before permanently sealing them into epoxy, or build a benchtop instrument for measuring  salinity, temperature, and air pressure. This board works with the components listed in the manual [Construction and Operation of the OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf). 
+
+![Bare OpenCTD Benchtest Board](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/Benchtester/BoardBlank.png)
 
 To build your benchtester, you will need:
 1. [Standard female headers](https://amzn.to/3J5v8dg) (2 8-pin headers, 2 3-pin headers, 1 16-pin header, and 1 12-pin header, but you can order long strips of headers and cut them down with a flush cutter)
@@ -16,6 +18,8 @@ Once assembled, this board will read data from the [Sparkfun 14-Bar Pressure Sen
 
 ### Assembling the Benchtest Board
 
+![OpenCTD Benchtest Board with headers, switch, and resistors](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/Benchtester/BoardHeaders.png)
+
 Note: All components will be soldered onto on the front (the side with Andrew's contact information) of the card. If you've never soldered before, I recomend reading through Mitch Altman's [Soldering Is Easy](https://mightyohm.com/files/soldercomic/FullSolderComic_EN.pdf) guide. 
 
 1. Trim your strips of female headers to the correct length for each set of through holes. I reccommend cutting through the center of the next pin in the line in order to ensure that you do not accidentally cut it too short. You will have 1 16-pin-long strip, 1 12-pin-long strip, 2 8-pin long strips, and 2 3-pin-long strips.
@@ -28,4 +32,8 @@ Note: All components will be soldered onto on the front (the side with Andrew's 
 
 5. Insert the switch into the holes labeled switch and solder into place.
 
-That's it! Your board is now ready tgo be populated with OpenCTD components. For instuctions on how to assemble the Adalogger, Real-time Clock, and EZO EC circuit, as well as the sensors, please refer to Chapter 6 and Chapter 7 of [Construction and Operation of the OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf).
+![OpenCTD Benchtest Board poulated with components](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/Benchtester/BoardPopulated.png)
+
+That's it! Your board is now ready tgo be populated with OpenCTD components. For instuctions on how to assemble the Adalogger, Real-time Clock, and EZO EC circuit, as well as the sensors, please refer to Chapter 6 and Chapter 7 of [Construction and Operation of the OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf). To learn how to calibrate these sensor, you can reference the build guide or the [Calibration and Data Management](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_CalibrationDataManagement.pdf) guide.
+
+![OpenCTD Benchtest Board with sensors attached](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/Benchtester/BoardFinished.png)
