@@ -1,4 +1,4 @@
-## OpenCTD Beanchtest Board
+## OpenCTD Benchtest Board
 
 Congratulations! If you've landed here, you've recieved one of the OpenCTD benchtest boards/calling cards. This card allows you to build a working CTD that you can use to practice your soldering skills, test OpenCTD components before permanently sealing them into epoxy, or build a benchtop instrument for measuring  salinity, temperature, and air pressure. This board works with the components listed in the manual [Construction and Operation of the OpenCTD](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_ConstructionOperation.pdf). 
 
