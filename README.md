@@ -5,7 +5,7 @@ Let's explore the ocean, together.
 **Updated 5/21/2023**
 
 ### Development Notes: 
-> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consintently in cold water. We do not recommend using Cherne endcaps in you CTD build.
+> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in you CTD build.
 >
 > A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6]
 >
