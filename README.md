@@ -2,7 +2,15 @@ Build your own research-quality oceanographic instrument for a fraction of the c
 
 Let's explore the ocean, together. 
 
-**Updated 12/20/2023**
+**Updated 5/21/2023**
+
+### Development Notes: 
+> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consintently in cold water. We do not recommend using Cherne endcaps in you CTD build.
+>
+> A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6]
+>
+> (https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_PowerManagementUpgrade_rev6.pdf), a guide to fixing the annoying "must be on to charge" feature of the OpenCTD rev 6 control board.
+> Some batteries ordered from Amazon have the positive and negative termninal reversed. Please check battery polarity before attempting to power your CTD. 
 
 # OpenCTD: Oceanography for Everyone
 
@@ -112,4 +120,4 @@ software for calibrating the conductivity sensors in
 
 Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
-**Updated 12/20/2023**
+**Updated 5/21/2024**
