@@ -7,9 +7,7 @@ Let's explore the ocean, together.
 ### Development Notes: 
 > Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in you CTD build.
 >
-> A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6]
->
-> (https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_PowerManagementUpgrade_rev6.pdf), a guide to fixing the annoying "must be on to charge" feature of the OpenCTD rev 6 control board.
+> A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_PowerManagementUpgrade_rev6.pdf), a guide to fixing the annoying "must be on to charge" feature of the OpenCTD rev 6 control board.
 > Some batteries ordered from Amazon have the positive and negative termninal reversed. Please check battery polarity before attempting to power your CTD. 
 
 # OpenCTD: Oceanography for Everyone
