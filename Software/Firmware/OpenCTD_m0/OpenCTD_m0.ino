@@ -60,7 +60,7 @@ byte received_from_sensor = 0; // How many characters have been received.
 byte string_received = 0; // Whether it received a string from the EC circuit.
 
 #define EC_SAMPLING_FREQUENCY 1 // Set the requested sampling frequency of the conductivity probe in seconds (NO Decimals) (this by extension sets the overall frequency of logging).
-
+#define EC_LED 1 // Set the LED on the EZO EC Chip. 1 to turn on, 0 to turn off to preserve power
 
 void setup () {
 
@@ -144,6 +144,7 @@ void setup () {
 
     ecSerial.write('i');  // Tell electrical conductivity board to reply with the board information by sending the 'i' character ...
     ecSerial.write('\r'); // ... Finish the command with the charage return character.
+
     received_from_sensor = ecSerial.readBytesUntil('\r', EC_data, 30); // Wait for the ec circut to send the data before moving on...
     EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
 
@@ -156,12 +157,20 @@ void setup () {
   ecSerial.write(',');  //
   ecSerial.print(EC_SAMPLING_FREQUENCY);    // ... every x seconds (here x is the EC_SAMPLING_FREQUENCY variable)
   ecSerial.write('\r'); // Finish the command with the carrage return character.
+    
+  ecSerial.write('L');  // Tell electrical conductivity board to turn off LED to preserve power ...
+  ecSerial.write(',');  //
+  ecSerial.print(EC_LED);  // 1 to turn light on, 0 to turn light off
+  ecSerial.write('\r'); // ... Finish the command with the charage return character.
 
   received_from_sensor = ecSerial.readBytesUntil('\r', EC_data, 10); // keep reading the reply until the return character is recived (or it gets to be 10 characters long, which shouldn't happen)
   EC_data[received_from_sensor] = 0; // Null terminate the data by setting the value after the final character to 0.
   Serial.print("EC Frequency Set Sucessfully? -> "); Serial.println(EC_data);
-  Serial.println("--- Starting Datalogging ---");
+  Serial.print("EC LED on or off? -> ");
+  if (EC_LED > 0) {Serial.println("on");}
+    else {Serial.println("off");}
 
+  Serial.println("--- Starting Datalogging ---");
 }
 
 void loop () {
