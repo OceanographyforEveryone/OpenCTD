@@ -2,13 +2,16 @@ Build your own research-quality oceanographic instrument for a fraction of the c
 
 Let's explore the ocean, together. 
 
-**Updated 5/21/2023**
+**Updated 8/27/2024**
 
 ### Development Notes: 
-> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in you CTD build.
+> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in your CTD build.
 >
-> A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_PowerManagementUpgrade_rev6.pdf), a guide to fixing the annoying "must be on to charge" feature of the OpenCTD rev 6 control board.
-> Some batteries ordered from Amazon have the positive and negative termninal reversed. Please check battery polarity before attempting to power your CTD. 
+> A new version of the control board is in production. If you have a Rev 6 control board, we have released [Power Management Upgrade for OpenCTD rev 6](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Documentation/Manual/OpenCTD_PowerManagementUpgrade_rev6.pdf), a guide to fixing the annoying "must be on to charge" feature of the OpenCTD rev 6 control board. You can download the Gerbers for the new board [here](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/Electronics/PCB/rev7c).
+> 
+> Some batteries ordered from Amazon have the positive and negative termninal reversed. Please check battery polarity before attempting to power your CTD.
+>
+> We are actively developing CircuitPython code to port the current M0 firmware to the new RP2040 Adaloggers. We anticipate that this will be done in early 2025. 
 
 # OpenCTD: Oceanography for Everyone
 
@@ -118,4 +121,4 @@ software for calibrating the conductivity sensors in
 
 Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
-**Updated 5/21/2024**
+**Updated 8/27/2024**
