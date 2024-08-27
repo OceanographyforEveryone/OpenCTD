@@ -2,7 +2,7 @@ Build your own research-quality oceanographic instrument for a fraction of the c
 
 Let's explore the ocean, together. 
 
-**Updated 5/21/2023**
+**Updated 8/27/2024**
 
 ### Development Notes: 
 > Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in you CTD build.
