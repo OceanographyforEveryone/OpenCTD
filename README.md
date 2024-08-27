@@ -120,4 +120,4 @@ software for calibrating the conductivity sensors in
 
 Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
 
-**Updated 5/21/2024**
+**Updated 8/27/2024**
