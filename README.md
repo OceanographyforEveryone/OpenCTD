@@ -1,3 +1,5 @@
+# OpenCTD Rev8 is coming! Keep an eye on the commits as we update the repository! 6/17/2026
+
 Build your own research-quality oceanographic instrument for a fraction of the cost of commercial alternatives. 
 
 Let's explore the ocean, together. 
