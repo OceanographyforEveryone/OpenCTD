@@ -1,78 +1,23 @@
 # OpenCTD Rev8 is coming! Keep an eye on the commits as we update the repository! 6/17/2026
 
-Build your own research-quality oceanographic instrument for a fraction of the cost of commercial alternatives. 
-
-Let's explore the ocean, together. 
-
-**Updated 6/20/2025**
-
-A new Build Guide is available! 
+**The ocean belongs to everyone.** The tools to study the ocean should be accessible to anyone with the curiosity and motivation to pursue that inquiry. Build your own [research-quality oceanographic instrument](https://tos.org/oceanography/article/the-openctd-a-low-cost-open-source-ctd-for-collecting-baseline-oceanographic-data-in-coastal-waters) and let's explore the ocean, together. 
 
 # OpenCTD: Oceanography for Everyone
 
-The [OpenCTD Construction and
-Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual)
-manual provides a comprehensive, step-by-step guide to building your own
-OpenCTD, with a standard construction pathway as well as numerous alternatives
-depending on parts availability and technical skills. 
+The CTD is an oveanographic instrument that measures salinity, temperature, and depth. By measuring these
+characteristics, scientists can begin to unlock ocean patterns hidden beneath the sea's surface.
 
-The OpenCTD [core software](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software) is designed
-to be used with an M0-style Arduino microcontroller, for which we recommend the
-[Adafruit Adalogger Feather M0](https://www.adafruit.com/product/2796). 
+CTDs come in a variety of shapes, sizes, and applications. Most oceanographic research vessels have a CTD connected to a rosette platform, which houses other instruments and collects water samples in parallel with real-time data. CTDs are also commonly attached to fixed moorings, autonomous underwater vehicles (AUVs), remote-operated vehicles (ROVs), and even to marine animals.
 
----
-
-There is something radical about making and using your own scientific
-instruments. The structure of scientific inquiry has coalesced around a model
-that is, in general, both expensive and exclusive. This centralizes knowledge
-production within a small circle of individuals, organizations, and
-institutions who have access to substantial financial resources. This circle
-rarely reflects the breadth of identities, experiences, and ways of knowing
-that are most directly connected to the places being explored.
-
-By building your own instruments to study and understand the natural world, you
-are expanding the circle of knowledge production. A scientist who can make
-their own instruments is not beholden to the cycles of funding and access that
-constrain formal, institutional inquiry. A researcher who can build and repair
-their own equipment is not dependent on the whims of academic sentiment to
-decide what is and is not worthy of study. A community leader who has the tools
-to create their own data does not have to wait for institutions to take notice
-of an emerging crisis before taking action.
-
-![The OpenCTD](Documentation/Images/IMG_20190727_150858%20(2).jpg)
+Unfortunately, commercial CTDs are expensive. The most affordable models cost several thousand dollars. For near-shore oceanographic research on the relatively shallow continental shelf, this cost can be prohibitive. This
+effectively excludes formal researchers from low and middle income countries, and small island states. Even in high-income countries, formal researchers at teaching institutions or at early career stages may also find themselves priced out of ocean research. Informal researchers such as citizen oceanographers, educators, conservation and management practitioners and students of all levels face severe challenges accessing expensive scientific instruments. 
 
 **You don’t need to ask for permission to understand your world.**
 
-Nowhere is this inequality of access more pronounced than in the ocean
-sciences, where all but a few entities have the capital to mount major
-oceanographic research campaigns. Even localized coastal research can be
-thwarted by lack of access to vessels, equipment, and instruments. As the need
-to understand the dramatic changes at the surface and beneath the waves
-accelerates, baring the participation of ocean stakeholders erodes our
-power to understand, anticipate, and mitigate those changes.
+By building your own instruments to study and understand the natural world, you are expanding the circle of knowledge production. A scientist who can make their own instruments is not beholden to the cycles of funding and access that constrain formal, institutional inquiry. A researcher who can build and repair their own equipment is not dependent on the whims of academic sentiment to decide what is and is not worthy of study. A community leader who has the tools to create their own data does not have to wait for institutions to take notice
+of an emerging crisis before taking action. 
 
-The ocean belongs to everyone. The tools to study the ocean should be
-accessible to anyone with the curiosity and motivation to pursue that inquiry.
-Chief among these tools is the workhorse of oceanography, the CTD, an
-instrument that measures salinity, temperature, and depth. By these
-characteristics, scientists can begin to unlock ocean patterns hidden beneath
-the sea's surface.
-
-CTDs come in a variety of shapes, sizes, and applications. Most oceanographic
-research vessels have a CTD connected to a rosette platform, which houses other
-instruments and collects water samples in parallel with real-time data. CTDs
-are also commonly attached to fixed moorings, autonomous underwater vehicles
-(AUVs), remote-operated vehicles (ROVs), and even to marine animals.
-
-Unfortunately, commercial CTDs are expensive. The most affordable models cost
-several thousand dollars. For near-shore oceanographic research on the
-relatively shallow continental shelf, this cost can be prohibitive. This
-effectively excludes formal researchers from low and middle income countries,
-and small island states. Even in high-income countries, formal researchers at
-teaching institutions or at early career stages may also find themselves priced
-out of ocean research. Informal researchers such as citizen oceanographers,
-educators, conservation and management practitioners and students of all levels
-face severe challenges accessing expensive scientific instruments. 
+![The OpenCTD](Documentation/Images/IMG_20190727_150858%20(2).jpg)
 
 ### Build Your Own CTD
 
@@ -88,7 +33,7 @@ within a PVC pipe. Power is provided by a standard 3.7V lithium polymer battery
 and data are stored in a tab-delimited text file accessed via SD card.  All
 OpenCTD software is released open source with no restrictions on use. 
 
-The OpenCTD is designed to be built by the end-user, providing both access to
+The OpenCTD built by the end-user, providing both access to
 the tools of oceanography as well as the skills to maintain, repair, and
 replace OpenCTDs. For scientists working in remote settings, the repairability
 of the OpenCTD is intended to prevent equipment failures from spiraling into
@@ -98,10 +43,14 @@ introduction to coding, 3D-printing, hardware prototyping, and electronics.
 Construction of an OpenCTD can provide a practical foundation for courses in
 oceanography and marine or environmental science. 
 
+### Publications
+
+Thaler, A., S.K. Sturdivant, R.Y. Neches, and J.J. Levenson. 2024. [The OpenCTD: A low-cost, open-source CTD for collecting baseline oceanographic data in coastal waters](https://tos.org/oceanography/article/the-openctd-a-low-cost-open-source-ctd-for-collecting-baseline-oceanographic-data-in-coastal-waters#citation). Oceanography 37(2):167–173, https://doi.org/10.5670/oceanog.2024.602.
+
 ### Core Resources
 
 The [OpenCTD Construction and
-Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual)
+Operation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation)
 manual provides a comprehensive, step-by-step guide to building your own
 OpenCTD, with a standard construction pathway as well as numerous alternatives
 depending on parts availability and technical skills. A shorter manual covering just the calibration process is also available. 
@@ -114,14 +63,4 @@ You can find all the Arduino libraries as described in the manual, as well as
 software for calibrating the conductivity sensors in
 [Support](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Software/Support).
 
-Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware) 
-
-### Development Notes: 
-> Please be advised that Atlas Scientific has released a detailed guide to cutting and soldering the electrical conductivity probe to minimize shorts and interference in the system. Please read [How to properly cut your probe cable](https://files.atlas-scientific.com/how-to-properly-cut-probe-cables.pdf) before proceeding with the sensor package build instructions. Atlas also recommends that you test the probe before cutting any wire, as cutting the wire will void the warranty.
-> 
-> Please be advised that the rubber o-rings in the yellow Cherne brand endcaps is much stiffer than the rubber used in other endcap brands and has been found to fail consistently in cold water. We do not recommend using Cherne endcaps in your CTD build.
->
-> Some batteries ordered from Amazon have the positive and negative termninal reversed. Please check battery polarity before attempting to power your CTD.
->
-> We are actively developing CircuitPython code to port the current M0 firmware to the new RP2040 Adaloggers. We anticipate that this will be done in early 2025. 
-
+Hardware file for both 3D printable components and the control unit PBC can be found in [Hardware](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware)
