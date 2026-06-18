@@ -1,5 +1,5 @@
-# OpenCTD 3D Printed Models
-The  primary 3D printer files for assembling an OpenCTD Rev8.
+# OpenCTD Shapefiles
+This directory contains all the 3D printer shapefiles needed to assemble an OpenCTD Rev8.
 
 ## Baseplates (print with 100% infill to avoid voids where water may enter)
 - [OpenCTD_Rev8_Baseplate_CPS](https://github.com/OceanographyforEveryone/OpenCTD/blob/main/Hardware/3DPrints/OpenCTD_Rev8_Baseplate_CPS.3mf): Baseplate for the Rev8 OpenCTD using an Oceanography for Everyone Custom Pressure Sensor Breakout Board.
