@@ -14,7 +14,3 @@ learning resources about the Adalogger Feather M0 board itself can be found in t
 Guide](https://learn.adafruit.com/adafruit-feather-m0-adalogger/).
 
 The OpenCTD electronics can be assembled using a breadboard, or using a custom PCB. The custom PCB is designed using [KiCad](https://www.kicad.org/), and can be ordered in small batches from many PCB fabrication services around the world using the files located in the [PCB](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/PCB) directory.
-
-### Enclosure
-
-Most of the OpenCTD enclosure is constructed from PCV plumbing tubing and components. However, there are some specialized parts that should be 3D printed for mounting the electronics and sensor array. These files are located in the [3D Prints](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Hardware/3DPrints/Models) directory.
