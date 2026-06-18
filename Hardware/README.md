@@ -9,7 +9,7 @@ If you've been lucky enough to recieve Andrew's business card, [Benchtester](htt
 The OpenCTD is controlled by an [Adalogger Feather M0](https://www.adafruit.com/product/2796) microcontroller development board.
 
 Instructions on how to upload OpenCTD firmware to the microcontroller board can
-be found in [Documentation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation/Manual). General instructions and
+be found in [Documentation](https://github.com/OceanographyforEveryone/OpenCTD/tree/main/Documentation). General instructions and
 learning resources about the Adalogger Feather M0 board itself can be found in the [Adafruit Learning
 Guide](https://learn.adafruit.com/adafruit-feather-m0-adalogger/).
 
