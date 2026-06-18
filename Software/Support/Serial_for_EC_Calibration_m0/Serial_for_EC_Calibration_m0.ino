@@ -4,28 +4,17 @@
 
 //communication protocols for temperature sensors
 
-#include <OneWire.h>
-#include <DallasTemperature.h>
+#include <Adafruit_MAX31865.h>
 
-OneWire oneWire(6); // Define the OneWire port for temperature.
-DallasTemperature sensors(&oneWire); //Define DallasTemperature input based on OneWire.
+//Set conditions for PT100/PT1000 temperature probe
+Adafruit_MAX31865 thermo = Adafruit_MAX31865(6, 9, 10, 11); //SPI: CS, DI, DO, CLK
+#define RREF      4300.0 // The value of the Rref resistor. Use 430.0 for PT100 and 4300.0 for PT1000
+#define RNOMINAL  1000.0 // The 'nominal' 0-degrees-C resistance of the sensor, 100.0 for PT100, 1000.0 for PT1000
+
+//Declare global variables for PT100/1000 temperature
+float tempPT;
 
 SoftwareSerial ecSerial(12, 13); // Define the SoftwareSerial port for conductivity.
-
-#define TEMP_SENSOR_RESOLUTION 12
-
-//Declare global temperature variables.
-float tempA;
-float tempB;
-float tempC;
-float avgTemp;
-float roundTemp;
-float fTemp;
-
-int tempADelayStartTime; // Define a variable to mark when we requested a temperature mesurement from A so we can wait the required delay before reading the value.
-int tempBDelayStartTime; // Define a variable to mark when we requested a temperature mesurement from B so we can wait the required delay before reading the value.
-int tempCDelayStartTime; // Define a variable to mark when we requested a temperature mesurement from C so we can wait the required delay before reading the value.
-int requiredMesurementDelay = sensors.millisToWaitForConversion(TEMP_SENSOR_RESOLUTION);
 
 //Declare global variables for eletrical conductivity
 float EC_float = 0;
@@ -45,14 +34,8 @@ void setup() {
 
   Serial.begin(9600);    // serial / USB port
 
-  sensors.begin();  // Intialize the temperature sensors.
-  sensors.setResolution(TEMP_SENSOR_RESOLUTION);  // Set the resolution (accuracy) of the temperature sensors.
-  sensors.requestTemperatures(); // on the first pass request all temperatures in a blocking way to start the variables with true data.
-  tempA = get_temp_c_by_index(0);
-  tempB = get_temp_c_by_index(1);
-  tempC = get_temp_c_by_index(2);
-
-  sensors.setWaitForConversion(false);  // Now tell the Dallas Temperature library to not block this script while it's waiting for the temperature mesurement to happen
+  //Initialize Temperature Sensor
+  thermo.begin(MAX31865_3WIRE);  // set to 2WIRE or 4WIRE as necessary
 
   ecSerial.begin(9600); // Set baud rate for conductivity circuit.
 
@@ -124,47 +107,18 @@ void loop() {
 
     }
 
-    // Read the temperature sensors.
-    if (millis() - tempADelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe A's value;
-      tempA = get_temp_c_by_index(0);
-      sensors.requestTemperaturesByIndex(0);  // request temp sensor A start mesuring so it can be read on the following loop (if enough time elapses).
-      tempADelayStartTime = millis();  // mark when we made the request to make sure we wait long enough before reading it.
-    }
-
-    if (millis() - tempBDelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe B's value;
-      tempB = get_temp_c_by_index(1);
-      sensors.requestTemperaturesByIndex(1);  // request temp sensor B start mesuring so it can be read on the following loop (if enough time elapses).
-      tempBDelayStartTime = millis();  // mark when we made the request to make sure we wait long enough before reading it.
-    }
-
-
-    if (millis() - tempCDelayStartTime > requiredMesurementDelay) { // wait for conversion to happen before attempting to read temp probe C's value;
-      tempC = get_temp_c_by_index(2);
-      sensors.requestTemperaturesByIndex(2);  // request temp sensor C start mesuring so it can be read on the following loop (if enough time elapses).
-      tempCDelayStartTime = millis(); // mark when we made the request to make sure we wait long enough before reading it.
-    }
-
-    avgTemp = ((tempA+tempB+tempC)/3);
-    roundTemp = round(avgTemp*10);
-    fTemp = (roundTemp/10);
+    // Read the temperature sensor.
+    uint16_t rtd = thermo.readRTD();
+    float ratio = rtd;
+    ratio /= 32768;
+    tempPT = thermo.temperature(RNOMINAL, RREF);
 
     // print conductivity from parsed string
     Serial.print(EC_data);
     Serial.print(", Temp = ");
-    Serial.println(fTemp);
+    Serial.println(tempPT);
     
   }
-}
-
-float get_temp_c_by_index(int sensor_index) {
-  
-  float value = sensors.getTempCByIndex(sensor_index);
-  if (value == DEVICE_DISCONNECTED_C) {
-    return NAN; // Return Not a Number (NAN) to indicate temperature probe has error or is disconnected.
-  } else {
-    return value; // otherwise return the measured value.
-  }
-
 }
 
 void parse_data() { // Parses data from the EC Circuit.

@@ -54,7 +54,7 @@ byte string_received = 0; // Whether it received a string from the EC circuit.
 
 void setup () {
 
-  // comment the following three lines out for final deployment
+// comment the following three lines out for final deployment
 //#ifndef ESP8266
 // while (!Serial && millis() < 20000); //for Leonardo/Micro/Zero - Wait for a computer to connect via serial or until a 20 second timeout has elapsed (This works because millis() starts counting the mlliseconds since the board turns on)
 //#endif
