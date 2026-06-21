@@ -1,4 +1,4 @@
-# OpenCTD Rev8 is coming! Keep an eye on the commits as we update the repository! 6/17/2026
+# OpenCTD Rev8 is here!
 
 **The ocean belongs to everyone.** The tools to study the ocean should be accessible to anyone with the curiosity and motivation to pursue that inquiry. Build your own [research-quality oceanographic instrument](https://tos.org/oceanography/article/the-openctd-a-low-cost-open-source-ctd-for-collecting-baseline-oceanographic-data-in-coastal-waters) and let's explore the ocean, together. 
 
@@ -42,6 +42,8 @@ experience for advanced students, the process of building an OpenCTD offers an
 introduction to coding, 3D-printing, hardware prototyping, and electronics.
 Construction of an OpenCTD can provide a practical foundation for courses in
 oceanography and marine or environmental science. 
+
+# Visit [Oceanography for Everyone](http://oceanographyforeveryone.com/) to learn more, inquire about workshops, or purchase OpenCTD kits!
 
 ### Publications
 
